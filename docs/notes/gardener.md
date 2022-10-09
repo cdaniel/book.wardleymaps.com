@@ -1,0 +1,1 @@
+gardener manages [[ecosystem]], not a dictator

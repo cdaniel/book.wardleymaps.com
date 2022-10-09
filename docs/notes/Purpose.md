@@ -1,0 +1,6 @@
+![[Chapter 7 - Finding a new purpose#^feb47a]]
+![[Chapter 7 - Finding a new purpose#^99def7]]
+![[Chapter 7 - Finding a new purpose#^ec5593]]
+![[Chapter 7 - Finding a new purpose#^e395e4]]
+![[Chapter 7 - Finding a new purpose#^044648]]
+[[balancing act]]

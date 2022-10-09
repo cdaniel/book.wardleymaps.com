@@ -1,0 +1,17 @@
+![[Chapter 5 - The play and a decision to act#^78153c]]
+![[Chapter 5 - The play and a decision to act#^c31c35]]
+![[Chapter 5 - The play and a decision to act#^b80026]]
+![[Chapter 5 - The play and a decision to act#^856c9e]]
+![[Chapter 5 - The play and a decision to act#^c9309c]]
+![](https://miro.medium.com/max/700/1*07wGxnzk4cbH2Ep5cZptaA.png)
+![[Chapter 5 - The play and a decision to act#^bfccfa]]
+![[Chapter 5 - The play and a decision to act#^1a19df]]
+![[Chapter 5 - The play and a decision to act#^e20d49]]
+![[Chapter 5 - The play and a decision to act#^04670d]]
+![[Chapter 5 - The play and a decision to act#^5dde89]]
+![[Chapter 5 - The play and a decision to act#^c82c34]]
+![[Chapter 5 - The play and a decision to act#^652f20]]
+![[Chapter 5 - The play and a decision to act#^46cbe2]]
+![[Chapter 5 - The play and a decision to act#^a3127c]]
+![[Chapter 5 - The play and a decision to act#^2b98e0]]
+![](https://miro.medium.com/max/700/1*Ne4oGPcNR5VokWrCJazULA.jpeg)
