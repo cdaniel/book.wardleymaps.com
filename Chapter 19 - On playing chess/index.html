@@ -1,0 +1,1426 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>Chapter 19 On playing chess - obsidian-mkdocs template</title>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#stepping-stones">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Chapter 19   On playing chess
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%201%20-%20On%20being%20lost/">
+        Chapter 1   On being lost
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2010%20-%20I%20wasn%E2%80%99t%20expecting%20that/">
+        Chapter 10   I wasn’t expecting that
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2011%20-%20A%20smorgasbord%20of%20the%20slightly%20useful/">
+        Chapter 11   A smorgasbord of the slightly useful
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2012%20-%20The%20scenario/">
+        Chapter 12   The scenario
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2013%20-%20Something%20wicked%20this%20way%20comes/">
+        Chapter 13   Something wicked this way comes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2014%20-%20To%20thine%20own%20self%20be%20true/">
+        Chapter 14   To thine own self be true
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2015%20-%20On%20the%20practice%20of%20scenario%20planning/">
+        Chapter 15   On the practice of scenario planning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2016%20-%20Super%20Looper/">
+        Chapter 16   Super Looper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2017%20-%20To%20infinity%20and%20beyond/">
+        Chapter 17   To infinity and beyond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2018%20-%20Better%20for%20Less/">
+        All change please
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Chapter 19   On playing chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%202%20-%20Finding%20a%20path/">
+        Chapter 2   Finding a path
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%203%20-%20Exploring%20the%20map/">
+        Chapter 3   Exploring the map
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%204%20-%20Doctrine/">
+        Chapter 4   Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%205%20-%20The%20play%20and%20a%20decision%20to%20act/">
+        Chapter 5   The play and a decision to act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%206%20-%20Getting%20started/">
+        Chapter 6   Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%207%20-%20Finding%20a%20new%20purpose/">
+        Chapter 7   Finding a new purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%208%20-%20Keeping%20the%20wolves%20at%20bay/">
+        Chapter 8   Keeping the wolves at bay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%209%20-%20Charting%20the%20future/">
+        Chapter 9   Charting the future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Licence/">
+        Licence
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20I%20-%20What%20culture%20is%20right%20for%20you/">
+        The Problem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20II%20-%20Exploring%20culture/">
+        Mapping Culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20III%20-%20Exploring%20Brexit/">
+        The first rule of Brexit is **“you’re wrong”.**
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20IV%20-%20From%20Values%20to%20Rituals/">
+        Mea culpa
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20V%20-%20Exploring%20Value/">
+        Understanding Value
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VI%20-%20Embedded%20in%20memory/">
+        On memory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VII%20-%20Me%20vs%20We/">
+        Part VII   Me vs We
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_30" id="__nav_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_30">
+          Clarifications
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Clarifications" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_30">
+<span class="md-nav__icon md-icon"></span>
+          Clarifications
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Comments%20on%20Y-axis/">
+        Comments on Y axis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20-%20commodity%20services%20can%20be%20delivered%20by%20custom%20systems%20built%20from%20commodity%20components/">
+        Evolution   commodity services can be delivered by custom systems built from commodity components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20is%20not%20diffusion/">
+        Evolution is not diffusion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Strategy%20is%20about%20options/">
+        Strategy is about options
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_31" id="__nav_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_31">
+          Contributors
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributors" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_31">
+<span class="md-nav__icon md-icon"></span>
+          Contributors
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Chris%20Daniel/">
+        Chris Daniel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Simon%20Wardley%20-%20author/">
+        Simon Wardley   author
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/_list/">
+         list
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_32" id="__nav_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_32">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Notes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_32">
+<span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/2x2s/">
+        2x2s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/67%25%20of%20other%20generals%20bomb%20hills%2C%20I%20should%20learn%20to%20bomb%20a%20hill/">
+        67% of other generals bomb hills, I should learn to bomb a hill
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20action/">
+        A bias towards action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20the%20new/">
+        A bias towards the new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20game%20of%20chess/">
+        A game of chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Accelerators%2C%20decelerators%20and%20constraints/">
+        Accelerators, decelerators and constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Adaptive%20renewal%20cycle/">
+        Adaptive renewal cycle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/All%20models%20are%20wrong%20but%20some%20are%20useful/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Anticipation/">
+        Anticipation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Ashby%E2%80%99s%20law%20of%20requisite%20variety/">
+        Ashby’s law of requisite variety
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20humble/">
+        Be humble
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20pragmatic/">
+        Be pragmatic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20the%20owner/">
+        Be the owner
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20transparent/">
+        Be transparent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Challenge%20assumptions/">
+        Challenge assumptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Characteristics%20Change/">
+        Characteristics Change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Climate/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Co-evolution/">
+        Co evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Commit%20to%20the%20direction/">
+        Commit to the direction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Consultants/">
+        Consultants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Crossing%20the%20river%20by%20feeling%20the%20stones/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Dealing%20with%20disruption/">
+        Dealing with disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Deng%20Xiaoping/">
+        Deng Xiaoping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Design%20for%20constant%20evolution/">
+        Design for constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Diffusion%20of%20Innovation/">
+        Diffusion of Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Distribute%20power%20and%20decision%20making/">
+        Distribute power and decision making
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Do%20better%20with%20less/">
+        Do better with less
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Doctrine/">
+        Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Effectiveness%20over%20Efficiency/">
+        Effectiveness over Efficiency
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20enables%20innovation/">
+        Efficiency enables innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20vs%20effectiveness/">
+        Efficiency vs effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20will%20reduce%20our%20budget/">
+        Efficiency will reduce our budget
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evaluating%20Evolution/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everett%20Rogers/">
+        Everett Rogers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everything%20evolves/">
+        Everything evolves
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution%20of%20a%20communication%20mechanism%20can%20increase%20the%20speed%20of%20evolution%20overall/">
+        Evolution of a communication mechanism can increase the speed of evolution overall
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution/">
+        Quick intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Execution%20matters%20more%20than%20strategy/">
+        Execution matters more than strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Exploit%20the%20landscape/">
+        Exploit the landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/FIRE/">
+        FIRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20high%20situational%20awareness/">
+        Focus on high situational awareness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20the%20outcome%2C%20not%20the%20contract/">
+        Focus on the outcome, not the contract
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20user%20need/">
+        Focus on user need
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Genesis/">
+        Genesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Geoffrey%20Moore/">
+        Geoffrey Moore
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Haier%E2%80%99s%20Cell%20based%20structure/">
+        Haier’s Cell based structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Higher%20order%20systems%20create%20new%20sources%20of%20worth/">
+        Higher order systems create new sources of worth
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/I%20wisely%20started%20with%20a%20map./">
+        I wisely started with a map.
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ILC/">
+        ILC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20increases%20with%20past%20success/">
+        Inertia increases with past success
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20kills/">
+        Inertia kills
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Innovate%2C%20Leverage%20and%20Commoditise/">
+        Innovate, Leverage and Commoditise
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Know%20your%20users/">
+        Know your users
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Kubernetes%2C%20Serverless%20%26%20Satellite%20Internet/">
+        Kubernetes, Serverless &amp; Satellite Internet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Landscape/">
+        Landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Leadership/">
+        Leadership
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Listen%20to%20your%20ecosystem/">
+        Listen to your ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/MMORPG/">
+        MMORPG
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Failure/">
+        Manage Failure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Inertia/">
+        Manage Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Marketplace/">
+        Marketplace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Mastering%20strategy%20as%20simply%20as%20I%20can/">
+        Mastering strategy as simply as I can
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Move%20fast/">
+        Move fast
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/No%20one%20size%20fits%20all/">
+        No one size fits all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Not%20all%20parts%20of%20the%20map%20are%20equally%20predictable/">
+        Not all parts of the map are equally predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/OODA%20loop/">
+        OODA loop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Opportunity/">
+        Opportunity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Optimise%20flow/">
+        Optimise flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/PSTP/">
+        PSTP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Past%20success%20breeds%20inertia/">
+        Past success breeds inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Peace%2C%20War%20and%20Wonder/">
+        Peace, War and Wonder
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Porter%E2%80%99s%20forces/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Predictability/">
+        Predictability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Provide%20purpose%2C%20mastery%20and%20autonomy/">
+        Provide purpose, mastery and autonomy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Punctuated%20Equilibrium/">
+        Punctuated Equilibrium
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose%2C%20Autonomy%2C%20Mastery/">
+        Purpose, Autonomy, Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose/">
+        Purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Red%20Queen%20Hypothesis/">
+        Red Queen Hypothesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Remove%20duplication%20and%20bias/">
+        Remove duplication and bias
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/SWOTS/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Seek%20the%20best/">
+        Seek the best
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Set%20exceptional%20standards/">
+        Set exceptional standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Standardisation/">
+        Standardisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20complex/">
+        Strategy is complex
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20iterative/">
+        Strategy is iterative
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Hypothetical%20Gun%20company/">
+        The Hypothetical Gun company
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Stacey%20Matrix/">
+        The Stacey Matrix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Strategy%20Cycle/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20two%20types%20of%20why/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Themistocles/">
+        Themistocles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20core/">
+        There is no core
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20one%20culture/">
+        There is no one culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Thing%20big/">
+        Thing big
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20Small%20-%20details/">
+        Think Small   details
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20aptitude%20and%20attitude/">
+        Think aptitude and attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20small%20%28as%20in%20teams%29/">
+        Think small (as in teams)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Two%20Pizza%20model/">
+        Two Pizza model
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20Standards/">
+        Use Standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20common%20language/">
+        Use a common language
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20systematic%20mechanism%20of%20learning/">
+        Use a systematic mechanism of learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20methods/">
+        Use appropriate methods
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20tools/">
+        Use appropriate tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/User%20needs/">
+        User needs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Value%20Chain/">
+        Value Chain
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Waves%20of%20organisational%20change/">
+        Waves of organisational change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/We%20can%20deal%20with%20it%20later/">
+        We can deal with it later
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Worth%20based%20development/">
+        Worth based development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/You%20cannot%20take%20a%20diffusion%20curve%20and%20slap%20on%20evolution/">
+        You cannot take a diffusion curve and slap on evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/a%20profile%20diagram/">
+        A profile diagram
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/anti-pattern%20organisation/">
+        Anti pattern organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/attitude/">
+        Attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/backward%20causality/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/balancing%20act/">
+        Balancing act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/challenge/">
+        Challenge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/chasms/">
+        Chasms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/climatic%20patterns/">
+        Climatic patterns
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/commoditisation/">
+        Commoditisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/communication/">
+        Communication
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/components/">
+        Components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constant%20evolution/">
+        Constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific%20gameplay/">
+        Context specific gameplay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific/">
+        Context specific
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/contracts/">
+        Contracts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/different%20forms%20of%20disruption/">
+        Different forms of disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/disposing%20of%20liability/">
+        Disposing of liability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ecosystem/">
+        Ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/efficiency%20but%20effectiveness/">
+        Efficiency but effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/executive%20coaching/">
+        Executive coaching
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/fear%2C%20uncertainty%20and%20doubt/">
+        Fear, uncertainty and doubt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/flow/">
+        Flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/future%20organisation/">
+        Future organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/gardener/">
+        Gardener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/generally%20useful%20principles/">
+        Generally useful principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialisation/">
+        Industrialisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialised/">
+        Industrialised
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/inertia/">
+        Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/innovation/">
+        Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/learning/">
+        Learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/limits%20of%20evolution/">
+        Limits of evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/map/">
+        Comment
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mapping%20business/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mastery/">
+        Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/military%20history/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/misconceptions/">
+        Misconceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/nature%20of%20publications/">
+        Nature of publications
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/no%20choice%20over%20evolution/">
+        No choice over evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20approach/">
+        Open approach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20data/">
+        Open data
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20source/">
+        Open source
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/outsourcing/">
+        Outsourcing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pig%20in%20a%20poke/">
+        Pig in a poke
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pioneers/">
+        Pioneers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pipeline/">
+        Pipeline
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20stability/">
+        Point of stability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20ubiquity/">
+        Point of ubiquity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/position/">
+        Position
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/predictable/">
+        Predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/purpose%20of%20mapping/">
+        Purpose of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/recommended%20books/">
+        Recommended books
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/resistance%20to%20change/">
+        Resistance to change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/settlers/">
+        Settlers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/simplicity/">
+        Simplicity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/situational%20awareness/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/six%20absolute%20basic%20elements%20for%20any%20map/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/small%20cells/">
+        Small cells
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/social%20capital%20is%20important/">
+        Social capital is important
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/space%20has%20meaning/">
+        Space has meaning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/strategy%20based%20on%20familiarity%20and%20memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/sweat%20and%20dump/">
+        Sweat and dump
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20map%20is%20not%20the%20territory/">
+        The map is not the territory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20process%20of%20mapping/">
+        The process of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20movement/">
+        The why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20purpose/">
+        The why of purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/town%20planners/">
+        Town planners
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/transitional/">
+        Transitional
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/uncharted/">
+        Uncharted
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/use%20of%20patents/">
+        Use of patents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/visual%20representation/">
+        Visual representation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/weak%20signals/">
+        Weak signals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/where%20to%20attack/">
+        Where to attack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/why%20of%20movement/">
+        Why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/%E2%80%9CArt%20of%20War%E2%80%9D%20by%20Sun%20Tzu/">
+        “Art of War” by Sun Tzu
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_33" id="__nav_33" type="checkbox"/>
+<label class="md-nav__link" for="__nav_33">
+          Practices
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Practices" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_33">
+<span class="md-nav__icon md-icon"></span>
+          Practices
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Cardinal%20Evolution%20Phases/">
+        Cardinal Evolution Phases
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Notation%20Experiments/">
+        Notation Experiments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/X-Axis%20Explanations/">
+        Approach 1 by Mike Haber
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<p>In this chapter, I’m going to introduce some basic concepts that we will use and expand upon when exploring the issue of strategy itself. These concepts include stepping stones, use of policy, nature of capital and finding a balance.</p>
+<h1 id="stepping-stones"><strong>Stepping stones</strong><a class="headerlink" href="#stepping-stones" title="Permanent link">¶</a></h1>
+<p>Manipulating the environment to your advantage is the essence of strategy. In the case of Fotango, we understood our competitive environment and that we were losing the battle in the online photo service business. We were losing this external battle because we had to focus internally on our parent company’s needs and that absorbed what little resources we had for investment. Alternative services such as Flickr were rapidly dominating the space. Any differential we had with the service was in image manipulation but being a relatively novel act and uncertain we had no way of foretelling its future. We certainly were unable to predict the rise Instagram and what would happen next, this was 2005. We were also aware that our existing business with the parent company would eventually be caught up in their outsourcing efforts. In other words, I was losing the external battle and would eventually lose the internal one.</p>
+<p>The strategy game starts with being honest with yourself. You’re not going to improve if you believe everything is perfect despite the evidence. If you accept this, then even failure provides an opportunity to learn. Strategy is all about observing the landscape, understanding how it is changing and using what resources you have to maximise your chances of success. Obviously, you need to define what success is and that’s where your purpose comes in. It’s the yardstick by which you currently measure yourself. However, as this is a cycle, your very actions may also change your purpose and so don’t get to stuck on it. Ludicorp was once a failing online video game company that shut down its Neverending game in 2004 and became a massively successful online photo service known as Flickr. It’s worth noting that after Flickr, the founder Stewart Butterfield then went on to create another online video game company — Tiny Speck. Its game, known as Glitch, was shut down in 2012. As with Ludicorp, the founder had once again singularly failed to deliver on the promise of a huge online video game but in the process of doing this for a second time, he had also created Slack which is now a massively successful company valued in the billions. If Stewart had <em>“stuck to his purpose”</em> or <em>“focused on the core of online video games”</em> then we probably wouldn’t have Flickr or Slack and we’d all be the poorer for it.</p>
+<p>Back to Fotango, I knew we had to act. We needed to free up resources and find a new path. I knew that such action would have to create a new purpose for the organisation in order for us to have a future. I didn’t now how much time I really had, how much political clout I could use to hold back the wolves nor even what it was we were going to do. Somehow, we needed to find a way to flourish as the unwritten purpose of every organisation and of every organism is always to survive. Using our maps, we determined that creating a utility platform or infrastructure play was the best option as there were established product markets, these markets were suitable for utility provision and incumbents would have inertia to change. Both approaches would not only enable us to build a new business but free up capital through more efficient use of resources in our existing business. However, infrastructure itself was capital intensive and despite our profitability we had imposed constraints from capital expenditure to being both profitable and cashflow positive each and every month.</p>
+<p>However, I gambled that if we believed the market was about to change then others would see the same. Some new entrant such as Google would play the infrastructure game. If they launched such a play, we could then exploit this by building our platform on top rather than just consuming our own infrastructure. The timing was going to be critical here. We could make enough savings from our existing business through the provision of our own utility infrastructure environment to initiate our own public platform play. To grow the new business quickly, we would need someone else to make that big infrastructure play or else constrain our own platform growth to a manageable level. I had talked to the rest of the board, highlighted this future trillion-dollar market opportunity and bought enough slack (or rope depending upon your point of view) to do it anyway.</p>
+<p>The PaaS play (what you would call Serverless today) also suited our capabilities because we had the skills required to build a low cost, large-scale distributed architecture. This would also act as a barrier to entry for others. The nagging question was who would trust this online photo service for their coding platform? By open sourcing the PaaS technology itself (Zimki) we planned to overcome many of the adoption fears and rapidly drive towards creating a standard. If we were lucky then others would set up as Zimki providers (offering their own PaaS play). This suited us because our ultimate goal was not to be a PaaS provider but to build the exchange, brokerage and assurance industries on top of this. We had used maps to extend far beyond the obvious and speculate at what was coming next. The PaaS play was simply our beach-head. Our strategy was developed from our map and our understanding of it. We would use both the landscape and our capabilities to our advantage to the best of our understanding.</p>
+<p>We launched, and shortly after Amazon (not Google) launched an infrastructure service known as EC2. We didn’t care who it was as we were over the moon. We positioned our platform to build upon Amazon’s infrastructure, we rapidly grew and then we were shutdown (in 2007). The parent company’s outsourcing plan overtook my own. They did not believe in this space, this purpose. The future to them was not cloud and I had miscalculated. I had enough political capital to get started but nowhere near enough to stop the outsourcing change. I tried the usual routes of management buy-out even VC funding but the asking price was either too high, the VC too focused elsewhere or just too skeptical. You have to remember, this was between 2006 and early 2007. Investors wanted to hear web 2.0, collective intelligence and user driven network effects. Terms like “compute utility” and “coding platform” were just not “something we’d invest in”. There were exceptions, such as BungeeLabs but as one investor told me “Wrong approach, wrong technology and wrong place. No-one has ever heard of a successful tech firm from Old Street, London”. It was a cutting point but fair enough, we were operating in a barren land with the barest whiff of tech companies and good souls. This was a long way from the heartland of Silicon Valley though of course, Old Street these days is known as Silicon Roundabout.</p>
+<p>The crunch then came, and I had choice. Dismantle the service and the team, take a cushy number within the parent company or resign. I decided to take the hit. Cloud became that billion-dollar industry and Serverless will grow far beyond that, realising that trillion-dollar dream. If you’re reading this and that hasn’t happened yet then you still might not agree. Just wait. This story has its uses. When we consider mapping, there are multiple methods to use them to create an advantage or an opportunity. For example : -</p>
+<p><strong>Method 1)</strong> You can use a map to see how components that are evolving can be combined to create new activities or to support your own efforts. If what you’re doing is focusing on building something new in the uncharted area of the map then you should note that whatever you do will be risky — it’s the adjacent unexplored, an unknown area. In figure 246, I’ve given an example in the mobile phone space where each higher order system combined underlying components with more industrialised technology. The map assumes a timeframe of the early to mid 2000s, obviously these components have evolved since then. The play of combining industrialised components to expand into the adjacent unexplored with some new higher order activity is a high-risk stepping stone. You don’t know what you’ll find nor where it could lead next. It might be the next best thing since sliced bread but the past is littered with failed concepts. The problem with figure 246 is we always look back from the perspective of today and highlight the path by which success was achieved. There were other ideas such as phones integrated with projectors, printers, firearms, umbrellas, clothing and even into a tooth that have all been, gone and quickly forgotten.</p>
+<p><em>Figure 246 — Combination Plays</em></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*-oZD4wPJkqOPQbuLPSCF0Q.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*-oZD4wPJkqOPQbuLPSCF0Q.jpeg"/></p>
+<p>In our case, we used our maps to anticipate future developments including exchanges, assurance reporting, application marketplace, billing facilities and a brokerage service.</p>
+<p><strong>Method 2)</strong> Beyond removal of duplication and bias, you can also use a map to find efficiencies and constraints by examining links within the value chain. For example, take something as trivial as a desktop role out. You might find that you’re forced to treat the operating system as more of a product than a commodity because some essential business application is tightly coupled to the operating system. By understanding and breaking this link, such as forcing the application into a browser, you can often treat a wide number of other components as a commodity. From our position, we understood that building data centres would be a constraint to building an IaaS play and that infrastructure was a constraint to building a PaaS. This also created opportunities i.e. if one player launched in IaaS and became dominant then competitors could launch equivalent services and use a price war to force up demand beyond the ability of the first mover to supply (this assumes that competitors had their wits about them). Given we had the underlying infrastructure technology known as Borg to do this, we could exploit such an opportunity.</p>
+<p><strong>Method 3)</strong> Another way is to take advantage of both evolution and inertia itself e.g. by driving any component to a more evolved state such as from product to commodity. These are potential goldmines hence I tend to look at those components that are described as being in the product stage but are close to becoming a commodity. I look for those four factors (concept, suitability, technology and attitude) to exist in the market. I even double check by asking people. The problem here is that people who work in that space often have inertia to this idea and will tell you endless reasons why it won’t work and this or that thing can’t become a commodity. You want that inertia to exist because then all your competitors will have that inertia and equally dismiss the change but you also wanted to get to the truth of the matter. The question becomes how do I find out whether it’s really suitable for a shift to commodity when almost everyone in the field will tell me it isn’t because of inertia? To find out if something is viable, I cheat. I find a group of people familiar with the field and ask them to imagine we have already built such a service. I then ask them to write down exactly what it looks likes and what it would need. The modern way of doing this is to get them to write the press release. If they can do this clearly, precisely and without recourse to hand waving then we’ve got something widespread and ubiquitous enough to be suitable for an industrialised play.</p>
+<p>Whichever method you use, aim to make this a stepping stone to a further play. For example, in the case of Zimki then:-</p>
+<ul>
+<li>creating a utility service in the platform space and exposing it through APIs was a stepping stone towards running an ILC (ecosystem) like game.</li>
+<li>open sourcing Zimki was simply a stepping stone to achieving an exchange with many providers.</li>
+<li>the play to open source Borg (our underlying infrastructure system) was a counter play against any one competitor becoming dominant in the IaaS space.</li>
+</ul>
+<p>This idea of future possibilities through stepping stones is an important concept within strategy. If we look at the first method again (i.e. banking on recombination efforts in the uncharted space) then this is often a bad position to find yourself in. More often than not it leads to a dead end — the phone firearm or the phone tooth. I tend to refer to these high risk approaches as “gambling” rather than “opportunities” because opportunities should expand your future possibilities and not reduce them. If you’re going to gamble then the only way to consistently make this work is to be lucky. Try instead not to gamble as much as focus on expanding future possibilities. Just because you could do something, doesn’t mean you should do it. Strategy is as much about saying what you won’t do as it is about what you will do. This is summed up in the highly mischievous phrase “opportunities expand as they are seized” which is often misinterpreted as “grab everything” which is precisely not what you should be doing. This is also why Fotango pivoted from a declining online photo service to a platform play, as it expanded our possibilities. See also Stewart Butterfield who seems to have become a master of such pivots. This doesn’t however guarantee success as these are opportunities and not certainties.</p>
+<h1 id="policy-or-technology"><strong>Policy or technology?</strong><a class="headerlink" href="#policy-or-technology" title="Permanent link">¶</a></h1>
+<p>Through-out this book, I’ve heavily relied upon examples from the technology industry. The reason for this is that information technology has been undergoing profound change in the last decade. If it had been the legal industry that had been impacting so many value chains (though there are past examples of industrialisation with will-writing and current trends for general purpose contracts through AI) then this book would have mainly focused on the legal industry. Despite this technology industry focus, most of my work tends to deal with nation or industry level competition and touches upon areas of policy. The concepts of strategy, mapping and finding opportunities apply equally well in this space. Remember your map is not just activities but includes practice, data, knowledge and all forms of capital (including social).</p>
+<h2 id="scenario-first-pass"><strong><em>Scenario — first pass.</em></strong><a class="headerlink" href="#scenario-first-pass" title="Permanent link">¶</a></h2>
+<p>Since Brexit is very much the talk of the town, I’m going to focus on one specific area namely that of standards. However, I’m not going to start with a UK centric view but instead let us pretend you’re a regulator in some mythical country. Your role is covering the pharmaceutical industry e.g. you’re working for the Office of Compliance within an administrative body (i.e. equivalent to the Food &amp; Drug Administration, USA). Your purpose is to shield patients from poor quality, unsafe, and ineffective drugs through compliance strategies and risk-based enforcement actions. To this end, you use strategic and risk-based decisions that are guided by law and science to foster global collaboration, promote voluntary compliance and takes decisive and swift actions to protect patients. It’s exciting and noble sounding stuff! Well, it should be as I lifted those words from the FDA website. But why do you exist? You exist because bad medicines kill people and those people tend to be voters. Any Government knows that being in charge and doing nothing when people are dying doesn’t tend to win elections in a democracy. There are no positives about bad medicines and there’s no way to spin this.</p>
+<p>When something goes wrong then you need to investigate and take action (often legal enforcement). In light of this, you tend to do audits of facilities and enforce compliance to standards which you also develop. But there’s a problem. The pharmaceutical industry is a global and complicated supply chain. The drugs in your local chemist shop probably were delivered through a series of warehouses and transportation systems (facilities) with plenty of opportunities for things to go wrong. Before this it was manufactured (in another facility) with the active / inactive components being chemicals which themselves were delivered through a series of warehouses, import/export, transportation systems and manufacturers. Even the raw material to make the chemicals can come through another set of facilities which can include refiners and miners. The supply chain can be very long, very complicated and provides many points where disaster can be introduced. It’s also global and when you cross international borders then you have no guarantee that the standards which you apply are also the standards that are in practice applied elsewhere. Which is why you, as a regulator, probably push for global standards and close co-operation with other agencies. You work with other nations to develop supply chain toolkits covering good manufacturing practice, transportation practice, product security to track &amp; trace.</p>
+<p>Let us assume you have brought in legislation which demands that pharmaceutical companies must know their supply chain i.e. we want the origin, history and interactions of every component that went into the drug. Let us also assume that some companies don’t see the benefit of exposing their supply chain but instead see cost beyond a one up, one down approach i.e. they know the boundary of their suppliers — we bought this from them — and who they supplied their products to. From a regulatory viewpoint whether pharma, automotive, consumer goods or any other then this is not enough especially when the supply chain crosses an international boundary. We could attempt to introduce legislation that they must know about the entire supply chain but this will invoke potentially huge lobbying bodies against us. At this point, someone normally shouts a technological solution such as “use blockchain” to create a chain of custody. Beyond the issue of implementation, the idea of a public blockchain is normally faced with criticism that being public it would expose the sales of the company to competitors. Often, there is a push to modify the idea and make it private. Such a private chain would in itself create a new hurdle for new entrants trying to get into an industry and whilst barriers to entry might be welcomed by some companies to reduce competition, the purpose of regulators didn’t include “protect incumbents from competition”. It’s a thorny issue. How to protect the public but allow for competition?</p>
+<p>Part of the problem noted above is the inertia to having a publicly visible global supply chain whether using blockchain or not. It is amusing that if you ask executives within the industry whether they know what their competitors are selling they will often answer “Yes”. There is an entire industry of marketing, competitor analysis and surveillance companies that everyone feeds in order to gain competitive intelligence on what others are doing. In fact, so complicated is the internal supply chain of gigantic manufacturers that when combined with discounts, promotions, variability in production, fraud, returns and even error within their own internal systems then sometimes companies can only approximate what they’ve sold. One executive even told me that they knew what their competitors were selling better than they knew what they were selling themselves hence they had also started to use a marketing analysis company on their own company. An argument for radical transparency is to simply recognise this (i.e. be honest) and eliminate the cost of such competitive intelligence by making the blockchain open. However, this also threatens to expose the inefficiencies, waste and practices within the supply chain which is probably where the real inertia exists. The problem with exposing waste is that it doesn’t tend to go down well with either customers or shareholders. Let us assume this is the scenario in our case. First thing I want you to do is to take 30 minutes and come up with ideas of how you will solve all of this?</p>
+<h2 id="scenario-second-pass"><strong><em>Scenario — second pass</em></strong><a class="headerlink" href="#scenario-second-pass" title="Permanent link">¶</a></h2>
+<p>So, how do you as a regulator manage this? Well, let us start with a map. I provided the map in figure 247 and will give a brief explanation underneath.</p>
+<p><em>Figure 247 — Regulator’s Map</em></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*lxK6fCtxQh7MbRCj2DHWwg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*lxK6fCtxQh7MbRCj2DHWwg.jpeg"/></p>
+<p>From the map, we start with the industry itself. It has a need for investors (i.e. shareholders) which involves a bidirectional flow of capital e.g. investment from the shareholders and return on investment to the shareholders. I’ve simply marked this as a “$” to represent a financial flow in both directions. Remember each node (circle) is some form of stock of capital (whether physical, practice, information or otherwise) and each line is a flow of capital. In order to pay for the return on investment (whether dividends or share buybacks) the industry needs to do something that makes a profit. This involves making the DRUG which in this case I’ve described as a quite well evolved product. Obviously, in practice there is a <a href="../notes/pipeline/">pipeline</a> of drugs (from the novel and new to the more commodity) but this map will suffice for our purposes. ^e8c55e</p>
+<p>To make a profit on the drug then there are costs in making it and hopefully revenue from selling it. Our drug therefore needs consumers. Hence we have a bidirectional flow of capital with consumers i.e. the physical drug is exchanged for monetary $. Now, those consumers also want the drug not to kill them and hence they need standards that ensure (as much as it is possible) that the drug is safe. Those standards add to the cost of the drug i.e. certification to a standard doesn’t come for free. Let us assume that if our industry could get away without standards, they probably would as such costs reduce profits which the industry needs in order to pay the return to shareholders. Fortunately for those consumers, someone else needs them. That someone is the Government and what it needs are voters. These voters just happen to be also consumers. Hence in order to gain its voters the Government has a need for regulators who in turn create and police the standards that satisfy the needs of the consumers. Naturally, standards without enforcement is worthless and hence the regulators use audits which in turn use legal enforcement against the drug itself. This gives the industry two costs. The first cost is that of implementing the standard which is usually a bidirectional capital flow of investment in standards for a certification that the drug meets the standard. The second cost is the cost of legal enforcement i.e. a failure to meet the standard which can take many forms from court cases to product recall to enforced action.</p>
+<p>But how are those audits conducted? In general, it is against the facilities involved whether this is the distribution point (i.e. the chemist shop), the warehouse, the transportation system or the manufacturer. Product can be taken from any of these points and tested or the facility inspected. Obviously, that involves a cost which in part is hopefully recovered from the standards process or at worst from taxes from the voters. You can simply follow the lines on the map (which represent capital flow) to determine possible ways of balancing this out. How you balance that out is a matter of policy.</p>
+<p>At this point the map starts to become a little bit more complicated. For this map, I have considered all of the flows so far to be inside a border i.e. we manufacture and distribute within a single market (the dotted blue line border in our map). This could be a single nation or a multilateral FTA (free trade agreement) or a common market with agreed standards. Now let us look at the raw materials (another source of cost for the drug) and bring in the idea of import and export from outside of this market. This is going to bring into play a bewildering array of import &amp; export arrangements, warehouses, manufacturers, transportation systems and an entire global supply chain. As per the scenario we have a one up, one down form of understanding within the industry and hence the global supply chain in all its details is poorly understood. Also, as per the scenario there is significant waste in these global supply chains. In general, from experience, I have yet to find one where there isn’t. Another problem is that outside of the common market then standards will tend to be specific to other countries. These might be more evolved than within the market but I’m going to assume for this exercise that they are less evolved, less developed hence the manner in which I’ve drawn standards on the map.</p>
+<p>Our regulator has all the power it needs to enforce legislation on facilities within its market, but it wishes to gain access to information related to the global supply chain. It wants to make these supply chains both more clearly defined and transparent. It also wants to bring standards in the outside market upto its own level and ideally increase co-operation with other countries. However, both efforts will face inertia i.e. resistance to change and extensive lobbying if we attempt to do this trough legislation. The inertia over global supply chains will normally be disguised as competitive reasons (fear of exposing information to competitors) but it is usually related to cost and fear of exposing the waste that exists. The second case of inertia includes resistance from other nations and their regulators to any imposition of standards by another party. Sovereignty is a big deal for lots of people. So, considering your ideas from the first pass at this scenario, take another 30 minutes and come up with what you would do and try to avoid “use a blockchain”. Think of non technical opportunities i.e. policy.</p>
+<h2 id="scenario-my-answer"><strong><em>Scenario — my answer</em></strong><a class="headerlink" href="#scenario-my-answer" title="Permanent link">¶</a></h2>
+<p>One of the beauties of maps is that I can describe a space and what I intend to do about it, allowing others to challenge me. Now, I’m no regulator but I can propose a solution. It might be a dreadful solution, there might be far better ways of doing this, the map could be more accurate but that’s the point. Maps are fundamentally about communication. It’s also important to note, that every choice you make (if you have a map) can be reviewed in the future and learnt from. Mapping itself isn’t about giving you an answer, it’s about helping you think about a space and learn from what you did. You won’t get good at mapping or strategic play if you don’t either act or put the effort into understanding a space before you act and review it later. It’s a bit like playing a guitar — there’s only so much you can read from books, eventually you have to pick up the instrument and use it. This is when you really start learning.</p>
+<p>Hence I’ll give you my answer which took about thirty minutes but on the provision that we all understand that many of you will have a better answer. If you shared those maps with me, then I might learn (something I’d appreciate). Let us start with a map on which I’ve marked my play (see figure 248) and I’ll go through my reasoning after.</p>
+<p><em>Figure 248 — My answer</em></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*x5eXd5ylQpQRDHkJ9anrJQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*x5eXd5ylQpQRDHkJ9anrJQ.jpeg"/></p>
+<p>I have two parts to my answer. The first (marked as number one in red circles) is to open up the data, practice and systems that I use to build and manage standards to other countries. The reason for this is that I want to drive standards to a globally accepted norm and make it as easy as possible for other nations to learn from our experience and reduce cost. In return for such a generous gesture, I’m aiming to “buy” both ease of use and interaction when dealing with other country agencies including good co-operation through a hefty element of goodwill. By opening it all up, I’m also carefully avoiding trying to impose any standard but instead encourage adoption. I might have invested in building those systems (i.e. invested financial capital in activities, practices and data) as a Government but I’m trading that capital for data and social capital from others.</p>
+<p>The second part of my play (the red number two) is to name and shame. I would aim to deliberately undertake a campaign of highlighting waste in global supply chains and the poor understanding that companies have over their actual supply chain. This will involve us working with other countries to understand the supply chain hence another purpose to step one. I’m going to direct this campaign towards shareholders and customers in order to create pressure for change despite the inertia that executives within the company might have. I don’t care how the industry solves the problem (they can use blockchain if they wish) but I’d intend to use policy to drive for a more open approach on global supply chains. The two parts are needed because having a global supply being transparent is useful but not as useful if the standards involved throughout the chain are similar or at least the details can be accessed. Now, you might fundamentally disagree with this approach and that’s fine. It might surprise you to discover that I’m not a regulator and have little to no idea about the current state of the pharmaceutical industry. Hence, the mythical company. But disagreeing is part of the purpose of a map. It exists to enable precisely these sorts of discussions by exposing the assumptions. However, it’s also important to note that action and strategy doesn’t have to involve specific technology (e.g. blockchain) but can instead be driven through policy. There is a tendency in today’s world to immediately jump for a technological solution when other routes are available e.g. frictionless trade doesn’t necessarily require magic smart borders.</p>
+<h1 id="the-nature-of-capital-and-purchasing-it"><strong>The nature of capital and purchasing it.</strong><a class="headerlink" href="#the-nature-of-capital-and-purchasing-it" title="Permanent link">¶</a></h1>
+<p>A map of a competitive environment is simply a map of capital (i.e. stocks of physical, knowledge, data, social, financial and information assets) and flows between them. What a map also adds are the concept that those capital stocks have a <strong>position</strong> in a chain of needs and they are not static, they are <strong>moving</strong> (i.e. evolving) themselves. From the original evolution graph, then evolution is itself related to the ubiquity and certainty of the thing. The value of any thing is also related to certainty i.e. some things we’re more certain about and can precisely define a value because the market is defined, whilst other things we’re unsure of. This uncertainty is often embedded in a concept know as potential value i.e. when we say “this has potential value” we mean “this has an uncertain amount of future value” compared to the current market. Roughly speaking (and based upon an idea proposed by Krzysztof Daniel) then :-</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*cMBhZRzdm2J0iELGR5mpPA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*cMBhZRzdm2J0iELGR5mpPA.jpeg"/></p>
+<p>What this is saying is that novel and new things that have a high potential value have inherently a lot of uncertainty around them. Hence all the risk in the uncharted space as we just don’t know what is going to happen despite our belief in some huge future potential value. As the market develops and more actors become involved because that market becomes more defined, then the uncertainty declines because of competition. But, so does the potential value as the current market is becoming more defined, divided and industrialised. In other words by investing in some activity (e.g. computing in the early days) then by simply doing nothing at all the value of that investment will change as the industry evolves through competition.</p>
+<p>I said roughly for two reasons. Firstly, potential value itself implies uncertainty and hence the “equation” above breaks down to uncertainty is inversely proportional to certainty i.e. the less certain of something we are then the more uncertain we become. It’s the self referencing flaw of Darwin’s evolutionary theory and survival of the fittest. We define the “fittest” by those who survive. Hence evolutionary theory breaks down to survival of the survivors. This obvious circular reference doesn’t mean it isn’t useful. The second issue is the actual relationship between value and evolution isn’t simple. The value of an investment in an activity and its related practices and other forms of capital which we spend financial capital on to acquire (e.g. by training) doesn’t just decline with evolution. There are step changes as it crosses the boundary between different evolution stages. For example, a massive investment in computing as a product (e.g. servers, practices related to this and other components such as data centres) changes as compute shifts from product to utility. What was once a positive investment can quickly become a technical debt and a source of inertia. The act of computing might be becoming more defined, ubiquitous and certain but our past investment in assets can quickly turn into a liability.</p>
+<p>In practice, the early adopters of one stage of evolution (e.g. buying compute as a product such as servers) can quickly find themselves as the laggards to the next stage of evolution (e.g. cloud) because of their past investment and choices. The same change appears to also happen up and down the value chain. For example, with serverless (a shift of platform from product to utility) then often the first movers into the world of cloud (i.e. utility infrastructure) and DevOps (i.e. co-evolved practice) exhibit the characteristics of laggards to the serverless world whilst some companies that many would describe as laggards to cloud are the early adopters of serverless.</p>
+<p>These changes in the value of a stock are problematic because in accountancy and financial reports we rarely reflect the concept of evolution. At best, we use the idea of depreciation of some form of static stock but fail to grasp that the stock itself isn’t static. The balance sheet of a company might look healthy but can hide a huge capital investment that has not only been depreciated but is now undergoing a potential change in the stage of evolution e.g. data centres, servers and related practices that will quickly become a huge financial burden requiring massive investment, retraining and re-architecting.</p>
+<p>The idea that suddenly an asset can become a liability due to a change of evolutionary stage in the industry is not one that fits well with double entry book-keeping. In other words Assets = Equity + Liability doesn’t work quite so well when Assets become Liabilities due to outside forces. It’s not that these things can’t be accounted for, it’s simply that we generally don’t. This is one of the dangers of looking at a company financials. We can often make statements on the market evolving and impacting revenue but less frequently consider the debt that a change in evolution can cause. This also is not something that should surprise us. Unless there are genuine constraints then with enough competitive pressure, all the technical/operational obstacles to evolution (the four factors of technology, suitability, attitude and concept) will be overcome and such changes will happen. It’s never a question of if but when.</p>
+<p>However, it’s not just accounting methods that tend to be inadequate when it comes to evolution. As we’ve discussed at length, it’s also development methods and even purchasing techniques. In figure 249 below, I’ve provided a map of a system which starting from user needs is disaggregated into components through a chain of needs. This has in turn be broken into small contracts with appropriate methods applied. However, the method of purchasing is also context specific. In the uncharted space where items have high potential value combined with lots of uncertainty then a venture capital or time &amp; material type approach is needed for investment. As the same act evolves and we start to develop an understanding of it with introduction of concepts like MVP (minimal viable product) then a more outcome based approach can be used. We’re still trying to mitigate risk but this time we have a targets and a rough goal of what we’re aiming for. As a product evolves we can switch to a more commercial off the shelf (COTS) type arrangement. Finally, as it becomes defined, we have a known market and are focused on a more unit or utility based pricing around defined standards and expectations.</p>
+<p><em>Figure 249 — Capital and Purchasing.</em></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*7HhXBgQveTpI9utF2CmKVg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*7HhXBgQveTpI9utF2CmKVg.jpeg"/></p>
+<p>The point of this is that not only does capital evolve (whether activities, practices, data or otherwise) but so does the means by which we should purchase it. In any organisation you need at least four different purchasing frameworks across the company. In any large complicated system, there isn’t such a thing as a one size fits all purchasing method and you’ll need to use multiple of these frameworks. Unless of course, you like things such as explaining massive change control cost overruns and trying to blame others. Maybe that floats your boat because it’s simple and at least the vendor provides nice conferences. Oh, and if you want to fry your noodle, the implications of the above is there isn’t actually one way of accounting for things. That field also happens to be context specific i.e. the way you account for things in the uncharted space (the genesis of the things) is different from how you account for commodities in the industrialised space. However, getting into discussions on different accounting methods — innovation accounting, the use of options, how we combine them — and attempting to upset the entire world of financial reporting is something that we’ll have to leave until much later on. Having written the global chart of accounts for one enormous multinational, I have a lot of sympathy for accountants.</p>
+<h1 id="finding-a-balance"><strong>Finding a balance</strong><a class="headerlink" href="#finding-a-balance" title="Permanent link">¶</a></h1>
+<p>Whether it’s finding opportunities (i.e. stepping stones that expand your future possibilities), using policy to change the game rather than just technology or whether it’s the flows of capital within a system and how we account for or purchase it — these are all elements which we use in gameplay. There is also the issue of balance within the system i.e. inertia is both a good thing in terms of keeping you from industrialising an industry too early but a disaster if you haven’t effectively managed it when an industry is industrialising. In the same manner, an investment in some form of capital asset can rapidly become a liability as the space evolves. As you develop, you’ll learn to keep all of this in balance.</p>
+<p>The maps themselves can help guide you but you’ll need to scenario plan around them. There are rarely simple answers. In the next chapters, we’re going to start going through a long list of specific patterns of play before we come back and break down an entire industry. To prepare you, I’ve listed the general forms of gameplay in figure 250. I’ve organised the table by broad category i.e. user perception, accelerators, de-accelerators, dealing with toxicity, market impacts, defensive, attacking, ecosystem, competitor, positional and poison. Each of the following chapters will deal with a single category (eleven chapters in total) using maps and where possible examples to demonstrate the play. By now, you’re probably ready and dangerous enough to start playing chess with companies or at least start learning how to do so.</p>
+<p><em>Figure 250 — Gameplays.</em></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*d_TRUXLcc9nF6GLyMmleyw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*d_TRUXLcc9nF6GLyMmleyw.jpeg"/></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: All change please" class="md-footer__link md-footer__link--prev" href="../Chapter%2018%20-%20Better%20for%20Less/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              All change please
+            </div>
+</div>
+</a>
+<a aria-label="Next: Chapter 2   Finding a path" class="md-footer__link md-footer__link--next" href="../Chapter%202%20-%20Finding%20a%20path/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Chapter 2   Finding a path
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

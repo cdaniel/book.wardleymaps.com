@@ -1,0 +1,1603 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>Chapter 10 I wasn’t expecting that - obsidian-mkdocs template</title>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#an-unexpected-discovery">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Chapter 10   I wasn’t expecting that
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%201%20-%20On%20being%20lost/">
+        Chapter 1   On being lost
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Chapter 10   I wasn’t expecting that
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Chapter 10   I wasn’t expecting that
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#climatic-pattern-punctuated-equilibrium">
+    Climatic Pattern : Punctuated Equilibrium
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2011%20-%20A%20smorgasbord%20of%20the%20slightly%20useful/">
+        Chapter 11   A smorgasbord of the slightly useful
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2012%20-%20The%20scenario/">
+        Chapter 12   The scenario
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2013%20-%20Something%20wicked%20this%20way%20comes/">
+        Chapter 13   Something wicked this way comes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2014%20-%20To%20thine%20own%20self%20be%20true/">
+        Chapter 14   To thine own self be true
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2015%20-%20On%20the%20practice%20of%20scenario%20planning/">
+        Chapter 15   On the practice of scenario planning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2016%20-%20Super%20Looper/">
+        Chapter 16   Super Looper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2017%20-%20To%20infinity%20and%20beyond/">
+        Chapter 17   To infinity and beyond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2018%20-%20Better%20for%20Less/">
+        All change please
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2019%20-%20On%20playing%20chess/">
+        Chapter 19   On playing chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%202%20-%20Finding%20a%20path/">
+        Chapter 2   Finding a path
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%203%20-%20Exploring%20the%20map/">
+        Chapter 3   Exploring the map
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%204%20-%20Doctrine/">
+        Chapter 4   Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%205%20-%20The%20play%20and%20a%20decision%20to%20act/">
+        Chapter 5   The play and a decision to act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%206%20-%20Getting%20started/">
+        Chapter 6   Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%207%20-%20Finding%20a%20new%20purpose/">
+        Chapter 7   Finding a new purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%208%20-%20Keeping%20the%20wolves%20at%20bay/">
+        Chapter 8   Keeping the wolves at bay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%209%20-%20Charting%20the%20future/">
+        Chapter 9   Charting the future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Licence/">
+        Licence
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20I%20-%20What%20culture%20is%20right%20for%20you/">
+        The Problem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20II%20-%20Exploring%20culture/">
+        Mapping Culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20III%20-%20Exploring%20Brexit/">
+        The first rule of Brexit is **“you’re wrong”.**
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20IV%20-%20From%20Values%20to%20Rituals/">
+        Mea culpa
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20V%20-%20Exploring%20Value/">
+        Understanding Value
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VI%20-%20Embedded%20in%20memory/">
+        On memory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VII%20-%20Me%20vs%20We/">
+        Part VII   Me vs We
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_30" id="__nav_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_30">
+          Clarifications
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Clarifications" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_30">
+<span class="md-nav__icon md-icon"></span>
+          Clarifications
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Comments%20on%20Y-axis/">
+        Comments on Y axis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20-%20commodity%20services%20can%20be%20delivered%20by%20custom%20systems%20built%20from%20commodity%20components/">
+        Evolution   commodity services can be delivered by custom systems built from commodity components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20is%20not%20diffusion/">
+        Evolution is not diffusion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Strategy%20is%20about%20options/">
+        Strategy is about options
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_31" id="__nav_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_31">
+          Contributors
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributors" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_31">
+<span class="md-nav__icon md-icon"></span>
+          Contributors
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Chris%20Daniel/">
+        Chris Daniel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Simon%20Wardley%20-%20author/">
+        Simon Wardley   author
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/_list/">
+         list
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_32" id="__nav_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_32">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Notes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_32">
+<span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/2x2s/">
+        2x2s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/67%25%20of%20other%20generals%20bomb%20hills%2C%20I%20should%20learn%20to%20bomb%20a%20hill/">
+        67% of other generals bomb hills, I should learn to bomb a hill
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20action/">
+        A bias towards action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20the%20new/">
+        A bias towards the new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20game%20of%20chess/">
+        A game of chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Accelerators%2C%20decelerators%20and%20constraints/">
+        Accelerators, decelerators and constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Adaptive%20renewal%20cycle/">
+        Adaptive renewal cycle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/All%20models%20are%20wrong%20but%20some%20are%20useful/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Anticipation/">
+        Anticipation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Ashby%E2%80%99s%20law%20of%20requisite%20variety/">
+        Ashby’s law of requisite variety
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20humble/">
+        Be humble
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20pragmatic/">
+        Be pragmatic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20the%20owner/">
+        Be the owner
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20transparent/">
+        Be transparent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Challenge%20assumptions/">
+        Challenge assumptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Characteristics%20Change/">
+        Characteristics Change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Climate/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Co-evolution/">
+        Co evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Commit%20to%20the%20direction/">
+        Commit to the direction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Consultants/">
+        Consultants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Crossing%20the%20river%20by%20feeling%20the%20stones/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Dealing%20with%20disruption/">
+        Dealing with disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Deng%20Xiaoping/">
+        Deng Xiaoping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Design%20for%20constant%20evolution/">
+        Design for constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Diffusion%20of%20Innovation/">
+        Diffusion of Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Distribute%20power%20and%20decision%20making/">
+        Distribute power and decision making
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Do%20better%20with%20less/">
+        Do better with less
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Doctrine/">
+        Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Effectiveness%20over%20Efficiency/">
+        Effectiveness over Efficiency
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20enables%20innovation/">
+        Efficiency enables innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20vs%20effectiveness/">
+        Efficiency vs effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20will%20reduce%20our%20budget/">
+        Efficiency will reduce our budget
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evaluating%20Evolution/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everett%20Rogers/">
+        Everett Rogers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everything%20evolves/">
+        Everything evolves
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution%20of%20a%20communication%20mechanism%20can%20increase%20the%20speed%20of%20evolution%20overall/">
+        Evolution of a communication mechanism can increase the speed of evolution overall
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution/">
+        Quick intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Execution%20matters%20more%20than%20strategy/">
+        Execution matters more than strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Exploit%20the%20landscape/">
+        Exploit the landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/FIRE/">
+        FIRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20high%20situational%20awareness/">
+        Focus on high situational awareness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20the%20outcome%2C%20not%20the%20contract/">
+        Focus on the outcome, not the contract
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20user%20need/">
+        Focus on user need
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Genesis/">
+        Genesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Geoffrey%20Moore/">
+        Geoffrey Moore
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Haier%E2%80%99s%20Cell%20based%20structure/">
+        Haier’s Cell based structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Higher%20order%20systems%20create%20new%20sources%20of%20worth/">
+        Higher order systems create new sources of worth
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/I%20wisely%20started%20with%20a%20map./">
+        I wisely started with a map.
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ILC/">
+        ILC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20increases%20with%20past%20success/">
+        Inertia increases with past success
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20kills/">
+        Inertia kills
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Innovate%2C%20Leverage%20and%20Commoditise/">
+        Innovate, Leverage and Commoditise
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Know%20your%20users/">
+        Know your users
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Kubernetes%2C%20Serverless%20%26%20Satellite%20Internet/">
+        Kubernetes, Serverless &amp; Satellite Internet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Landscape/">
+        Landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Leadership/">
+        Leadership
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Listen%20to%20your%20ecosystem/">
+        Listen to your ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/MMORPG/">
+        MMORPG
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Failure/">
+        Manage Failure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Inertia/">
+        Manage Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Marketplace/">
+        Marketplace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Mastering%20strategy%20as%20simply%20as%20I%20can/">
+        Mastering strategy as simply as I can
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Move%20fast/">
+        Move fast
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/No%20one%20size%20fits%20all/">
+        No one size fits all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Not%20all%20parts%20of%20the%20map%20are%20equally%20predictable/">
+        Not all parts of the map are equally predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/OODA%20loop/">
+        OODA loop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Opportunity/">
+        Opportunity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Optimise%20flow/">
+        Optimise flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/PSTP/">
+        PSTP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Past%20success%20breeds%20inertia/">
+        Past success breeds inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Peace%2C%20War%20and%20Wonder/">
+        Peace, War and Wonder
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Porter%E2%80%99s%20forces/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Predictability/">
+        Predictability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Provide%20purpose%2C%20mastery%20and%20autonomy/">
+        Provide purpose, mastery and autonomy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Punctuated%20Equilibrium/">
+        Punctuated Equilibrium
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose%2C%20Autonomy%2C%20Mastery/">
+        Purpose, Autonomy, Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose/">
+        Purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Red%20Queen%20Hypothesis/">
+        Red Queen Hypothesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Remove%20duplication%20and%20bias/">
+        Remove duplication and bias
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/SWOTS/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Seek%20the%20best/">
+        Seek the best
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Set%20exceptional%20standards/">
+        Set exceptional standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Standardisation/">
+        Standardisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20complex/">
+        Strategy is complex
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20iterative/">
+        Strategy is iterative
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Hypothetical%20Gun%20company/">
+        The Hypothetical Gun company
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Stacey%20Matrix/">
+        The Stacey Matrix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Strategy%20Cycle/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20two%20types%20of%20why/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Themistocles/">
+        Themistocles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20core/">
+        There is no core
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20one%20culture/">
+        There is no one culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Thing%20big/">
+        Thing big
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20Small%20-%20details/">
+        Think Small   details
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20aptitude%20and%20attitude/">
+        Think aptitude and attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20small%20%28as%20in%20teams%29/">
+        Think small (as in teams)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Two%20Pizza%20model/">
+        Two Pizza model
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20Standards/">
+        Use Standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20common%20language/">
+        Use a common language
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20systematic%20mechanism%20of%20learning/">
+        Use a systematic mechanism of learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20methods/">
+        Use appropriate methods
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20tools/">
+        Use appropriate tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/User%20needs/">
+        User needs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Value%20Chain/">
+        Value Chain
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Waves%20of%20organisational%20change/">
+        Waves of organisational change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/We%20can%20deal%20with%20it%20later/">
+        We can deal with it later
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Worth%20based%20development/">
+        Worth based development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/You%20cannot%20take%20a%20diffusion%20curve%20and%20slap%20on%20evolution/">
+        You cannot take a diffusion curve and slap on evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/a%20profile%20diagram/">
+        A profile diagram
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/anti-pattern%20organisation/">
+        Anti pattern organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/attitude/">
+        Attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/backward%20causality/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/balancing%20act/">
+        Balancing act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/challenge/">
+        Challenge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/chasms/">
+        Chasms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/climatic%20patterns/">
+        Climatic patterns
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/commoditisation/">
+        Commoditisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/communication/">
+        Communication
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/components/">
+        Components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constant%20evolution/">
+        Constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific%20gameplay/">
+        Context specific gameplay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific/">
+        Context specific
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/contracts/">
+        Contracts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/different%20forms%20of%20disruption/">
+        Different forms of disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/disposing%20of%20liability/">
+        Disposing of liability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ecosystem/">
+        Ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/efficiency%20but%20effectiveness/">
+        Efficiency but effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/executive%20coaching/">
+        Executive coaching
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/fear%2C%20uncertainty%20and%20doubt/">
+        Fear, uncertainty and doubt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/flow/">
+        Flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/future%20organisation/">
+        Future organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/gardener/">
+        Gardener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/generally%20useful%20principles/">
+        Generally useful principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialisation/">
+        Industrialisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialised/">
+        Industrialised
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/inertia/">
+        Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/innovation/">
+        Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/learning/">
+        Learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/limits%20of%20evolution/">
+        Limits of evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/map/">
+        Comment
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mapping%20business/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mastery/">
+        Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/military%20history/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/misconceptions/">
+        Misconceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/nature%20of%20publications/">
+        Nature of publications
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/no%20choice%20over%20evolution/">
+        No choice over evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20approach/">
+        Open approach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20data/">
+        Open data
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20source/">
+        Open source
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/outsourcing/">
+        Outsourcing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pig%20in%20a%20poke/">
+        Pig in a poke
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pioneers/">
+        Pioneers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pipeline/">
+        Pipeline
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20stability/">
+        Point of stability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20ubiquity/">
+        Point of ubiquity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/position/">
+        Position
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/predictable/">
+        Predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/purpose%20of%20mapping/">
+        Purpose of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/recommended%20books/">
+        Recommended books
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/resistance%20to%20change/">
+        Resistance to change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/settlers/">
+        Settlers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/simplicity/">
+        Simplicity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/situational%20awareness/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/six%20absolute%20basic%20elements%20for%20any%20map/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/small%20cells/">
+        Small cells
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/social%20capital%20is%20important/">
+        Social capital is important
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/space%20has%20meaning/">
+        Space has meaning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/strategy%20based%20on%20familiarity%20and%20memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/sweat%20and%20dump/">
+        Sweat and dump
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20map%20is%20not%20the%20territory/">
+        The map is not the territory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20process%20of%20mapping/">
+        The process of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20movement/">
+        The why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20purpose/">
+        The why of purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/town%20planners/">
+        Town planners
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/transitional/">
+        Transitional
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/uncharted/">
+        Uncharted
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/use%20of%20patents/">
+        Use of patents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/visual%20representation/">
+        Visual representation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/weak%20signals/">
+        Weak signals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/where%20to%20attack/">
+        Where to attack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/why%20of%20movement/">
+        Why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/%E2%80%9CArt%20of%20War%E2%80%9D%20by%20Sun%20Tzu/">
+        “Art of War” by Sun Tzu
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_33" id="__nav_33" type="checkbox"/>
+<label class="md-nav__link" for="__nav_33">
+          Practices
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Practices" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_33">
+<span class="md-nav__icon md-icon"></span>
+          Practices
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Cardinal%20Evolution%20Phases/">
+        Cardinal Evolution Phases
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Notation%20Experiments/">
+        Notation Experiments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/X-Axis%20Explanations/">
+        Approach 1 by Mike Haber
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#climatic-pattern-punctuated-equilibrium">
+    Climatic Pattern : Punctuated Equilibrium
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<p>I was in a quandary. Having described the three states of war, wonder and peace then I found myself in the unusual position of finding them everywhere. All activities seemed to show these three competitive states. However, I had no real way of testing the existence of these states and my ability to perceive them might be caused by some sort of bias? It’s bit like owning a Mini Cooper, once you have one then you suddenly notice how many other cars are Mini Coopers. I started to scout around for some means of testing these concepts. Did the states really exist? How could I test them? Do they just effect individual activities in industries or could they have a wider effect?</p>
+<p>At the very least I had a set of predictions (from <a href="../notes/weak%20signals/">weak signals</a>) for when a range of activities would start to industrialise and so I could just wait. Of course, this could just mean the weak signals were wrong or I was just lucky? There was also something strangely familiar about those three stages. I’m a geneticist by training, I hold a second masters in environmental management and I also have a background in economics, courtesy of a mother who as an economist ignited my interest in the subject. I knew I’d seen these three states elsewhere. It didn’t take me long to re-discover that first example — C.S. Holling’s Adaptive Renewal cycle.</p>
+<p>The adaptive cycle describes the dynamics of a complex ecosystems in response to change. We start with the creation of some form of disturbance — the genesis of a new act, some form of wonder. This is followed by a rapid stage of exploitation and accumulation in a stage of conservation where the change has become more stabilised in the ecosystem — the equivalent to a time of products, a peaceful state of competition. Eventually, the change has been normalised which releases energy enabling re-organisation and the genesis of new acts and new disruptions — the time of war. The Holling’s cycle is measured over the potential of the system for change and the connectedness of the system. Whilst not an exact corollary, I’ve overlaid an approximation of the peace, war and wonder cycle onto the Holling’s cycle in figure 112.</p>
+<p><strong>Figure 112 — <a href="../notes/Adaptive%20renewal%20cycle/">Adaptive renewal cycle</a></strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*7_DH1RI8ATmQiggDY5gMBA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*7_DH1RI8ATmQiggDY5gMBA.jpeg"/></p>
+<p>C.S. Holling, Adaptive Renewal Cycle</p>
+<p>The importance for me of this was it gave rise to a number of concepts. First, when considering economic systems we would have to look at them as we do with biological systems and consider how an ecosystem reacts to a change and how competition will drive that change throughout the system. Secondly, the size of the ecosystem impacted should reflect the connectedness of the system that is changing i.e. industrialisation of legal will writing would only impact the legal industry whereas industrialisation of computing should have a much broader macro-economic effect. Lastly, there may well be an element of re-organisation involved. I was already aware of co-evolution but maybe this enabled broader organisational change?</p>
+<p>With this in mind, I started to explore macro economic scale effects on an assumption that a suitably connected technology should not only have micro economic impacts to its industry but wider impacts. I was aware that the economy exhibited cycles known as Kondratiev waves (thanks to my interest in economics) and the largest waves we described as Ages. The first thing I noted was that these ages were not initiated by the genesis of some new activity but always by the industrialisation of a pre-existing activity that enabled higher order systems to develop. For example, the Age of Electricity was not caused by the introduction of electrical power which occurred with the Parthian Battery (sometime before 400 AD) but instead utility provision of A/C electricity with Westinghouse and Tesla, almost 1500 years later. Equally, the Mechanical Age was not caused by the introduction of the screw by Archimedes but by the industrialisation of standard mechanical components through systems such as Maudslay’s screw cutting lathe. The Age of the Internet did not involve the introduction of the first means of mass communication such as the Town Crier but instead industrialisation of the means of mass communication.</p>
+<p>Whilst born out of industrialisation, each of these Ages were associated with a major cluster of “<a href="../notes/innovation/">innovation</a>s” (i.e. genesis of new activities) that are built upon the industrialised components. Each age therefore had a “time of Wonder”. The ages were also associated with a change in organisations. I started collecting approximate dates for these different ages, trying to identify the point of technology that may have initiated it and also the type of organisation structure that was dominant. A later version of this is provided in figure 113.</p>
+<p><strong>Figure 113 — <a href="../notes/Waves%20of%20organisational%20change/">Waves of organisational change</a></strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*he6Usfab1SCJlWzJPIDArQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*he6Usfab1SCJlWzJPIDArQ.jpeg"/></p>
+<p>I still had no narrative linking it all together, instead it was a lose collection of almost connected concepts. Then in mid 2008, I came across Carlotta Perez’s marvellous book — <em>Technological Revolutions and Financial Capital</em>. Perez has characterised these K-Waves around technological and economic paradigm shifts. For example the Industrial Revolution included factory production, mechanisation, transportation and development of local networks whereas the Age of Oil and Mass Production included standardisation of products, economies of scale, synthetic materials, centralisation and national power systems. Carlotta had talked about the eruption of change, the frenzy of exploitation and later stages involving synergy and maturity (a more peaceful time of competition, of exploitation and conservation). It reminded me of Holling’s Adaptive renewal cycle. It reminded me of peace, war and wonder.</p>
+<ul>
+<li>The wonder of eruption and frenzy of new ideas, the explosion of the new and the re-organisation of systems around it. A time of exploration and pioneers.</li>
+<li>The exploitation and growth of these concepts, the synergy and the maturity of products in a more peaceful state of change. A time of settlers.</li>
+<li>The eventual release of capital and tumultuous shift from one cycle to another, the lost of the old, the birth of the new, the time of war and creative destruction of the past. A time of industrialisation and town planners.</li>
+</ul>
+<p>I’ve taken Carlota’s description of K-waves and added onto it the overlapping stages of peace, war and wonder in figure 114.</p>
+<p><strong>Figure 114 — Carlota Perez and Kondratiev waves</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*X_8v-BuvccNerKO6V2QKTw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*X_8v-BuvccNerKO6V2QKTw.jpeg"/></p>
+<p>Carlotta Perez, Technology Revolutions and Financial Capital, 2002</p>
+<h1 id="an-unexpected-discovery">An unexpected discovery<a class="headerlink" href="#an-unexpected-discovery" title="Permanent link">¶</a></h1>
+<p>^dd1eff</p>
+<p>In my pursuit of discovering a way to test the peace, war and wonder cycle then I had accidentally stumbled upon a narrative for describing a system wide organisational change. How widespread a change would be depended upon how well connected the components that were industrialising are. They could be specific to an ecosystem (e.g. legal will writing) and a small set of value chains or they could impact many industries (e.g. computing) and many value chains.</p>
+<p>The narrative would start with the birth of a new concept A[1] which would undergo a process of evolution through competition from its first wonder and exploration to convergence around a set of products (<strong>point 1</strong> in figure 115 below). These products, after <em>x</em> iterations crossing many chasms and following many diffusion curves would become more stabilised with well defined best practice for their use (<strong>point 2</strong> in figure 115). Large vendors would have established, each with inertia to future change due to past success but the concept and the activity it represents will continue to evolve.</p>
+<p>Eventually the component would be suitable for industrialisation and new entrants (not suffering from inertia) would make the transition across that inertia barrier introducing a more commodity form of A[x+1]. This would trigger a state of war, a shift to industrialised forms, a release of capability and capital (<strong>point 3</strong>) enabling an explosion of new activities due to componentisation effects and new practices (<strong>point 4</strong>) through co-evolution. The underlying activity would continue its evolution to ever more industrialised forms until some form of stability is achieved with A [1+n], a long an arduous journey of <em>n</em> iterations from the first wonder of its first introduction. The past ways, the past forms of the activity, the past practice would have died off (<strong>point 5</strong>) and they would have done so quickly.</p>
+<p><strong>Figure 115 — Understanding why</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*EHRWKamdSOnH_aK-i_39Zg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*EHRWKamdSOnH_aK-i_39Zg.jpeg"/></p>
+<p>In 2008, this was exactly what was started to happen around me in cloud computing. But the vast majority of people seemed to be assuring me that the change would take many decades, it would be very slow. Why would this be a slow progression? Why wouldn’t the change happen quickly? To understand this, we need to introduce a climatic pattern known as the punctuated equilibrium.</p>
+<h2 id="climatic-pattern-punctuated-equilibrium">Climatic Pattern : <a href="../notes/Punctuated%20Equilibrium/">Punctuated Equilibrium</a><a class="headerlink" href="#climatic-pattern-punctuated-equilibrium" title="Permanent link">¶</a></h2>
+<p>^bcde7d</p>
+<p>Throughout history there have been periods of rapid change. The question should be when is change a slow progression and when is it rapid? Part of this caused by an illusion, an application of our bias to the concept of change. Let us consider an evolving act — <strong>A</strong>. From figure 74 (<a href="https://medium.com/wardleymaps/finding-a-new-purpose-8c60c9484d3b">Chapter 7</a>), we know that the evolution of an act consists of the diffusion of many improving instances of that act. Let us assume that the activity quickly progress to a product — A[2] and evolves through a set of feature improvements — A[2] to A[x] as shown in figure 116 below. This will be the time a products, a constant jostle for improving features and though individual iterations will rapidly diffuse (e.g. the 586 processor replaced the 486 which replaced the 386 and the 286 in the x86 family), the characteristics of products (the x86) are broadly the same and the overall time of products appears to be long. This had happened with servers, a constant improvement and a long product run of 30 to 40 years. ^61ce64</p>
+<p><strong>Figure 116 — The illusion of speed</strong> ^1d1a33</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*gF4RkmRPaV9cCYcP_mVfsw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*gF4RkmRPaV9cCYcP_mVfsw.jpeg"/></p>
+<p>With the advent of more utility forms, you gain all the benefits of efficiency and agility, you’re under pressure to adopt due to the Red Queen but invariably people suffer from a bias towards a slow change because this is what they’ve experienced with products. They forget that we’ve had successive iterations (286 to 386 to 486 etc) and label this all as one thing. They expect the progression to more utility forms will take equally long but the transition is not multiple overlapping diffusion curves and the appearance of slow but steady progress but a single rapid shift (see figure above). Rather than 30 to 40 years, the change can happen in 10 to 15 years. We are caught out by the exponential growth and the speed at which it moves. This form of transition is known as a punctuated equilibrium and invariably shift from product to utility forms exhibit it.</p>
+<p>It’s the exponential nature that really fools us. To explain this, I’ll use an analogy from a good friend of mine, Tony Fish. Consider a big hall that can contain a million marbles. If we start with one marble and double the number of marbles each second, then the entire hall will be filled in 20 seconds. At 19 seconds, the hall will be half full. At 15 seconds only 3% of the hall, a small corner will be full. Despite 15 seconds having passed, only a small corner of the hall is full and we could be forgiven for thinking we have plenty more time to go, certainly vastly more than the fifteen seconds it has taken to fill the small corner. We haven’t. We’ve got five seconds.</p>
+<p>Alas, these punctuated equilibriums are often difficult to see because we not only have the illusion of slow progress but confusion over what speed actually is. Let us assume that today it takes on average 20 to 30 years for an act to develop from genesis to the point of industrialisation, the start of the “war” which changes so much in industry. Organisations consist of many components in their value chains all of which are evolving. We can often confuse the speed at which something evolves with the simultaneous entrance of many components into the “war” state. For example, in figure 117, I’ve provided the weak signal analysis (from chapter 9) of many points of change. We can see that each component takes roughly 20 to 30 years to evolve (<strong>point 1</strong>) to the point of industrialisation, followed by 10 to 15 years to industrialise (the “war”). However, if you examine <strong>point 2</strong> then we have many components from robotics to immersive technology to IoT that are embroiled in such a war. This can give us the impression that change is happening vastly more rapidly as everything around us seems to be changing. It’s important to separate out the underlying pace of change from the overlapping coincidence of multiple points of change.</p>
+<p><strong>Figure 117 — The confusion of speed</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*rdJz1Pq9ezreKOw3a6P11Q.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*rdJz1Pq9ezreKOw3a6P11Q.jpeg"/></p>
+<p>Of Wonders and Disruption, Leading Edge Forum, 2014</p>
+<p>Given this, it should be possible to test the punctuated equilibrium. By selecting a discrete activity we should be able to observe its rapid change along with the denial in the wider industry that such a change would be rapid. Cloud computing gave me a perfect example to test this. In 2010 (when I was at Canonical), I produced a forward revenue chart for Amazon. This estimated the forward revenue at the end of each year for AWS (Amazon web services) and was based upon what little data I could extract given that Amazon wasn’t breaking out the figures. I’ve provided this estimate in figure 118.</p>
+<p>By the end of 2014, I had anticipated AWS would have a forward revenue rate of $7.5 billion p.a. which means every year after 2014 it would exceed this figure. In fact, AWS clocked over $7.8 billion in 2015. Now, what’s not important is the accuracy of the figures, that’s more luck given the assumptions that I needed to make. Instead what matters is the growth, it’s non linear nature and the general disbelief that it could happen. Back in 2010, telling people that AWS would clock over $7.5 billion in revenue some five years later was almost uniformly met by disbelief.</p>
+<p><strong>Figure 118 — The punctuated equilibrium</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*RfFF_pUxCgI3HHll9TMk6Q.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*RfFF_pUxCgI3HHll9TMk6Q.jpeg"/></p>
+<h1 id="finding-the-future-organisation">Finding the <a href="../notes/future%20organisation/">future organisation</a><a class="headerlink" href="#finding-the-future-organisation" title="Permanent link">¶</a></h1>
+<p>^f342a5</p>
+<p>In 2008, I had the narrative of how organisations change and though I still had to demonstrate aspects of this (by anticipating a punctuated equilibrium before it happened) it did provide me with a path to test the concepts. I knew that if the concept was right then over the next decade we would see a rapid change to more industrialised computing, co-evolution of practice and a new form of organisation appearing. In the case of the rise of DevOps then this process had already started. Beyond just simply observing the growth of new practices and new activities along with the death of the past (see figure 119), I wanted a more formal method to evaluate this change. What I wanted to know is could we catch this next wave? Would the shift of numerous IT based activities to more utility services create a new organisational form? Timing would be critical and unlike my earlier work in genetics where populations of new bacteria are grown rapidly, I had to wait. So wait, I did.</p>
+<p><strong>Figure 119 — the past and the future</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*oRePqd_lAwj6BP-XBvM8JA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*oRePqd_lAwj6BP-XBvM8JA.jpeg"/></p>
+<p>By 2010, the signals were suggesting that this was happening and in early 2011, I had exactly the opportunity I needed. Being a geneticist, I was quite well versed in population characteristics and so as part of a Leading Edge Forum project (published in the same year) we decided to use such techniques to examine populations of companies, specifically a hundred companies in Silicon Valley. We were looking for whether a statistically different population of companies had emerged and their characteristics (phenotypes) were starting to diffuse. It was a hit or miss project, we’d either find a budding population or it was back to the drawing board.</p>
+<p>We already knew two main categories of company existed in the wild — those that described themselves as traditional enterprise and those using the term “web 2.0”. The practices from the web 2.0 were already diffusing throughout the entire environment. Most companies used social media, they thought about network effects, used highly dynamic and interactive web based technology and associated technology practices. The two populations were hence blurring through adoption of practices (i.e. the traditional were becoming more web 2.0 like) but also partially because past companies had died. But was there now a next generation budding, a new Fordism?</p>
+<p>I interviewed a dozen companies that I thought would be reasonable examples of traditional and web 2.0 and where I hoped a couple of highly tentative next generation companies might be hiding. I developed a survey from those companies, removed them from the sample population to be examined and then interviewed over 100 companies divided roughly equally among those that described themselves as web 2.0 and those who called themselves more traditional. The populations all contained a mix of medium and huge companies. I examined over 90 characteristics giving a reasonable volume of data. From the cycle of change and our earlier interviews, we had guessed that our next generation was likely to be found in the self describing “web 2.0” group and in terms of strategic play they would tend to be focused on disruption (the war phase) rather than profitability (the peace phase). From our earlier interviews I had developed a tentative method of separating out into candidate populations. So, I divided the population sample out into these categories and looked at population characteristics — means and standard deviations. Were there any significant differences? Were the differences so significant that we could describe them as a different population i.e. in a sample of mice and elephants then there exist significant characteristics that can be used to separate out the two populations.</p>
+<p>I ran our analysis and waited. It was an edgy moment. Had we found something or as per many attempts before had we found nothing? I tend to assume nothing and when there is something, I tend to doubt it. Within our data set we found statistically significant population differences across a wide number of the characteristics but also significant similarities. I re-examined, looked through my work, tested, sought the advice of others and tested again — but the differences and similarities remained. For example, I examined each company’s view on open source and whether it was primarily something that means relatively little to them, a mechanism for cost reduction, something they relied upon, something they were engaged in or whether open source was viewed as a tactical weapon to be used against competitors. The result is provided in figure 120 with the subdivision by population type.</p>
+<p><strong>Figure 120 — Views on <a href="../notes/open%20source/">open source</a></strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*C_vY_FF1g9mHcRBLiZuHDw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*C_vY_FF1g9mHcRBLiZuHDw.jpeg"/></p>
+<p>Learning from Web 2.0, Leading Edge Forum, 2011</p>
+<p>Whilst the traditional companies mainly viewed open source as a means of cost reduction and something they relied upon, this next generation viewed it as a competitive weapon and something they were heavily engaged in. The web 2.0 group had a broader view from cost to weapon. This difference in population was repeated throughout many characteristics spanning strategy, tactics, practice, activities and form. The odds of achieving the same results due to random selection of a single population were exceptionally low. We had found our candidate next generation.</p>
+<p>To describe this next generation, it is best to examine them against the more traditional. Some of the characteristics show overlap as would be expected. For example, in examining the highest priority focus for provision of technology by a company whether it’s profitability, enhancement of existing products and services, innovation of new products and services, enabling other companies to innovate on top of their products and services or creating an engaged ecosystem of consumers then overlaps exists. In other areas, the differences were starker. For example, in an examination of computing infrastructure then traditional favoured enterprise class servers whereas the next generation favoured more commodity. A good example of this similarity and yet difference was the attitude towards open source. When asked whether a company open sourced a source of differential advantage on a scale of strongly disagree to strongly agree then both traditional and next generation gave almost identical response (see figure 121).</p>
+<p><strong>Figure 121 — Finding similarity</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*y0OVmbRq1oI4ZCUUb0svHA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*y0OVmbRq1oI4ZCUUb0svHA.jpeg"/></p>
+<p>Learning from Web 2.0, Leading Edge Forum, 2011</p>
+<p>However, when asked whether they would open source a technology to deliberately out manoeuvre a competitor then the answers were almost polar opposite (see figure 122).</p>
+<p><strong>Figure 122 — Finding difference</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*BypwdQo3qJw3Z_ENKFVB9Q.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*BypwdQo3qJw3Z_ENKFVB9Q.jpeg"/></p>
+<p>Learning from Web 2.0, Leading Edge Forum, 2011</p>
+<p>Using these populations, I then characterised the main differences between traditional and next generation. These are provided in figure 123 but we will go through each in turn. I’ve also added some broad categories for the areas of doctrine the changes impact.</p>
+<p><strong>Figure 123 — the phenotypic differences.</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*6yKahcRvk1kdZTixNCBtWA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*6yKahcRvk1kdZTixNCBtWA.jpeg"/></p>
+<p>Source data from “Learning from Web 2.0”, Leading Edge Forum, 2011</p>
+<p><strong>Development<br/>
+</strong>Traditional companies tend to focus towards singular management techniques for development (e.g. Agile or Six Sigma) and often operate on a change control or regular process of updates. The next generation tends towards mixed methods depending upon what is being done and combine this with a continuous process of release.</p>
+<p><strong>Operations<br/>
+</strong>Traditional organisations tend to use architectural practices such as scale –up (bigger machines) for capacity planning, N+1 (more reliable machines) for resilience and single, time critical disaster recovery tests for testing of failure modes. These architectural practices tend to determine a choice for enterprise class machinery. The next generation has entirely different architectural practices from scale-out (or distributed systems) for capacity planning, design for failure for resilience and use of chaos engines (i.e. the deliberate and continuous introduction of failure to test failure modes) rather than single, time critical disaster recovery test. These mechanisms enable highly capable systems to be built using low cost commodity components.</p>
+<p><strong>Structure<br/>
+</strong>Traditional organisations used a departmental structure often by type of activity (IT, Finance, Marketing) or region with often a silo mentality and a culture that was considered to be inflexible. The next generation used smaller cell based structures (with teams typically of less than twelve) often with each cell providing services to others cells within the organisation. Each cell operated fairly autonomously covering a specific activity or set of activities. Interfaces were well defined between cells and the culture was viewed as more fluid, adaptable and dynamic.</p>
+<p><strong>Learning<br/>
+</strong>Traditional organisations tend to use analysts to learn about their environment and changes that are occurring. They tend to also use big data systems which are focused primarily on providing and managing large sets of data. The next generation use ecosystems to more effectively manage, identify and exploit change. They also tend to not only use “big data” but to be run by it with extensive use of modelling and algorithms. The focus is not on the data per se but the models.</p>
+<p><strong>Leading<br/>
+</strong>In traditional organisations, the use of open systems (whether source, data, APIs or other) is viewed primarily as a means of cost reduction. A major focus of the company tends to be towards profitability. In some cases technology or data is provided in an open means with an assumption that this will allow others to provide “free” resources and hence reduce costs. In next generation, open is viewed as a competitive weapon, a way of manipulating or changing the landscape through numerous tactical plays from reducing barriers to entry, standardisation, eliminating the opportunity to differentiate, building an ecosystem and even protecting an existing value chain. Next generation are primarily focused on disruption of pre-existing activities (a war phase mentality) and exhibit higher levels of strategic play.</p>
+<p>The LEF published the work in Dec 2011 and since then we have observed the diffusion of many of these changes as the traditional become more next generation. In the parlance of “<em>Boiling Frogs”</em> (an outstanding open sourced document on management provided by GCHQ) then we’re seeing “less of” the traditional and “more of” the next generation over time. However, I very much don’t want you to read the above list and get the impression that — <em>“this is how we create an advantage!” —</em> instead be realistic. The above characteristics are already diffusing and evolving, tens if not hundreds of thousands of people and their companies are well aware of them today. You’ll need to adapt simply to survive. Any real advantage has already been taken and any remaining advantage will be over those who are slower to adapt.</p>
+<p>I do however what to expand the above figure 123 and include some specific examples of doctrine (see figure 124 below). For example, the shift from single to multiple methods is just an refinement of the principle <em>“to use appropriate methods”</em>. There was a time when we thought that a single method was appropriate but as we’ve become more used to the concepts of evolution and change then we’ve learned that multiple techniques are needed. This doesn’t stop various attempts to create a tyranny of the one whether agile or six sigma or some purchasing method but for many of us the way we implement that principle has changed. In other words, the principle of doctrine has remained consistent but our implementation has refined and become more nuanced. Equally our principle of <em>“manage failure”</em> has simply refined from one time disaster recovery tests to constant introduction of failure through chaos engines. Now, certainly the implementation has to be mindful of the landscape and purpose, for example constant failure through chaos engines is not appropriate for the generation components of a nuclear power plant.</p>
+<p><strong>Figure 124 — The change from traditional to next generation</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*gWhzJeJtjXYXOcrJwalQpw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*gWhzJeJtjXYXOcrJwalQpw.jpeg"/></p>
+<p>Source data from “Learning from Web 2.0”, Leading Edge Forum, 2011</p>
+<p>In other cases, the principle <em>“Think small teams”</em> is relatively young in management terms (i.e. less than forty years). The theory of management tends to move extremely slowly and its practices can take a considerable amount of time to evolve. The point that I want to emphasise is that when we talk about the evolution of organisation, this is normally reflected in terms of a change in doctrine and either evolution or addition of principles. However, not everything changes. There are many practices and concepts that are simply copied to the next generation. It should never be expected that there are no common characteristics or overlap but instead what you hope to find is significant difference in specific characteristics (i.e. Mice have two eyes, same as Elephants and hence there are some similarities along with huge differences). I’ve provided a small subset of the similarities in figure 125 but it should be remembered of the 90 odd characteristics I examined, only twelve showed significant change.</p>
+<p><strong>Figure 125 — Not everything changes</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*wKv3f1-lEdstGhSN204Ziw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*wKv3f1-lEdstGhSN204Ziw.jpeg"/></p>
+<p>Source data from “Learning from Web 2.0”, Leading Edge Forum, 2011</p>
+<p>In 2008, I understood the cycle of change (peace, war and wonder) which had evolved from the concept of evolution and I had a hypothesis for the process of how organisations evolve. By 2011, we had not only anticipated this change but observed a budding next generation. I say “budding” because we had no real idea of whether they would be successful or not. It turns out that they are but that’s a story for a later chapter. For now, there are a couple of refinements that I’d like to make to these models.</p>
+<h1 id="notes-on-peace-war-and-wonder">Notes on Peace, War and Wonder<a class="headerlink" href="#notes-on-peace-war-and-wonder" title="Permanent link">¶</a></h1>
+<p>There are number of patterns which are worth highlighting.</p>
+<h2 id="climatic-pattern-evolution-of-a-communication-mechanism-can-increase-the-speed-of-evolution-overall"><strong>Climatic Pattern : <a href="../notes/Evolution%20of%20a%20communication%20mechanism%20can%20increase%20the%20speed%20of%20evolution%20overall/">Evolution of a communication mechanism can increase the speed of evolution overall</a>.</strong><a class="headerlink" href="#climatic-pattern-evolution-of-a-communication-mechanism-can-increase-the-speed-of-evolution-overall" title="Permanent link">¶</a></h2>
+<p>In figure 117 above, I discussed the confusion of speed and how we often mix concepts about the underlying rate of change with the circumstantial overlapping of multiple points of industrialisation. Does this however mean the underlying rate of change is constant? The answer is no. There is another pattern here which deals with communication mechanisms.</p>
+<p>On the 1st May, 1840 a revolution in industry was started by the introduction of the Penny Black. This simple postage stamp caused a dramatic explosion in communication from 76 million letters sent in 1839 to 350 million by 1850. It wasn’t a case that postal services didn’t exist before but the Penny Black turned the act of posting a letter into a more standard, well defined and ultimately ubiquitous activity. The introduction caused a spate of copy cat services throughout the world, with the US introducing their first stamps in 1847. The 125 million pieces of post sent through their system in that year mushroomed to 4 billion by 1890. From stamps to street letter boxes (1858) to the pony express, railway deliveries (1862), money order and even international money orders by 1869.</p>
+<p>The humble stamp changed communication forever. But it wasn’t alone. Telegraph lines which later enabled the telephone which later enabled the internet have all led to corresponding explosions of communication. In all cases it wasn’t the invention of the system (the first stamp for example being created by William Dockwra in 1680) but instead the system becoming more standard, well defined and more of a commodity which created the explosion. Each time, we’ve experienced one of these communication changes we’ve also experienced significant industrial change. The growth in postal services and telegraph lines coincides with the Railway and Steam Engine era where diffusion of new machine concepts became rampant.</p>
+<p>Of course, the origin of industrial steam engines started in the earlier first industrial revolution which itself arguably started with Maudslay’s screw cutting lathe and the introduction of interchangeable mechanical components. By providing mechanical components as more of a commodity, we saw a growth in new machine industries and new manufacturing processes. From the Plymouth system for manufacturing which later became the Armory system in the US, an entirely new method of manufacturing was started by the humble nut and bolt.</p>
+<p>Whilst this might appear to be nothing more than the peace, war and wonder cycle in action, there is something quite unique here. When we examine how things have evolved over time then nuts and bolts took over 2,000 years to industrialise, electricity took 1,400 years, the telephone merely 60 to 80 years and computing some 60 to 70 years. What has changed during that time is industrialisation of communication mechanisms. As we move up the value chain (see figure 126) then the speed at which things evolve across the landscape is impacted by industrialisation of communication mechanisms. The printing press, the postage stage, the telephone and the internet did more than just industrialise a discrete components in a value chain, they accelerated the evolution of all components.</p>
+<p><strong>Figure 126 — The speed of evolution</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*qtmcRCtu_SY2LribFML0rQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*qtmcRCtu_SY2LribFML0rQ.jpeg"/></p>
+<p>Do not however confuse this with how innovative we are as a species. Rather realise that the speed at which something evolves has accelerated. My best guess is the speed of change today now corresponds to about 20 to 30 years on average from genesis to the point of industrialisation and then around 10 to 15 years for the “war” to work through the system and the change to become the dominant form. The jury is out at the moment (i.e. I’m collecting more data) as to whether it really is that fast and not all industrial ecosystems work at the same speed. Obviously, as per figure 117 <em>the confusion of speed</em> then during your lifetime it is likely you will experience multiple overlapping waves or points of industrialisation. However, an increase in the underlying speed means we should experience more of these and life going forward will probably feel a lot more disruptive.</p>
+<h2 id="climatic-pattern-inertia-increases-with-past-success"><strong>Climatic Pattern : <a href="../notes/Inertia%20increases%20with%20past%20success/">Inertia increases with past success</a>.</strong><a class="headerlink" href="#climatic-pattern-inertia-increases-with-past-success" title="Permanent link">¶</a></h2>
+<p>One of the subjects I’ve mentioned is inertia and our resistance to change. With any established value chain, there are existing interfaces to components along with accompanying practices. There is a significant cost associated with changing these interfaces and practices due to the upheaval caused to all the higher order systems that are built upon it e.g. changing standards in electrical supply impacts all the devices which use it. This cost creates resistance to the change. You also find similar effects with data or more specifically our models for understanding data. As Bernard Barber once noted even scientists exhibit varying degrees of resistance to scientific discovery. For example, the cost associated with changing the latest hypothesis on some high level scientific concept is relatively small and often within the community we see vibrant debate on such hypotheses. However changing a fundamental scientific law that is commonplace, well understood and used as a basis for higher level concepts will impact all those things built upon it and hence the level of resistance is accordingly greater. Such monumental changes in science often require new forms of data creating a crisis point in the community through unresolved paradoxes including things that just don’t fit our current models of understanding. In some cases, the change is so profound and the higher order impact is so significant that we even coin the phrase “a scientific revolution” to describe it.</p>
+<p>The costs of change are always resisted and past paradigms are rarely surrendered easily — regardless of whether it is a model of understanding, a profitable activity provided as a product or a best practice of business. As Wilfred Totter said “the mind delights in a static environment”. Alas, this is not the world we live in. Life’s motto is <em>“situation normal, everything must change”</em> and the only time things stop changing is when they’re dead.</p>
+<p>The degree of resistance to change will increase depending upon how well established and connected the past model is. In figure 127, I’ve shown this as inertia barriers which increase in size the more evolved the component becomes.</p>
+<p><strong>Figure 127 — inertia increases with success</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*Y7mC0pJiT2eVKc30ndz8Mw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*Y7mC0pJiT2eVKc30ndz8Mw.jpeg"/></p>
+<p>There are also many forms of inertia. In the example of co-evolution (provided in <a href="https://medium.com/wardleymaps/anticipation-89692e9b0ced">chapter 9</a>) there were two forms of inertia. The first is due to the success of past architectural practice. The second is caused by the co-evolving practice being relatively novel and hence there existing high degrees of uncertainty over it. Both sources will create resistance due to adopting the change which in this case is the shift from product to utility of computing (see figure 128).</p>
+<p><strong>Figure 128 — Practices and inertia</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*OaxDhKsYws4ppbn-s5dBAQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*OaxDhKsYws4ppbn-s5dBAQ.jpeg"/></p>
+<p>So what makes up inertia and this resistance to change exist in business? That depends upon the perspective of the individual and whether they are a consumer or supplier.</p>
+<p><strong><em>The Consumer</em><br/>
+</strong>From a consumer of an evolving activity, a practice or a model of understanding then inertia tends to manifest itself in three basic forms — disruption to past norms, transition to the new and the agency of new. I’ll explain each using the example of cloud computing.</p>
+<p>The typical concerns regarding the <strong>disruption to past norms</strong> include: -</p>
+<ul>
+<li>Changing business relationships from old suppliers to potentially new suppliers.</li>
+<li>A loss of in financial or physical capital through prior purchasing of a product e.g. the previous investment needs to be written off.</li>
+<li>A loss in political capital through making a prior decision to purchase a product e.g. “what do you mean I can now rent the billion dollar ERP system I advised the board to buy on a credit card?”</li>
+<li>A loss in human capital as existing skill-sets and practices change e.g. server huggers.</li>
+<li>A threat that barriers to entry will be reduced resulting in increased competition in an industry e.g. even a small business can afford a farm of super computers.</li>
+</ul>
+<p>The typical concerns regarding the <strong>transition to the new</strong> include: -</p>
+<ul>
+<li>Confusion over the new methods of providing the activity e.g. isn’t this just hosting?</li>
+<li>Concerns over the new suppliers as relationships are reformed including transparency, trust and security of supply.</li>
+<li>Cost of acquiring new skill-sets as practices co-evolve e.g. designing for failure and distributed architecture.</li>
+<li>Cost of re-architecting existing estates which consume the activity. For example, the legacy application estates built on past best practices (such as N+1, Scale-Up) and assume past methods of provision (i.e. better hardware) and will now require re-architecting.</li>
+<li>Concerns over changes to governance and management.</li>
+</ul>
+<p>The typical concerns regarding the <strong>agency of the new</strong> include: -</p>
+<ul>
+<li>Suitability of the activity for provision in this new form i.e. is the act really suitable for utility provision and volume operations?</li>
+<li>The lack of second sourcing options. For example, do we have choice and options? Are there multiple providers?</li>
+<li>The existence of pricing competition and switching between alternatives suppliers. For example, are we shifting from a competitive market of products to an environment where we are financially bound to a single supplier?</li>
+<li>The loss of strategic control through increased dependency on a supplier.</li>
+</ul>
+<p>These risks or concerns were typical of the inertia to change I saw with cloud computing in 2008, however it wasn’t just consumers that had inertia but also suppliers of past norms.</p>
+<p><strong><em>Suppliers of past norms.</em><br/>
+</strong>The inertia to change of suppliers inevitably derives from past financial success. For example, the shift from product to utility services is a shift from high value model to one of volume operations and over time declining unit value. There is a transitional effect here which cause a high volume, high margin business for a period of time but we will cover that later. In general, existing suppliers need to adapt their existing successful business models to this new world. Such a change is problematic for several reasons: -</p>
+<ul>
+<li>All the data the company has demonstrates the past success of current business models and concerns would be raised over cannibalisation of the existing business.</li>
+<li>The rewards and culture of the company are likely to be built on the current business model hence reinforcing internal resistance to change.</li>
+<li>External expectations of the financial markets are likely to reinforce continual improvement of the existing model i.e. it’s difficult to persuade shareholders and financial investors to replace a high margin and successful business with a more utility approach when that market has not yet been established.</li>
+</ul>
+<p>For the reasons above, the existing business model tends to resist the change and the more successful and established it is then the greater the resistance. This is why the change is usually initiated by those not encumbered by past success. The existing suppliers, not only have to contend with their own inertia to change but also the inertia their customers will have. Unfortunately, the previous peaceful model of competition (e.g. one product vs another) will lull these suppliers into a false sense of gradual change, in much the same way that our existing experience of climate change lulls us into a belief that climate change is always gradual. This is despite ample evidence that abrupt climate change has occurred repeatedly in the past, for example at the end of the Younger Dryas period, the climate of Greenland exhibited a sudden warming of +10°C within a few years. We are as much a prisoner of past expectations of change as past norms of operating.</p>
+<p>Hence suppliers, with pre-existing business models, will tend to view change as gradual and have resistance to the change which in turn is reinforced by existing customers. This resistance of existing suppliers will continue until it is abundantly clear that the past model is going to decline. However, this has been compounded by the punctuated equilibrium which combines exponential change with denial. Hence by the time it has become abundantly clear and a decision is made, it is often too late for those past incumbents to survive. For a hardware manufacturer who has sold computer products and experienced gradual change for thirty years, it is understandable how they might consider this change to utility services would also happen slowly. They will have huge inertia to the change because of past success, they may view it as just an economic blip due to a recession and their customers will often try to reinforce the past asking for more “enterprise” like services. Worst of all, they will believe they have time to transition, to help customers gradually change, to spend the years building and planning new services and to migrate the organisation over to the new models. The cold hard reality was that many existing suppliers didn’t comprehend that the battle would be over in three to four years and for many the time to act was already passing. In 2008, they were in the last chance saloon and the tick was clocking towards last orders though they claimed this event was far in the future and they had plenty of time. Like the rapid change in climate temperature in Greenland, our past experience of change does not necessarily represent the future.</p>
+<p>In figure 129, I’ve classified various forms of inertia included tactics to be used to counter and various forms of messaging you might wish to consider in your struggle against it. When looking at a map, it’s extremely helpful to identify the forms of inertia you will face and how to counter them before charging straight on into the battle. There’s little worse than leading the charge into battle only to discover the rest of organisation is still getting dressed for a party and is convinced the war is sometime next decade.</p>
+<p><strong>Figure 129 — Classifying inertia</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*z3WowW5JiBQ5NS7BfF4OLw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*z3WowW5JiBQ5NS7BfF4OLw.jpeg"/></p>
+<p>One of the more dangerous forms of inertia are financial markets. Despite the illusion of the future thinking world of finance, in most cases stability is prized. There is an expectation set by the market on past results and often significant discounting of the future. If anything, 2008 was a very visible reminder of this as the economy crumbled around us. The problem for a CEO of a hardware company at that time was the market comes to expect a certain level of profit, revenue, growth and return. There is only so much you can do to blame a change on general economic factors (e.g. a downturn) as the market expects you to return to norm and most executives are rewarded on short term measures based upon this. The result is one of the most peculiar aspects of the “war” stage of competition — the death spiral.</p>
+<h2 id="climatic-pattern-inertia-kills"><strong>Climatic Pattern : Inertia kills</strong><a class="headerlink" href="#climatic-pattern-inertia-kills" title="Permanent link">¶</a></h2>
+<p>I mentioned previously in <a href="https://medium.com/wardleymaps/the-play-and-a-decision-to-act-8eb796b1dff1">chapter 5</a> how Kodak had inertia which it finally overcame in order to invest in exactly the wrong part of the industry. We often think that companies die due to lack of innovation but this appears to be rarely the case. Kodak out innovated most (with digital still cameras, with online photo services and with photo printers) but it was inertia caused by past success in fulfilment and blindness to the environment that caused it to collapse. Equally Blockbuster out innovated most competitors with its early entrance into the web space, being first with ordering videos online and the first experiments with video streaming. Alas, it was wedded to a business model based upon late fees. There are many different examples of how inertia usually amplified by blindness to a change can cause a company to crumble but none is as common as the death spiral and the cause of it is something which at another time is perfectly sensible — cutting costs.</p>
+<p>If your industry (i.e. the parts of value chain which you sell) are in a peace era then cutting costs through efficiency to increase profitability can be a good play, assuming you don’t reduce barriers to entry into the space. There are many reasons why you would do this and often you can clear out a lot of waste in the organisation. However, if your industry has moved into the war then then cutting costs through staff to restore profitability due to declining revenue is often a terrible move. The problem is your revenue is eroding due to a change in the value chain and the industrialisation of the activity to more commodity forms. You need to respond by adapting and possibly moving up the value chain. However, by layoffs you’re likely to get rid of those people who were seen to be less successful in the previous era. That doesn’t sound too bad but the result is you end up with a higher density of people successful in the past models (which are now in decline due to evolution) and hence you’ll tend to increase your cultural inertia to change. In all likelihood, you’ve just removed the very people who might have saved you.</p>
+<p>Revenue will continue to drop and you’ll start a death spiral. You’ll start scrambling around looking for <em>“emerging markets”</em> i.e. less developed economies for you to sell your currently being industrialised product into. The only result of this however is you’re laying the ground work for those economies to be later industrialised once your competitors have finished chewing up your existing market. What you of course should be doing is adapting and realising that the tactics you play in one era are not the same as another (peace vs war etc). Now any large organisations has multiple different values chains in different evolutionary phases and you have to see this and know how to switch context between them in order to choose the right tactics. Naturally, most people don’t manage to achieve this, nor do they effectively anticipate change or cope with industrialisation in the right way. This is why big companies often die but at least that keeps things interesting.</p>
+<p>Of course, if you do embark on the death spiral then whilst it’s appalling for those employed by the company, the executives are often rewarded. Why? Well, it comes back to the financial markets. If a market knows this transition is occurring then one tactic is to invest in the future industry (e.g. Amazon) whilst extracting as much short term value as possible from the past (e.g. existing hardware players). This requires a high expectation of share buy-backs, dividends and mergers in those past giants. It’s not that you’re expecting a long term gain from such investments but instead highly profitable short term wins which are balanced with your long term investment in the future. From a financial point of view then the death spiral is exactly what you want to see as you don’t care about the long term survivability of the company (your investment will be gone by then) but you do want maximum extraction of value. If you’re a canny executive then running a death spiral can bring big personal financial rewards as long as you’re comfortable with the destruction you’ll cause to people and companies alike. However, not all executives are canny. Often people find themselves in this position by accident. Which leads me to my next topic on the different forms of disruption.</p>
+<h1 id="the-different-forms-of-disruption">The <a href="../notes/different%20forms%20of%20disruption/">different forms of disruption</a><a class="headerlink" href="#the-different-forms-of-disruption" title="Permanent link">¶</a></h1>
+<p>One of the more interesting discussions in recent times has been Professor Jill Lepore’s arguments against Clayton Christensen’s concept of disruptive innovation. In her now famous New Yorker 2014 article on <em>“the disruption machine”</em>, Lepore argued that disruptive innovation doesn’t really explain change, but is instead mostly an artefact of history, a way of looking at the past and is unpredictable. Christensen naturally countered. For me, this really was a non-argument. What I had determined back in 2008 was there are many forms of disruption — some of which are predictable and some of which aren’t. When the argument started then from my perspective, both Christensen and Lepore were right and wrong. The problem stems from the issue that they’re not arguing over the same thing.</p>
+<p>The three main forms of potential disruption that we will discuss are genesis, product to product substitution and product to utility business model substitution. The genesis of new acts are inherently unpredictable. If some novel activity appears that genuinely alters pre-existing value chains then there’s little you can do to predict this, you have to simply adapt.</p>
+<p>When product to product substitution occurs due to some new capability or feature then the predictability of <strong>when</strong> and <strong>what</strong> is low. The when depends upon individual actors actions and this is unknown. Equally, the addition of some new capability is also inherently unpredictable. Note, we know that things will evolve and the pathway for evolution (from genesis to commodity) but we don’t know nor can we predict the individual steps such as this product will beat that product. This means a new entrant can at any time create a disruptive product that will substitute an existing market but a company will have no way of ascertaining when that will occur or what it will be. Though this does happen, in the time of peace, the time of product giants then such changes are less frequent than the rampage of sustaining changes. There are exceptions and Apple’s iPhone disrupting the Blackberry is a good example of this type of disruption. I’ll note that Christensen quite famously dismissed the iPhone and has subsequently gone on to claim it’s not an example of it, in any case this sort of substitution is unpredictable. Equally hydraulic vs cable excavators would fall into this category. They are easy to analyse post event but next to impossible to determine pre-event. In these instances, Lepore seems to be on firm footing.</p>
+<p>With product to utility substitution the <strong>what</strong> and <strong>when</strong> can be anticipated. We know we’re going to enter a state of war, an explosion of higher order systems, co-evolution of practice, disruption of past vendors stuck behind inertia barriers and so forth. Weak signals and the four condition (suitability, technology, concept and attitude) can give us an idea of when it will happen. In any case, even without the weak signals, the transition to more industrialised forms is inevitable if competition exists. So, we can be prepared. A new entrant can more effectively target this change to disrupt others. However, it also means an existing player can effectively mount a defence having prior knowledge of the change and time to prepare. Fortunately for the new entrants, the incredibly low levels of situational awareness that exists in most industry combined with the inertia faced by incumbents in terms of existing business models, developed practices, technological debt, behavioural norms, financial incentives, Wall Street expectations and self interest are often insurmountable and hence the start-ups often wins when they shouldn’t. Whilst the change is entirely defendable against (with often many decades of prior warning) companies fail to do so. This form of disruption is entirely predictable and it is here where Christensen’s theory excels. The more industrialised forms are considered lower quality, not meeting the performance requirements and usually dismissed by the incumbents.</p>
+<p>Hence let us follow the evolution of an act. We start (in figure 130) with the appearance of some new activity A[1]. It is found useful and starts to diffuse with custom built examples. As it evolves early products start to appear and we jump across one inertia barrier from custom built to products (<strong>point</strong> 1). Obviously those companies that have invested in their own custom solution argue that their solution is better but eventually pressure mounts and they adopt a product. The act continues to evolve with a constant stream of more “feature” complete products as we understand the space. Sometimes the progression is sustaining but sometimes a product appears that substitutes the previous examples. There’s inertia to the change (<strong>point</strong> 2) from customers and vendors invested in the existing product line. The thing is, we don’t really know if this new product line is going to be successful, any more than Apple new it could beat Blackberry or others. This form of disruption is unpredictable. Someone wins. The product giants continue to grow until eventually the act become suitable for industrialised provision. New entrants jump the barrier first (<strong>point</strong> 3) and this barrier is significant. That act has become established in many value chains and it is highly connected with its own practices. There’s a lot of dismissal of the industrialised version, claims it will take a long time but the punctuated equilibrium bites, the past vendors are struggling, practices have co-evolved and the old way is now legacy. Many past vendors start the death spiral in the hope of recapturing their glory days, their demise accelerates. This form of disruption was predictable but for most it wasn’t. Of course, the world has moved onto to inventing novel and new things built upon these industrialised components (<strong>point</strong> 4), new forms of organisation appear based upon those co-evolved practices. A next generation of future giants has arisen. Whether we notice them depends upon whether the cycle is localised at a micro economic scale to a specific industry or in other cases the component is so vastly connected it appears at a macro economic scale. In any case, the cycle continues. Ba da boom. Ba da bing.</p>
+<p><strong>Figure 130 — Different types of disruption</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*vY9Y3RIKSjghB6vVGEDwRg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*vY9Y3RIKSjghB6vVGEDwRg.jpeg"/></p>
+<h2 id="dealing-with-disruption"><a href="../notes/Dealing%20with%20disruption/">Dealing with disruption</a><a class="headerlink" href="#dealing-with-disruption" title="Permanent link">¶</a></h2>
+<p>The problem is there isn’t one form of disruption and hence there isn’t one way to deal with it. The techniques and methods you need to use vary. Unfortunately, if you don’t have a map of your landscape and you don’t understand the basic climatic patterns then you don’t have a great deal of chance in separating this. For most people, it’s all the same thing and they end up facing off against highly predictable disruption without any preparation or planning. In 2008, this was common in the computing industry. I’d end up with many arguments in boards pointing out the cloud computing (the shift from product to utility) was inevitable and not a question of “if” but “when” and that “when” was starting now. I’d explain the impacts and how they were going to be disrupted and people would retort with product examples, they’d start discussing the current situation with Apple vs Blackberry and how Blackberry could counter. These weren’t even remotely the same thing. Don’t mix the unpredictable world of product vs product substitution with the predictable world of product to utility substitution. In figure 131, I’ve provided three main types of disruption and the characteristics associated with each.</p>
+<p><strong>Figure 131 — Dealing with disruption</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*gVMrBVYaMC-D81aa2lJqfA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*gVMrBVYaMC-D81aa2lJqfA.jpeg"/></p>
+<p>From the above :-</p>
+<p>The genesis of powered flight was with Félix du Temple de la Croix in 1857. What! No Wright Brothers? Well, this came later but since my American cousins get very sensitive on this topic, we will skip ahead to the much later. I’ll just note Eliot Sivowitch’s law of First — <em>“whenever you discover who was first, the harder you look you’ll find someone who was more first” —</em> and hence the first electric lightbulb was Joseph Wilson Swan, the person who actually flew a kite into the night which was hit by lightning was Thomas-François Dalibard and when it comes to the telephone, bar shenanigans with patent clerks then we owe a debt to Elisha Gray. Cue endless arguments and gnashing off teeth.</p>
+<p>Let us however stick with the Wright Brothers who <em>invented</em> powered flight to end all wars. The first planes sold to the US Army in 1909 were observation planes and the common idea of the time was <em>“With the perfect development of the airplane, wars will be only an incident of past ages.”</em> There was no existing practice associated with aircraft, there was some inertia to their adoption (similar to British concerns over the machine gun prior to World War I) and it was notoriously difficult to predict what would happen. Rather than airplanes ending all wars because no army could gain an advantage over another (all movements could be observed from the air), a rather different path of development occurred and bombs and machine guns were soon attached. With the genesis of such an act like powered flight, it’s difficult to anticipate what might change and your only defence is to adapt quickly. In such circumstances a cultural bias towards action i.e. quickly responding to the change is essential. With the example of Apple vs RIM (i.e. Blackberry) then similar characteristics exist. There are existing practices but a different type of smart phone product does not significantly change this. Again, the main way to react is to spot the change quickly (through horizon scanning) and have developed a culture with a bias towards action. These sorts of change are notoriously difficult to defend against. In the case of cloud computing then there was high levels of inertia and co-evolution of practice to tackle. However, the change was highly predictable and trivial to defend against. Despite this, most failed to react.</p>
+<h1 id="some-final-thoughts">Some final thoughts<a class="headerlink" href="#some-final-thoughts" title="Permanent link">¶</a></h1>
+<p>We’ve covered a lot in this section from refinement of the peace, war and wonder cycle to the introduction of different climatic patterns, to the manner in which organisations evolve and the different forms of disruption. There are a couple of things I want to call out in particular.</p>
+<p>_Do the states of peace, war and wonder really exist?<br/>
+_No, it’s just a model and all models are wrong. The model appears to predict secondary effects such as organisational change, it is developed from first principles of competition and there seems to be historical precedent. However, it’s no more than appearance at the moment until such time as I can confirm future points of industrialisation and even then I still have the question of whether that was just luck.</p>
+<p>_Do the states just effect individual activities in industries or could they have a wider effect?<br/>
+_The cycle’s effect depends upon how connected the components are. If they’re involved in many value chains then this can have a pronounced macro economic effect. When considering economic systems we have to look at them as we do with biological systems and consider how an ecosystem reacts to a change and how competition will drive that change throughout the system.</p>
+<p>_Can we anticipate organisational change?<br/>
+_We know roughly when such changes should occur (from weak signals) though we cannot detail what the impact will be, as in whether new doctrine will appear or what doctrine will refine? Population dynamics on companies is a non trivial exercise due to inherent bias in questions and responses. However, we can at least say something reasonable about the process of change and its likelihood.</p>
+<p>_Is life getting faster?<br/>
+_Certainly the evolution of acts appears to have accelerated but don’t confuse that with a higher rate of innovation. It’s highly questionable whether we have become more innovative as a species though we certainly can’t rely on novel things to create a differential for long. Furthermore be careful to avoid confusing multiple and coincidental points of industrialisation with a general change of speed.</p>
+<p>There are also a number of climatic patterns which I’ve mentioned that are worth noting.</p>
+<ul>
+<li><strong>Evolution of a communication mechanism can increase the speed of evolution overall.</strong> Not only can evolution not be measured over time but the speed of evolution is not constant over time.</li>
+<li><strong>Inertia increases with past success.</strong> Be careful with inertia, it will grow and tempt to you away from change even when you must.</li>
+<li><strong>Inertia kills</strong>. It’s rarely lack of innovation that gets you but past success.</li>
+<li><strong>Change is not always linear</strong>. Not all change is smooth and progressive, some is very rapid and be wary of being caught out by a slow moving past. ^067154</li>
+<li><strong>Shifts from product to utility tend to exhibit a punctuated equilibrium.</strong> Probably one of the most dangerous times or the biggest opportunity depending upon whether you’re an incumbent or new entrant. ^1f4a9c</li>
+<li><strong>There are many different forms of disruption (two broad classes are predictable vs non predictable).</strong> Don’t get caught into the trap of thinking that all disruption is the same. ^579424</li>
+<li><strong>A point of “war” is associated with organisational change.</strong> It’s not just things that evolve but entire organisations. ^fca154</li>
+</ul>
+<p>I’ve marked off all the patterns we’ve covered so far in orange in figure 132</p>
+<p><strong>Figure 132 — Climatic patterns</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*ixIZ6R-rFV6a7Jz9uRyKnw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*ixIZ6R-rFV6a7Jz9uRyKnw.jpeg"/></p>
+<h2 id="an-exercise-for-the-reader">An exercise for the reader<a class="headerlink" href="#an-exercise-for-the-reader" title="Permanent link">¶</a></h2>
+<p>The first thing I’d like you to do is to look at figure 124 — <em>the change from traditional to next generation</em> — and determine what type your organisation is? Are you adopting those principles or is there some context specific reason why you cannot? Have you challenged this?</p>
+<p>The second thing I’d like you to do is looking at your maps, start to consider what sort of inertia you might face in changing the landscape. Use figure 129 — <em>classifying inertia</em> — as a guide.</p>
+<p>Lastly, I want you to try and discover components in your value chains that are on the cusp of becoming industrialised and shifting from product forms. Ask yourself are you prepared for such a rapid change? What planning have you in place? How will you deal with the inertia?</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Chapter 1   On being lost" class="md-footer__link md-footer__link--prev" href="../Chapter%201%20-%20On%20being%20lost/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Chapter 1   On being lost
+            </div>
+</div>
+</a>
+<a aria-label="Next: Chapter 11   A smorgasbord of the slightly useful" class="md-footer__link md-footer__link--next" href="../Chapter%2011%20-%20A%20smorgasbord%20of%20the%20slightly%20useful/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Chapter 11   A smorgasbord of the slightly useful
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

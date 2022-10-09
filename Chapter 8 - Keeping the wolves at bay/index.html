@@ -1,0 +1,1634 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>Chapter 8 Keeping the wolves at bay - obsidian-mkdocs template</title>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-danger-of-making-it-simple">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Chapter 8   Keeping the wolves at bay
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%201%20-%20On%20being%20lost/">
+        Chapter 1   On being lost
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2010%20-%20I%20wasn%E2%80%99t%20expecting%20that/">
+        Chapter 10   I wasn’t expecting that
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2011%20-%20A%20smorgasbord%20of%20the%20slightly%20useful/">
+        Chapter 11   A smorgasbord of the slightly useful
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2012%20-%20The%20scenario/">
+        Chapter 12   The scenario
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2013%20-%20Something%20wicked%20this%20way%20comes/">
+        Chapter 13   Something wicked this way comes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2014%20-%20To%20thine%20own%20self%20be%20true/">
+        Chapter 14   To thine own self be true
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2015%20-%20On%20the%20practice%20of%20scenario%20planning/">
+        Chapter 15   On the practice of scenario planning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2016%20-%20Super%20Looper/">
+        Chapter 16   Super Looper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2017%20-%20To%20infinity%20and%20beyond/">
+        Chapter 17   To infinity and beyond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2018%20-%20Better%20for%20Less/">
+        All change please
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2019%20-%20On%20playing%20chess/">
+        Chapter 19   On playing chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%202%20-%20Finding%20a%20path/">
+        Chapter 2   Finding a path
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%203%20-%20Exploring%20the%20map/">
+        Chapter 3   Exploring the map
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%204%20-%20Doctrine/">
+        Chapter 4   Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%205%20-%20The%20play%20and%20a%20decision%20to%20act/">
+        Chapter 5   The play and a decision to act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%206%20-%20Getting%20started/">
+        Chapter 6   Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%207%20-%20Finding%20a%20new%20purpose/">
+        Chapter 7   Finding a new purpose
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Chapter 8   Keeping the wolves at bay
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Chapter 8   Keeping the wolves at bay
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-danger-of-making-it-simple">
+    The danger of making it simple
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-simple-trap">
+    The simple trap
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#finding-my-mojo">
+    Finding my mojo
+  </a>
+<nav aria-label="Finding my mojo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#worth-based-development">
+    Worth based development
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pricing-granularity">
+    Pricing granularity
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flow">
+    flow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efficiency-vs-effectiveness">
+    Efficiency vs effectiveness
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before-we-move-on">
+    Before we move on
+  </a>
+<nav aria-label="Before we move on" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#landscape">
+    Landscape
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#doctrine">
+    Doctrine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#an-exercise-for-the-reader">
+    An exercise for the reader
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%209%20-%20Charting%20the%20future/">
+        Chapter 9   Charting the future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Licence/">
+        Licence
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20I%20-%20What%20culture%20is%20right%20for%20you/">
+        The Problem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20II%20-%20Exploring%20culture/">
+        Mapping Culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20III%20-%20Exploring%20Brexit/">
+        The first rule of Brexit is **“you’re wrong”.**
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20IV%20-%20From%20Values%20to%20Rituals/">
+        Mea culpa
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20V%20-%20Exploring%20Value/">
+        Understanding Value
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VI%20-%20Embedded%20in%20memory/">
+        On memory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VII%20-%20Me%20vs%20We/">
+        Part VII   Me vs We
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_30" id="__nav_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_30">
+          Clarifications
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Clarifications" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_30">
+<span class="md-nav__icon md-icon"></span>
+          Clarifications
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Comments%20on%20Y-axis/">
+        Comments on Y axis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20-%20commodity%20services%20can%20be%20delivered%20by%20custom%20systems%20built%20from%20commodity%20components/">
+        Evolution   commodity services can be delivered by custom systems built from commodity components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20is%20not%20diffusion/">
+        Evolution is not diffusion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Strategy%20is%20about%20options/">
+        Strategy is about options
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_31" id="__nav_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_31">
+          Contributors
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributors" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_31">
+<span class="md-nav__icon md-icon"></span>
+          Contributors
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Chris%20Daniel/">
+        Chris Daniel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Simon%20Wardley%20-%20author/">
+        Simon Wardley   author
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/_list/">
+         list
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_32" id="__nav_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_32">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Notes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_32">
+<span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/2x2s/">
+        2x2s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/67%25%20of%20other%20generals%20bomb%20hills%2C%20I%20should%20learn%20to%20bomb%20a%20hill/">
+        67% of other generals bomb hills, I should learn to bomb a hill
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20action/">
+        A bias towards action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20the%20new/">
+        A bias towards the new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20game%20of%20chess/">
+        A game of chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Accelerators%2C%20decelerators%20and%20constraints/">
+        Accelerators, decelerators and constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Adaptive%20renewal%20cycle/">
+        Adaptive renewal cycle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/All%20models%20are%20wrong%20but%20some%20are%20useful/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Anticipation/">
+        Anticipation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Ashby%E2%80%99s%20law%20of%20requisite%20variety/">
+        Ashby’s law of requisite variety
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20humble/">
+        Be humble
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20pragmatic/">
+        Be pragmatic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20the%20owner/">
+        Be the owner
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20transparent/">
+        Be transparent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Challenge%20assumptions/">
+        Challenge assumptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Characteristics%20Change/">
+        Characteristics Change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Climate/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Co-evolution/">
+        Co evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Commit%20to%20the%20direction/">
+        Commit to the direction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Consultants/">
+        Consultants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Crossing%20the%20river%20by%20feeling%20the%20stones/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Dealing%20with%20disruption/">
+        Dealing with disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Deng%20Xiaoping/">
+        Deng Xiaoping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Design%20for%20constant%20evolution/">
+        Design for constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Diffusion%20of%20Innovation/">
+        Diffusion of Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Distribute%20power%20and%20decision%20making/">
+        Distribute power and decision making
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Do%20better%20with%20less/">
+        Do better with less
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Doctrine/">
+        Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Effectiveness%20over%20Efficiency/">
+        Effectiveness over Efficiency
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20enables%20innovation/">
+        Efficiency enables innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20vs%20effectiveness/">
+        Efficiency vs effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20will%20reduce%20our%20budget/">
+        Efficiency will reduce our budget
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evaluating%20Evolution/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everett%20Rogers/">
+        Everett Rogers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everything%20evolves/">
+        Everything evolves
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution%20of%20a%20communication%20mechanism%20can%20increase%20the%20speed%20of%20evolution%20overall/">
+        Evolution of a communication mechanism can increase the speed of evolution overall
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution/">
+        Quick intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Execution%20matters%20more%20than%20strategy/">
+        Execution matters more than strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Exploit%20the%20landscape/">
+        Exploit the landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/FIRE/">
+        FIRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20high%20situational%20awareness/">
+        Focus on high situational awareness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20the%20outcome%2C%20not%20the%20contract/">
+        Focus on the outcome, not the contract
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20user%20need/">
+        Focus on user need
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Genesis/">
+        Genesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Geoffrey%20Moore/">
+        Geoffrey Moore
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Haier%E2%80%99s%20Cell%20based%20structure/">
+        Haier’s Cell based structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Higher%20order%20systems%20create%20new%20sources%20of%20worth/">
+        Higher order systems create new sources of worth
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/I%20wisely%20started%20with%20a%20map./">
+        I wisely started with a map.
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ILC/">
+        ILC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20increases%20with%20past%20success/">
+        Inertia increases with past success
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20kills/">
+        Inertia kills
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Innovate%2C%20Leverage%20and%20Commoditise/">
+        Innovate, Leverage and Commoditise
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Know%20your%20users/">
+        Know your users
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Kubernetes%2C%20Serverless%20%26%20Satellite%20Internet/">
+        Kubernetes, Serverless &amp; Satellite Internet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Landscape/">
+        Landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Leadership/">
+        Leadership
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Listen%20to%20your%20ecosystem/">
+        Listen to your ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/MMORPG/">
+        MMORPG
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Failure/">
+        Manage Failure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Inertia/">
+        Manage Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Marketplace/">
+        Marketplace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Mastering%20strategy%20as%20simply%20as%20I%20can/">
+        Mastering strategy as simply as I can
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Move%20fast/">
+        Move fast
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/No%20one%20size%20fits%20all/">
+        No one size fits all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Not%20all%20parts%20of%20the%20map%20are%20equally%20predictable/">
+        Not all parts of the map are equally predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/OODA%20loop/">
+        OODA loop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Opportunity/">
+        Opportunity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Optimise%20flow/">
+        Optimise flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/PSTP/">
+        PSTP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Past%20success%20breeds%20inertia/">
+        Past success breeds inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Peace%2C%20War%20and%20Wonder/">
+        Peace, War and Wonder
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Porter%E2%80%99s%20forces/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Predictability/">
+        Predictability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Provide%20purpose%2C%20mastery%20and%20autonomy/">
+        Provide purpose, mastery and autonomy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Punctuated%20Equilibrium/">
+        Punctuated Equilibrium
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose%2C%20Autonomy%2C%20Mastery/">
+        Purpose, Autonomy, Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose/">
+        Purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Red%20Queen%20Hypothesis/">
+        Red Queen Hypothesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Remove%20duplication%20and%20bias/">
+        Remove duplication and bias
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/SWOTS/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Seek%20the%20best/">
+        Seek the best
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Set%20exceptional%20standards/">
+        Set exceptional standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Standardisation/">
+        Standardisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20complex/">
+        Strategy is complex
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20iterative/">
+        Strategy is iterative
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Hypothetical%20Gun%20company/">
+        The Hypothetical Gun company
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Stacey%20Matrix/">
+        The Stacey Matrix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Strategy%20Cycle/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20two%20types%20of%20why/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Themistocles/">
+        Themistocles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20core/">
+        There is no core
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20one%20culture/">
+        There is no one culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Thing%20big/">
+        Thing big
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20Small%20-%20details/">
+        Think Small   details
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20aptitude%20and%20attitude/">
+        Think aptitude and attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20small%20%28as%20in%20teams%29/">
+        Think small (as in teams)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Two%20Pizza%20model/">
+        Two Pizza model
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20Standards/">
+        Use Standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20common%20language/">
+        Use a common language
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20systematic%20mechanism%20of%20learning/">
+        Use a systematic mechanism of learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20methods/">
+        Use appropriate methods
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20tools/">
+        Use appropriate tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/User%20needs/">
+        User needs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Value%20Chain/">
+        Value Chain
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Waves%20of%20organisational%20change/">
+        Waves of organisational change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/We%20can%20deal%20with%20it%20later/">
+        We can deal with it later
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Worth%20based%20development/">
+        Worth based development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/You%20cannot%20take%20a%20diffusion%20curve%20and%20slap%20on%20evolution/">
+        You cannot take a diffusion curve and slap on evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/a%20profile%20diagram/">
+        A profile diagram
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/anti-pattern%20organisation/">
+        Anti pattern organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/attitude/">
+        Attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/backward%20causality/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/balancing%20act/">
+        Balancing act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/challenge/">
+        Challenge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/chasms/">
+        Chasms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/climatic%20patterns/">
+        Climatic patterns
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/commoditisation/">
+        Commoditisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/communication/">
+        Communication
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/components/">
+        Components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constant%20evolution/">
+        Constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific%20gameplay/">
+        Context specific gameplay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific/">
+        Context specific
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/contracts/">
+        Contracts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/different%20forms%20of%20disruption/">
+        Different forms of disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/disposing%20of%20liability/">
+        Disposing of liability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ecosystem/">
+        Ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/efficiency%20but%20effectiveness/">
+        Efficiency but effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/executive%20coaching/">
+        Executive coaching
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/fear%2C%20uncertainty%20and%20doubt/">
+        Fear, uncertainty and doubt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/flow/">
+        Flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/future%20organisation/">
+        Future organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/gardener/">
+        Gardener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/generally%20useful%20principles/">
+        Generally useful principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialisation/">
+        Industrialisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialised/">
+        Industrialised
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/inertia/">
+        Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/innovation/">
+        Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/learning/">
+        Learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/limits%20of%20evolution/">
+        Limits of evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/map/">
+        Comment
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mapping%20business/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mastery/">
+        Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/military%20history/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/misconceptions/">
+        Misconceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/nature%20of%20publications/">
+        Nature of publications
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/no%20choice%20over%20evolution/">
+        No choice over evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20approach/">
+        Open approach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20data/">
+        Open data
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20source/">
+        Open source
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/outsourcing/">
+        Outsourcing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pig%20in%20a%20poke/">
+        Pig in a poke
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pioneers/">
+        Pioneers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pipeline/">
+        Pipeline
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20stability/">
+        Point of stability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20ubiquity/">
+        Point of ubiquity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/position/">
+        Position
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/predictable/">
+        Predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/purpose%20of%20mapping/">
+        Purpose of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/recommended%20books/">
+        Recommended books
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/resistance%20to%20change/">
+        Resistance to change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/settlers/">
+        Settlers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/simplicity/">
+        Simplicity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/situational%20awareness/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/six%20absolute%20basic%20elements%20for%20any%20map/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/small%20cells/">
+        Small cells
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/social%20capital%20is%20important/">
+        Social capital is important
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/space%20has%20meaning/">
+        Space has meaning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/strategy%20based%20on%20familiarity%20and%20memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/sweat%20and%20dump/">
+        Sweat and dump
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20map%20is%20not%20the%20territory/">
+        The map is not the territory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20process%20of%20mapping/">
+        The process of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20movement/">
+        The why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20purpose/">
+        The why of purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/town%20planners/">
+        Town planners
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/transitional/">
+        Transitional
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/uncharted/">
+        Uncharted
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/use%20of%20patents/">
+        Use of patents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/visual%20representation/">
+        Visual representation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/weak%20signals/">
+        Weak signals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/where%20to%20attack/">
+        Where to attack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/why%20of%20movement/">
+        Why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/%E2%80%9CArt%20of%20War%E2%80%9D%20by%20Sun%20Tzu/">
+        “Art of War” by Sun Tzu
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_33" id="__nav_33" type="checkbox"/>
+<label class="md-nav__link" for="__nav_33">
+          Practices
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Practices" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_33">
+<span class="md-nav__icon md-icon"></span>
+          Practices
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Cardinal%20Evolution%20Phases/">
+        Cardinal Evolution Phases
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Notation%20Experiments/">
+        Notation Experiments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/X-Axis%20Explanations/">
+        Approach 1 by Mike Haber
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-danger-of-making-it-simple">
+    The danger of making it simple
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-simple-trap">
+    The simple trap
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#finding-my-mojo">
+    Finding my mojo
+  </a>
+<nav aria-label="Finding my mojo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#worth-based-development">
+    Worth based development
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pricing-granularity">
+    Pricing granularity
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flow">
+    flow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efficiency-vs-effectiveness">
+    Efficiency vs effectiveness
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before-we-move-on">
+    Before we move on
+  </a>
+<nav aria-label="Before we move on" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#landscape">
+    Landscape
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#doctrine">
+    Doctrine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#an-exercise-for-the-reader">
+    An exercise for the reader
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<p>To keep funding my research, I took a few more paid gigs which basically meant becoming a gun for hire. Cloud computing was colliding with the technology scene and there was lots of confusion about. Hence I had a constant stream of conferences — including some that actually paid — along with plenty of opportunity for piecemeal work. It was a wild west in computing with unfortunately some fairly shady practices and exploitation in the industry. I tried not to cause harm but I had an Achilles heel in simplicity.</p>
+<h2 id="the-danger-of-making-it-simple">The danger of making it simple<a class="headerlink" href="#the-danger-of-making-it-simple" title="Permanent link">¶</a></h2>
+<p>One of the obstacles with mapping was that some people found it complex. This is not really unsurprising because you’re exposing people to a world that the majority are unfamiliar with. Few in business have practical experience with situational awareness or the use of maps. Many don’t understand why it might be important. It also takes time and effort to become comfortable with creating a map. A common response tends to be <em>“can you create the map for us”</em> based upon an idea that they will then apply their general like strategy to it. This always degenerates into <em>“can you show us what moves we can make”</em> to which they’ll apply their general like intellect to. In the end if becomes <em>“which move should we make”</em> and then general like nodding of their approval.</p>
+<p>However, confusion over cloud computing had created an opportunity for a new way of thinking and hopefully learning. Alas piling on the complexity of mapping onto a bewildered person who has no connection to situational awareness can cause more confusion. Most people just wanted answers they could agree to such as how to solve their need of being in the cloud without rocking the boat too much. I’m guessing that’s why there has been an awful lot of questionable efforts in private cloud.</p>
+<p>Hence I looked for ways to simplify mapping, to make it more palatable and more familiar. I started with spot painting. I’d take a business process diagram or a box and wire for an existing system, such as our Elvish self driving car in figure 36 (<a href="https://medium.com/wardleymaps/doctrine-8bb0015688e5">chapter 4</a>) and then colour different parts according to whether they were more genesis or commodity. I’d produce something like figure 83.</p>
+<p><strong>Figure 83 — “Spot” painting of an Elvish self driving car</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*htf8w2KSVjY6_fgD1_QAvw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*htf8w2KSVjY6_fgD1_QAvw.jpeg"/></p>
+<p>Such annotated diagrams along with being colourful were more familiar and less threatening to the people who had written the originals. They enabled me to fairly easily introduce the concepts of evolution into an organisation and hence we could have a discussion about what methods to use. But without position and movement then these diagrams were unhelpful for effective challenge and continuous learning of economic patterns or forms of gameplay. There was a trade-off between simplicity and usefulness.</p>
+<h2 id="the-simple-trap">The simple trap<a class="headerlink" href="#the-simple-trap" title="Permanent link">¶</a></h2>
+<p><a href="../notes/Ashby%E2%80%99s%20law%20of%20requisite%20variety/">Ashby’s law of requisite variety</a> describes how the controlling mechanism of a system must be capable of representing what is being controlled. Organisations are both complicated and complex things. They are generally <em>complicated</em> because they have a large scope, contain many components that require specialisation and are difficult to grasp and manage. They are also <em>complex</em> because there are many emergent behaviours. For example, they have many components in the uncharted space for which there is uncertainty and you cannot predict this. The best you can do here is to feel your way. Whilst mapping provides you with a window onto this, you need to have a management capability able to cope with it.</p>
+<p>There is unfortunately another solution to Ashby’s law. Instead of coping with a complicated environment that contains complexity, you make the choice to pretend that what is being managed is simple. In business, we like things such as [[2x2]] diagrams not because they represent reality but because they obscure it and hence are easy to understand. We trade-off our ability to continuously learn about the environment for an illusion of simplicity and easy management. ^8eb889</p>
+<p>It’s important to make a distinction here. The act of taking something complicated (like a machine) and breaking it down into small but manageable components or using a mechanism to sense uncertain change in a complex environment is not the same as trying to manage such a system by pretending it’s a [[2x2]] matrix. As Einstein would say <em>“Everything should be made as simple as possible, but no simpler”</em> ^c1e73e</p>
+<p>Eventually, I was faced with a choice. Do I keep using these “spot” diagrams thereby making the concepts of evolution more accessible and just accept the flaws (and the cash) or do I take a slower path and try to push organisations towards a higher understanding of position and movement? If they struggled then I could compromise and do the heavy lifting for them by just providing a map and the results. However, I already knew this would make them dependent upon me which was the consultant path that I was trying to fight. My purpose was to free people from the shackles of consultants and not to chain them up even more. This compromise was out of the question. I had to take the slower path. I like to think that I stood my ground here but with very few companies mapping, bills mounting and clients taking an interest in the simplified concepts then it’s fair to say that I was starting to wobble.</p>
+<h1 id="finding-my-mojo">Finding my mojo<a class="headerlink" href="#finding-my-mojo" title="Permanent link">¶</a></h1>
+<p>My salvation was a piece of paid work that I’m particularly fond of. It concerned a question of efficiency versus effectiveness and to have any hope of explaining it then we first need to introduce three concepts— worth based development, pricing granularity and flow. After which we can connect them all together to examine this question. I’m going to have to jump around in history in order to do this but hopefully I can keep it all together.</p>
+<h2 id="worth-based-development"><a href="../notes/Worth%20based%20development/">Worth based development</a><a class="headerlink" href="#worth-based-development" title="Permanent link">¶</a></h2>
+<p>^abf40e</p>
+<p>In 2003, the company that I ran built and operated small sized systems for others. There were no big systems, these were more of the £100k — £2M scale covering a few million users. Our clients usually wanted to write a detailed specification of exactly what they needed to ensure we delivered. That doesn’t sound too bad but even at this small scale then some of the components in these projects would be in the uncharted space and hence no-one knew exactly what was wanted. Unfortunately, back then, I didn’t have the language to explain this. Hence we built and operated the systems and inevitably we had some tension over change control and arguments over what feature was in or out of a particular contract.</p>
+<p>During one of these discussions, I pointed out to the client that we were sitting around a table arguing over a piece of paper but not one of us was talking about what the users needed. The contract wasn’t really the customer here; the client’s end users were. We needed to change this discussion and focus on the end user. I suggested that we should create a metric of value based upon the end user, something we could both work towards. The idea fell on deaf ears as the client was pre-occupied with the contract but at least the seed was planted. It wasn’t long after this that another project provided an opportunity to test this idea. The client gave me a specification and asked how much would it cost to build? I replied — <em>“How does free sound?”</em></p>
+<p>They were a bit shocked but then I added <em>“However, we will have to be paid to operate the system. We need to determine a measure of value or worth and I’ll get paid on that”</em>. There was a bit of um and ah but eventually we agreed to try out a method of worth based development.</p>
+<p>In this case, the goal of the system was to provide leads for an expensive range of large format printers (LFPs). The client wanted more leads. Their potential end users wanted a way of finding out more on these printers along with a way of testing them. I would build something which would marry the two different set of needs. But rather than the client paying up front and taking all the risk, I would build it for free and take a fee on every new lead created.</p>
+<p>We (as in the client and my company) were no longer focused on what was in or out of a contract but on a single task of creating more leads. We both had an incentive for this. I also had a new incentive for cost effectiveness because the more efficient I made system then the more profit I retained. We agreed and so I built and operated a system which enabled consumers to upload an image, test it on a large format printer and get delivery of their print plus information on the kit’s performance plus a sales call. The system soared.</p>
+<p>In three months we had generated more leads than the client normally had in a year and this was accelerating. It was stunning. The client’s revenue was rocketing but so was my revenue as the system was based upon a metric of leads. The more success they had, the more success I had. It was a win-win situation or so I thought. Alas, this actually created two problems and one headache.</p>
+<p>The problems were caused by the client being unprepared for this level of interest and internal budgeting systems that weren’t designed to cope with such a variable success. What has budgeting got to do with this? Well, for the client then success was more leads which translated into more revenue. This was good from a budgeting point of view. But the more success the client had then the more my fee increased as it was also based on leads. This was bad from a budgeting point of view. The system became so successful that it exceeded an internal budget figure the client had set for costs and this caused an internal conflict with demands to switch off the system until new budget was allocated (a very lengthy process). Switch off a revenue generating system because it’s doing better than expected and passed some arbitrary budget figure? This is what happens when an inflexible one size fits all approach of budgeting hits reality.</p>
+<p>Before you go “this is daft”, actually it’s not. Over time companies tend to build up a body of work and processes — the corporate corpus — designed to stop past failure. It’s all done with reasonable intentions. The desire to spend money effectively and the desire to know resources are being well used. That mass of good intentions are often the cause of many problems when you try to change the system. That corpus can become a corpse, a zombie killing off innovation whenever it is found. I had attempted to change the system by introducing a worth based approach and I should have known that this would cause tensions with the corpus, in this case the budgeting system. I learned that lesson quickly.</p>
+<p>I’ve used worth based approaches (often called “outcome”) many times over the last decade, in fact I prefer them. Whilst they tend to solve the issue of an excessive focus on contracts, they have invariably hit other roadblocks such as a client not being able to describe a metric of value or the purpose of the system or even conflict and politics within internal processes. You need to be aware of this and to mitigate against it.</p>
+<p>Along with problems such as lack of preparation for the surge in demand or the corporate corpus there was also the headache that this worth based approach caused. This was my migraine. There was some financial risk associated with this project and some investment needed. I had to be concerned with not only the development but operations. This included lots of capital investment along with costs that weren’t either truly variable or ones that I could only guess at. To minimise the risk we shared common components with other projects but in a large heterogeneous application environment then this just complicates allocation of costs. How much would a user visiting our application cost us in terms of compute, power and data centre usage was an incredibly tough question.</p>
+<p>In my risk models, I also had no clear way of determining operational costs as it scaled. I had to make lots of estimates on stepwise changes and how much compute resources would be used by an application that hadn’t been built. The financial model was more akin to art than any form of science. Some of that uncertainty ending up as “padding” in the metric e.g. the price per lead that I would charge. Fortunately other areas had better costs models. In the LFP example above then distribution systems and even printing were more variable (i.e. price per print or price per package) because we had experience of running an online photo and printing service. This brings me to the next topic of pricing granularity.</p>
+<h2 id="pricing-granularity">Pricing granularity<a class="headerlink" href="#pricing-granularity" title="Permanent link">¶</a></h2>
+<p>With a worth based approach then I have a strong incentive to: -</p>
+<ul>
+<li>reduce the operational cost of the project because the cheaper it is then the more profit I make.</li>
+<li>provide reliability because if the system went down, I wasn’t making any money.</li>
+<li>ensure the system maximises the value metric. In the case of LFP then this metric was “generating leads”.</li>
+</ul>
+<p>But I also had questions on where to invest. In the case of LFP, it was doing very well (this was prior to the budget shenanigans) and so I decided to look at investing an additional $100K. But where do I best put the money? Improving the site reliability? Reducing the operational cost of the application through better code? Maximising the number of users through marketing? Improving conversion of users to leads? Which choice brings me the better return? This is a particularly tough question to answer if you can’t effectively determine operational cost of an application beyond hand waving or if other data is also guessed at.</p>
+<p>One of the huge benefits of Zimki (our platform as a service play in 2006) was not only its serverless nature and how you could simply write code through an online IDE but also its pricing granularity was down to the function. This was no accident as I had a genuine need to know this. Any application is nothing more than a high level function that calls other functions. If I developed a function in Zimki, whenever that function was called then I could see exactly how much it had cost me. I was charged on the network, storage and compute resources used by that function. This was quite a revelation. It changed behaviour significantly because suddenly in the sea of code that is my application, I could find individual functions that disproportionately cost me more.</p>
+<p>As far as I know this pricing per function was unparalleled in the world of IT in 2006 and we didn’t see an equivalent pricing granularity until AWS Lambda was launched in 2014. Now, obviously I was also the provider of Zimki and behind the scenes there was a complex array of basket of goods concepts and all manner of financial instruments to be able to provide those cost figures. But this was abstracted from the developer. All they saw was a cost every time their function ran no matter how much it scaled. There was no capital investment and this turned the operational cost of an application into a manageable variable.</p>
+<h1 id="flow"><a href="../notes/flow/">flow</a><a class="headerlink" href="#flow" title="Permanent link">¶</a></h1>
+<p>^6cb4c4</p>
+<p>I’m now going to combine the ideas of worth based (outcome) development and pricing granularity to introduce an idea known as flow. To do this, we’re going to revisit the LFP project but this time with a map and the knowledge of what a utility platform can bring. Back when we were actually working on the LFP project, I hadn’t developed the mapping concept fully and Zimki wasn’t released. Hence this is a post event analysis and more of a what could have happened rather than what did.</p>
+<p>So, let us go back to 2008. We know how to map (we knew this in 2005). Let us imagine that Zimki (launched in 2005) had survived or some other equivalent platform as a service has arisen. Let us now imagine a scenario where the client has turned up with the LFP project and is willing to build this using worth based development (as happened in 2003).</p>
+<p>In figure 84, I’ve created a map of the worth based LFP project. I won’t mark-up points on this map, hopefully you’ve enough experience now to start reading them.</p>
+<p><strong>Figure 84— Map of the LFP project</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*cgm57o5y6O2jkF4eFvTBVg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*cgm57o5y6O2jkF4eFvTBVg.jpeg"/></p>
+<p>The map begins with our client who has a need for more leads and ultimately consumers buying their product. The conversion from lead to actually purchasing a printer is beyond the scope of this project as that was within the client’s sales organisation. We’re focused solely on generating leads. The other type of user in this map is the consumer who hopefully will buy one of these expensive printers. They have different needs, they want to find out about the right sort of printer for their commercial operations and to test it before buying something they will use. In this project, we’re aiming to provide an online mechanism for the consumer to find out about the printer (a microsite) along with a method to test it (the testing application).</p>
+<p>The test is a high resolution image that the user uploads and which is then printed out using the printer of their choice. Their poster (this is large format) would then be distributed to the user along with a standard graphical poster (showing the full capabilities), relevant marketing brochures and a sales call arranged. The platform space — which was the source of my original headaches due to my inability to provide a variable operational cost for application use — is evolving towards more of a utility service.</p>
+<p>So, let us assume we decide to use a utility platform. I’m now going to add some financial indicators onto this map. See figure 85.</p>
+<p><strong>Figure 85 — Financial indicators in the LFP project</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*Ob3NdXdDe3pNDivJU8ixwA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*Ob3NdXdDe3pNDivJU8ixwA.jpeg"/></p>
+<p>From the map, we hope to have users visit our microsite which would extol the benefits of owning a large format printer. This hopefully persuades some of these visitors to go and test it out. The act of turning a visitor into an actual lead requires the user to test a printer. So we have multiple conversion rates e.g. from microsite to testing application and from visitor to lead. At the start these will be unknown but we can guess.</p>
+<p>Normally, operating a microsite requires all those hard to calculate costs but in a utility platform world, your application is simply a function running on the platform and I’m charged for use. The operational cost of my microsite is basically the number of visitors x the average cost of the microsite function. Remember, an application consists of many functions and users can navigate around it which means some “wandering” users turn out to be more expensive than others. But we can cope with that by taking an average for our microsite.</p>
+<p>The same will apply to my “test the printer” (testing) application but in this case the users will include converted visitors from the microsite along with those who directly visit. Every use of the testing application (a function) will incur a cost. But as with the microsite, this is a variable. Of course, the actual functional cost of the testing application could be wildly different from the microsite depending upon what the applications did and how well the code was written but at least we would have a granular price for every call. Finally, every visitor who tests a printer will create a distribution and printing cost for me but also revenue as they have become a lead.</p>
+<p>This isn’t the only path by which someone can print out a poster. The visitor might not come from the microsite but instead go directly to the testing application through word of mouth or if we expose the testing application as an API. There are a number of potential flows through the map.</p>
+<p>When you look at any map, there can be many forms of flow within it whether financial or otherwise. It could be flows of revenue or flows of risk. For example, if the utility platform dies due to some catastrophic event then it’ll impact my microsite and my testing application which will impact the consumer needs and stop any lead generation. This would incur a financial penalty for me in terms of lost revenue. Whereas, if I run out of brochures then this impacts distribution and I have a choice on whether to send out the prints now or delay until the brochures are available. In figure 86, I’ve given an example of a flow within a map from potential consumer through their need to microsite to testing application to distribution.</p>
+<p><strong>Figure 86 — Flow of the LFP project</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*1j1Ru_T3q7UyIw7kAiC4KQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*1j1Ru_T3q7UyIw7kAiC4KQ.jpeg"/></p>
+<p>It’s important to note that the interfaces between components in a map represent these flows of capital whether physical, financial, information, knowledge, risk, time or social. It could be anything which we trade. Things are rarely free. Whenever you use a service then you’re trading something whether it’s information or social capital (e.g. loyalty to a scheme) or even just your time (e.g. to create new entries, to edit the content).</p>
+<p>By using the concept of flow, it is relatively simple to build a financial model for the system. In figure 87, I’ve created the skeleton of such a model for the map above.</p>
+<p><strong>Figure 87— Building a financial model for LFP</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*qINuD0aSi78SsGLak80hPw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*qINuD0aSi78SsGLak80hPw.jpeg"/></p>
+<p>This is like manna from heaven for someone trying to build a business. Certainly I have the investment in developing the code but with the application being a variable operational cost then I can make a money printing machine which grows with users. It also changes my focus on investment — do I want to invest in increasing marketing for more users, or the conversion rate, or maybe the testing application is so badly written (or a function within it) that investing in coding improvement will bring me better returns? Suddenly, the whole way I build a business and invest is changed.</p>
+<p>Now back to when we originally built LFP in 2003. There wasn’t a utility platform, I didn’t have maps and I didn’t have the concept of flow. Instead myself and my CFO had a mass of spreadsheets trying to calculate what the above did and cope with all the stepwise investments and capital costs needed. What was a nightmare in 2003 is child’s play in 2016.</p>
+<p>Whenever you’re building something novel, then the game is to use operational expense over capital as much as possible in order to reduce risk either due to the system not being used or growing rapidly. You want to tie the cost as close to the path of revenue generation especially within any worth based system when you’re gambling on an uncertain outcome. However, there will always be some investment e.g. writing the application, marketing the microsite. This sort of modelling can help you identify which options improve the equation and hence where you should invest for the future.</p>
+<h1 id="efficiency-vs-effectiveness"><a href="../notes/Efficiency%20vs%20effectiveness/">Efficiency vs effectiveness</a><a class="headerlink" href="#efficiency-vs-effectiveness" title="Permanent link">¶</a></h1>
+<p>^71be3f</p>
+<p>Having introduced the concepts of worth based development, pricing granularity and flow, let us now get back to our main story.</p>
+<p>So there I was in 2008 with an understanding of the importance of maps and of the flow of capital within them. This helped me explain a question of efficiency versus effectiveness in one of my client’s projects. I was quite proud of this. There is unfortunately a problem.</p>
+<p>Hopefully, you’re discovering that maps can be a quite useful strategic tool. The information they contain can be very sensitive. I’m certainly not going to break the trust of a client by exposing their dirty laundry. This is why many of the maps that I use in this book are slightly distorted and don’t identify the original owner unless I was the one running the show. I don’t mind you knowing all the mistakes and failings that I’ve made but not everyone is like that. If you’re uncomfortable with this and you need the reassurance of being told that “big company X did Y” then you’ll need to find someone else to help you.</p>
+<p>To overcome this issue of confidentiality, the next section covers a hypothetical that blends a story related to a modern company to help tell a past story which I’ve set into a technology context. Yes, maps are part of story telling but as J.R.R Tolkien said on writing the Lord of the Rings, <em>“<a href="../notes/I%20wisely%20started%20with%20a%20map./">I wisely started with a map.</a>”</em></p>
+<p>Our story begins, as many do, with a challenge and unfortunately no maps. The company was expanding and needing to increase its compute resources. It had created a process flow diagram for this (figure 88) which involved a request for more compute to the actions needed to meet that demand.</p>
+<p><strong>Figure 88 — The[[ process flow]]</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*50ZiKcifqGtTjbzdUvB6dA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*50ZiKcifqGtTjbzdUvB6dA.jpeg"/></p>
+<p>The process however had a bottleneck. Once servers were delivered at “goods in” they needed to be modified before being racked. This was time consuming and sometimes prone to failure. They were focused on improving the efficiency of the process flow as it was important for their future revenue generation. A proposal was on the table to invest in robotics to automate the process of modifying the servers. Whilst the proposal was expensive, the benefits were considerable especially given the significant future revenue that was at risk. A strongly positive ROI had been calculated.</p>
+<p>I want you to consider the above for a moment and decide whether a proposal to invest in improving the efficiency of an inefficient process makes sense particularly when the benefits of the proposal vastly outweigh the costs and your future revenue stream is at risk?</p>
+<p>I had met the company, talked about the concept of evolution and it would be fair to say they had no interest in mapping. I had mentioned the “spot” diagram and we agreed to take a look at the proposal through this lens. I’ve taken those first same steps (see figure 89) and “spotted” the process. Whilst the ordering and goods in process were quite industrialised, the modify part of the process was very custom.</p>
+<p><strong>Figure 89 — Spot diagram of the process.</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*LgVC5TOKXHK_-AT3toM6kw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*LgVC5TOKXHK_-AT3toM6kw.jpeg"/></p>
+<p>It’s important to take a break for a minute here and have a good look at the diagram above. Try and see if you notice anything interesting or odd before continuing with this story.</p>
+<p>I’m now going to turn the diagram above into a map and hopefully the problem will become clearer. Let us start from the user need of more compute. This actually has two needs, the ordering of a server and the racking of the server once it has been delivered. Apparently mounting the equipment (i.e. racking, adding power and cabling) needs modifications to be made to the server hence the companies interest in automation with robotics. Both of these chains are connected at the point of the “server” and “goods in”. I’ve drawn this in figure 90 with both flows.</p>
+<p><strong>Figure 90 — Mapping the proposal</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*cf52oob3JzEgioXE8w5tEw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*cf52oob3JzEgioXE8w5tEw.jpeg"/></p>
+<p>Take another break for a minute here and have a good look at the diagram above. Try and see if you notice anything interesting or odd this time before continuing with this story.</p>
+<p>What is worth noting is the racks were considered custom. On investigation, the company had always used custom built racks and it even had a friendly company that made them for it. This was just part of its corporate corpus, a ghost from a long gone past that still haunted the place. If you asked the company why they were using custom built racks they’d tell you that this is what they’ve always done, it was how they worked and the racks were designed for them. They’d would also tell you that racks was irrelevant to the project at hand which was all about automation.</p>
+<p>However, dig a little bit more and we come to reason why the servers needed modification. It turns out that standard servers are designed to fit standard racks. They didn’t fit the custom built racks that the company had so lovingly built. Hence additional plates needed to be added, holes drilled into the servers — this was the modification that was required. Let us be clear, on the table was a proposal to invest in robotics in order to <em>customise</em> standard servers in order that they fit into <em>custom</em> built racks which the company was buying. Does the proposal still make sense? Is it a good investment? Are there alternatives? Do I hear you shout <em>“use standard racks?”</em></p>
+<p>Now the question is whether we should just use standard racks? This obviously moves racks towards the commodity (which is where they should be) and the modification part disappears though we still have mounting, cabling and power. It seems a lot better though (see figure 91).</p>
+<p><strong>Figure 91 — Using standard racks</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*F1ZTahWwWoiDCZpGeVa3tg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*F1ZTahWwWoiDCZpGeVa3tg.jpeg"/></p>
+<p>However, you still have a problem which is the legacy estate. Are you going to migrate all the racks? What about our sunk costs? How are we going to maintain our existing systems? There will be a long list of reasons to counter the proposed change. Before you go <em>“this is daft, we should just change”</em> remember the budget example, the corporate corpus and don’t expect to change a system without some resistance.</p>
+<p>In this case, despite resistance, we should go a step further. Computing was becoming a commodity provided by utility services. We can simplify this whole flow by just adopting utility services for any new work. We don’t need to think about robotic investment or even converting to using standard racks (itself a cost which might be prohibitive). This entire chunk of the value chain should disappear over time along with any additional costs it might be hiding (see figure 92).</p>
+<p><strong>Figure 92— Hidden costs and removing parts of the value chain</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*3QY3HK5G9Jn-Ulwgon_n_A.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*3QY3HK5G9Jn-Ulwgon_n_A.jpeg"/></p>
+<p>In this story, we started with a proposal of investment into robotics based upon improving the efficiency of an existing process. It sounded reasonable on the surface but if they had taken that route then they would have invested more in maintaining a highly ineffective process. In all likelihood, it would have exacerbated the problem later because the corporate corpus would have expanded to include this robotic investment. If some future person had said “we should get rid of these custom racks” then the response would be <em>“but we’ve always done this and we’ve invested millions in robotics”</em>.</p>
+<p>I used the “spotted” process flow to get us part of the way i.e. identifying the custom built rack as the problem. However to really understand this space then we needed a map and the flows within it. The “efficient” thing to do might be investing in robotics but the “effective” thing to do was to get rid of this entire part of the value chain. It’s a bit like the utility platform question. I can either invest in making my infrastructure and platform components more efficient by automation or I could just plan to get rid of that entire part of the value chain by using a utility platform. Often the “efficient” thing to do is not the “effective” thing.</p>
+<p>However, a word to the wise. This was 2008 and the idea of getting rid of custom built racks and adopting a move towards using infrastructure from a utility provider was not welcomed. It’s easy in 2016 to say “this is obvious” but that’s because most people now have the benefit of hindsight. In 2008, such ideas were seen as radical and even dangerous. The changes necessary were far from welcomed within the organisation and it was fought every step of the way from executives to the ground floor. Without the courage and conviction of the CEO and a few “rebels”, the company would have happily spent millions on robotics and would be still building custom racks today.</p>
+<p>From experience, you should be careful with both your use of simplification when viewing a landscape and the inertia that exists. You should be very careful of process improvements focused solely on efficiency. You should be extremely careful when dealing with the corporate corpus.</p>
+<p>The company in question was a manufacturing company, the real scenario had nothing to do with computing and yes, they were about to spend many millions making a highly ineffective process more efficient. They didn’t, they are alive and doing well. I also kept the wolves at bay. That’s what I call a “win-win” except obviously for the vendors who lost out.</p>
+<h1 id="before-we-move-on">Before we move on<a class="headerlink" href="#before-we-move-on" title="Permanent link">¶</a></h1>
+<p>In the last few chapters, we’ve been sneaking around the strategy cycle covering mainly purpose and then landscape. You should be familiar enough with the strategy cycle that I don’t need to repeat it. We will keep on looping around this, sometimes diving into interconnections as we go. Anyway, this will be the last time that I’ll mention that. We should recap on some of the ideas from this chapter.</p>
+<h2 id="landscape">Landscape<a class="headerlink" href="#landscape" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Be careful of <a href="../notes/simplicity/">simplicity</a>.</strong> There’s a balancing act here caused by Ashby’s law. Be aware that you’re often trading your ability to learn for easier management. In some cases, you can simplify so far that it becomes harmful e.g. one size fits all and group wide KPIs. Often people talk about the KISS principle (Keep it simple, stupid) just remember that by keeping it too simple then you can make some pretty daft choices. ^6b96ec</li>
+<li>The map contains <strong>flows of capital</strong> which are represented by the interfaces. There are usually multiple flows in a single map. Such capital can be physical, financial, information, knowledge, risk, time or social. It could be anything which we trade and is traded between the components. ^9ee4ae</li>
+<li><strong>Maps are a means of storytelling</strong>. Despite my dour attitude to storytelling (especially the hand waving kind of verbiage often found in strategy), maps are a form of visual storytelling. ^b1e63d</li>
+</ul>
+<h2 id="doctrine">Doctrine<a class="headerlink" href="#doctrine" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong><a href="../notes/Focus%20on%20the%20outcome%2C%20not%20the%20contract/">Focus on the outcome, not the contract</a>.</strong> Worth (outcome) based tools can be useful here but be warned, they can also expose flaws in the understanding of value and become stymied by the corporate corpus e.g. a budgeting processes and its inability to cope with variable charging. ^c6efbb</li>
+<li><strong><a href="../notes/Use%20appropriate%20tools/">Use appropriate tools</a></strong>. When using maps, if I’m looking at financial [[flows]] then I’ll often dive into financial modelling when considering multiple investment paths e.g. focus on increasing visitors through marketing or the conversion rate from a microsite. Equally, if I’ve identified multiple “wheres” that I can attack, then I’ll often dive into business model canvas to compare them. Don’t be afraid to use multiple tools. Maps are simply a guide and learning tool. ^38db19</li>
+<li><strong><a href="../notes/Optimise%20flow/">Optimise flow</a></strong>. Often when you examine flows then you’ll find bottlenecks, inefficiencies and profitless flows. There will be things that you’re doing that you just don’t need to. ^3d091f</li>
+<li>Be very careful to consider <strong>not only <a href="../notes/efficiency%20but%20effectiveness/">efficiency but effectiveness</a></strong>. Try to avoid investing in making an ineffective process more efficient when you need to be questioning why you’re doing something and uncovering hidden costs. Also, don’t assume that an “obvious” change will be welcomed. Beware the corporate corpus. ^0ac1e6</li>
+<li>When it comes to managing <a href="../notes/flow/">flow</a> then granularity is your friend. Be prepared though, most companies don’t have anywhere near the level of granularity that you’ll need and you may even encounter politics when trying to find out. Think small, as in know the details. ^4a795b</li>
+<li>Any map can contain multiple <strong>different users</strong> and often the needs of those users can be in conflict though you should try to bring them all together. ^d79470</li>
+</ul>
+<p>We’ve covered quite a bit of doctrine so far, I’ve highlighted this (in orange) in figure 93. Though we’ve skated over several other areas of doctrine, I do want to come back to them later in the book with a more formal examination.</p>
+<p><strong>Figure 93 — Doctrine</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/60/1*OdaK4FQhTP4T5hJ1JSo2mQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*OdaK4FQhTP4T5hJ1JSo2mQ.jpeg"/></p>
+<p>We’ve also mentioned an aspect of gameplay — <strong>Trading</strong>. Maps are a form of knowledge capital and they tend to have value. Don’t expect people to just share them with you. You’ll need to trade or create your own.</p>
+<p>In the next section we will focus on climate including common economic patterns and anticipation.</p>
+<h2 id="an-exercise-for-the-reader">An exercise for the reader<a class="headerlink" href="#an-exercise-for-the-reader" title="Permanent link">¶</a></h2>
+<p>I’d like you to take some time and look at figure 93 — doctrine. Go through each of the sections marked in orange, re-read any chapters in this book that you need to and make sure you’re familiar with them. Then ask yourself, does your company have these forms of doctrine? How do you implement them? If not, why not? What is stopping you?</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Chapter 7   Finding a new purpose" class="md-footer__link md-footer__link--prev" href="../Chapter%207%20-%20Finding%20a%20new%20purpose/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Chapter 7   Finding a new purpose
+            </div>
+</div>
+</a>
+<a aria-label="Next: Chapter 9   Charting the future" class="md-footer__link md-footer__link--next" href="../Chapter%209%20-%20Charting%20the%20future/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Chapter 9   Charting the future
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

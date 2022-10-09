@@ -1,0 +1,1590 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
+<title>Chapter 4 Doctrine - obsidian-mkdocs template</title>
+<link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#learning-doctrine">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Chapter 4   Doctrine
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href=".." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%201%20-%20On%20being%20lost/">
+        Chapter 1   On being lost
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2010%20-%20I%20wasn%E2%80%99t%20expecting%20that/">
+        Chapter 10   I wasn’t expecting that
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2011%20-%20A%20smorgasbord%20of%20the%20slightly%20useful/">
+        Chapter 11   A smorgasbord of the slightly useful
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2012%20-%20The%20scenario/">
+        Chapter 12   The scenario
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2013%20-%20Something%20wicked%20this%20way%20comes/">
+        Chapter 13   Something wicked this way comes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2014%20-%20To%20thine%20own%20self%20be%20true/">
+        Chapter 14   To thine own self be true
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2015%20-%20On%20the%20practice%20of%20scenario%20planning/">
+        Chapter 15   On the practice of scenario planning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2016%20-%20Super%20Looper/">
+        Chapter 16   Super Looper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2017%20-%20To%20infinity%20and%20beyond/">
+        Chapter 17   To infinity and beyond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2018%20-%20Better%20for%20Less/">
+        All change please
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%2019%20-%20On%20playing%20chess/">
+        Chapter 19   On playing chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%202%20-%20Finding%20a%20path/">
+        Chapter 2   Finding a path
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%203%20-%20Exploring%20the%20map/">
+        Chapter 3   Exploring the map
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Chapter 4   Doctrine
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Chapter 4   Doctrine
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-doctrine">
+    Learning doctrine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#categorising-doctrine">
+    Categorising Doctrine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-doctrine-with-our-first-map">
+    Using doctrine with our first map
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#an-exercise-for-the-reader">
+    An exercise for the reader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changelog">
+    Changelog:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%205%20-%20The%20play%20and%20a%20decision%20to%20act/">
+        Chapter 5   The play and a decision to act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%206%20-%20Getting%20started/">
+        Chapter 6   Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%207%20-%20Finding%20a%20new%20purpose/">
+        Chapter 7   Finding a new purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%208%20-%20Keeping%20the%20wolves%20at%20bay/">
+        Chapter 8   Keeping the wolves at bay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Chapter%209%20-%20Charting%20the%20future/">
+        Chapter 9   Charting the future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Licence/">
+        Licence
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20I%20-%20What%20culture%20is%20right%20for%20you/">
+        The Problem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20II%20-%20Exploring%20culture/">
+        Mapping Culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20III%20-%20Exploring%20Brexit/">
+        The first rule of Brexit is **“you’re wrong”.**
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20IV%20-%20From%20Values%20to%20Rituals/">
+        Mea culpa
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20V%20-%20Exploring%20Value/">
+        Understanding Value
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VI%20-%20Embedded%20in%20memory/">
+        On memory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Part%20VII%20-%20Me%20vs%20We/">
+        Part VII   Me vs We
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_30" id="__nav_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_30">
+          Clarifications
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Clarifications" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_30">
+<span class="md-nav__icon md-icon"></span>
+          Clarifications
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Comments%20on%20Y-axis/">
+        Comments on Y axis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20-%20commodity%20services%20can%20be%20delivered%20by%20custom%20systems%20built%20from%20commodity%20components/">
+        Evolution   commodity services can be delivered by custom systems built from commodity components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Evolution%20is%20not%20diffusion/">
+        Evolution is not diffusion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clarifications/Strategy%20is%20about%20options/">
+        Strategy is about options
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_31" id="__nav_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_31">
+          Contributors
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contributors" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_31">
+<span class="md-nav__icon md-icon"></span>
+          Contributors
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Chris%20Daniel/">
+        Chris Daniel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/Simon%20Wardley%20-%20author/">
+        Simon Wardley   author
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contributors/_list/">
+         list
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_32" id="__nav_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_32">
+          Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Notes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_32">
+<span class="md-nav__icon md-icon"></span>
+          Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/2x2s/">
+        2x2s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/67%25%20of%20other%20generals%20bomb%20hills%2C%20I%20should%20learn%20to%20bomb%20a%20hill/">
+        67% of other generals bomb hills, I should learn to bomb a hill
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20action/">
+        A bias towards action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20bias%20towards%20the%20new/">
+        A bias towards the new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/A%20game%20of%20chess/">
+        A game of chess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Accelerators%2C%20decelerators%20and%20constraints/">
+        Accelerators, decelerators and constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Adaptive%20renewal%20cycle/">
+        Adaptive renewal cycle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/All%20models%20are%20wrong%20but%20some%20are%20useful/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Anticipation/">
+        Anticipation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Ashby%E2%80%99s%20law%20of%20requisite%20variety/">
+        Ashby’s law of requisite variety
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20humble/">
+        Be humble
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20pragmatic/">
+        Be pragmatic
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20the%20owner/">
+        Be the owner
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Be%20transparent/">
+        Be transparent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Challenge%20assumptions/">
+        Challenge assumptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Characteristics%20Change/">
+        Characteristics Change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Climate/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Co-evolution/">
+        Co evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Commit%20to%20the%20direction/">
+        Commit to the direction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Consultants/">
+        Consultants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Crossing%20the%20river%20by%20feeling%20the%20stones/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Dealing%20with%20disruption/">
+        Dealing with disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Deng%20Xiaoping/">
+        Deng Xiaoping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Design%20for%20constant%20evolution/">
+        Design for constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Diffusion%20of%20Innovation/">
+        Diffusion of Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Distribute%20power%20and%20decision%20making/">
+        Distribute power and decision making
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Do%20better%20with%20less/">
+        Do better with less
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Doctrine/">
+        Doctrine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Effectiveness%20over%20Efficiency/">
+        Effectiveness over Efficiency
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20enables%20innovation/">
+        Efficiency enables innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20vs%20effectiveness/">
+        Efficiency vs effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Efficiency%20will%20reduce%20our%20budget/">
+        Efficiency will reduce our budget
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evaluating%20Evolution/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everett%20Rogers/">
+        Everett Rogers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Everything%20evolves/">
+        Everything evolves
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution%20of%20a%20communication%20mechanism%20can%20increase%20the%20speed%20of%20evolution%20overall/">
+        Evolution of a communication mechanism can increase the speed of evolution overall
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Evolution/">
+        Quick intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Execution%20matters%20more%20than%20strategy/">
+        Execution matters more than strategy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Exploit%20the%20landscape/">
+        Exploit the landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/FIRE/">
+        FIRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20high%20situational%20awareness/">
+        Focus on high situational awareness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20the%20outcome%2C%20not%20the%20contract/">
+        Focus on the outcome, not the contract
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Focus%20on%20user%20need/">
+        Focus on user need
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Genesis/">
+        Genesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Geoffrey%20Moore/">
+        Geoffrey Moore
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Haier%E2%80%99s%20Cell%20based%20structure/">
+        Haier’s Cell based structure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Higher%20order%20systems%20create%20new%20sources%20of%20worth/">
+        Higher order systems create new sources of worth
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/I%20wisely%20started%20with%20a%20map./">
+        I wisely started with a map.
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ILC/">
+        ILC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20increases%20with%20past%20success/">
+        Inertia increases with past success
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Inertia%20kills/">
+        Inertia kills
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Innovate%2C%20Leverage%20and%20Commoditise/">
+        Innovate, Leverage and Commoditise
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Know%20your%20users/">
+        Know your users
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Kubernetes%2C%20Serverless%20%26%20Satellite%20Internet/">
+        Kubernetes, Serverless &amp; Satellite Internet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Landscape/">
+        Landscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Leadership/">
+        Leadership
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Listen%20to%20your%20ecosystem/">
+        Listen to your ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/MMORPG/">
+        MMORPG
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Failure/">
+        Manage Failure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Manage%20Inertia/">
+        Manage Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Marketplace/">
+        Marketplace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Mastering%20strategy%20as%20simply%20as%20I%20can/">
+        Mastering strategy as simply as I can
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Move%20fast/">
+        Move fast
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/No%20one%20size%20fits%20all/">
+        No one size fits all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Not%20all%20parts%20of%20the%20map%20are%20equally%20predictable/">
+        Not all parts of the map are equally predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/OODA%20loop/">
+        OODA loop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Opportunity/">
+        Opportunity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Optimise%20flow/">
+        Optimise flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/PSTP/">
+        PSTP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Past%20success%20breeds%20inertia/">
+        Past success breeds inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Peace%2C%20War%20and%20Wonder/">
+        Peace, War and Wonder
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Porter%E2%80%99s%20forces/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Predictability/">
+        Predictability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Provide%20purpose%2C%20mastery%20and%20autonomy/">
+        Provide purpose, mastery and autonomy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Punctuated%20Equilibrium/">
+        Punctuated Equilibrium
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose%2C%20Autonomy%2C%20Mastery/">
+        Purpose, Autonomy, Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Purpose/">
+        Purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Red%20Queen%20Hypothesis/">
+        Red Queen Hypothesis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Remove%20duplication%20and%20bias/">
+        Remove duplication and bias
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/SWOTS/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Seek%20the%20best/">
+        Seek the best
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Set%20exceptional%20standards/">
+        Set exceptional standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Standardisation/">
+        Standardisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20complex/">
+        Strategy is complex
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Strategy%20is%20iterative/">
+        Strategy is iterative
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Hypothetical%20Gun%20company/">
+        The Hypothetical Gun company
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Stacey%20Matrix/">
+        The Stacey Matrix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20Strategy%20Cycle/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/The%20two%20types%20of%20why/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Themistocles/">
+        Themistocles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20core/">
+        There is no core
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/There%20is%20no%20one%20culture/">
+        There is no one culture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Thing%20big/">
+        Thing big
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20Small%20-%20details/">
+        Think Small   details
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20aptitude%20and%20attitude/">
+        Think aptitude and attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Think%20small%20%28as%20in%20teams%29/">
+        Think small (as in teams)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Two%20Pizza%20model/">
+        Two Pizza model
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20Standards/">
+        Use Standards
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20common%20language/">
+        Use a common language
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20a%20systematic%20mechanism%20of%20learning/">
+        Use a systematic mechanism of learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20methods/">
+        Use appropriate methods
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Use%20appropriate%20tools/">
+        Use appropriate tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/User%20needs/">
+        User needs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Value%20Chain/">
+        Value Chain
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Waves%20of%20organisational%20change/">
+        Waves of organisational change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/We%20can%20deal%20with%20it%20later/">
+        We can deal with it later
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/Worth%20based%20development/">
+        Worth based development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/You%20cannot%20take%20a%20diffusion%20curve%20and%20slap%20on%20evolution/">
+        You cannot take a diffusion curve and slap on evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/a%20profile%20diagram/">
+        A profile diagram
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/anti-pattern%20organisation/">
+        Anti pattern organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/attitude/">
+        Attitude
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/backward%20causality/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/balancing%20act/">
+        Balancing act
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/challenge/">
+        Challenge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/chasms/">
+        Chasms
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/climatic%20patterns/">
+        Climatic patterns
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/commoditisation/">
+        Commoditisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/communication/">
+        Communication
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/components/">
+        Components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constant%20evolution/">
+        Constant evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/constraints/">
+        Constraints
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific%20gameplay/">
+        Context specific gameplay
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/context%20specific/">
+        Context specific
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/contracts/">
+        Contracts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/different%20forms%20of%20disruption/">
+        Different forms of disruption
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/disposing%20of%20liability/">
+        Disposing of liability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/ecosystem/">
+        Ecosystem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/efficiency%20but%20effectiveness/">
+        Efficiency but effectiveness
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/executive%20coaching/">
+        Executive coaching
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/fear%2C%20uncertainty%20and%20doubt/">
+        Fear, uncertainty and doubt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/flow/">
+        Flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/future%20organisation/">
+        Future organisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/gardener/">
+        Gardener
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/generally%20useful%20principles/">
+        Generally useful principles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialisation/">
+        Industrialisation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/industrialised/">
+        Industrialised
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/inertia/">
+        Inertia
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/innovation/">
+        Innovation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/learning/">
+        Learning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/limits%20of%20evolution/">
+        Limits of evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/map/">
+        Comment
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mapping%20business/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/mastery/">
+        Mastery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/military%20history/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/misconceptions/">
+        Misconceptions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/nature%20of%20publications/">
+        Nature of publications
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/no%20choice%20over%20evolution/">
+        No choice over evolution
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20approach/">
+        Open approach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20data/">
+        Open data
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/open%20source/">
+        Open source
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/outsourcing/">
+        Outsourcing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pig%20in%20a%20poke/">
+        Pig in a poke
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pioneers/">
+        Pioneers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/pipeline/">
+        Pipeline
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20stability/">
+        Point of stability
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/point%20of%20ubiquity/">
+        Point of ubiquity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/position/">
+        Position
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/predictable/">
+        Predictable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/purpose%20of%20mapping/">
+        Purpose of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/recommended%20books/">
+        Recommended books
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/resistance%20to%20change/">
+        Resistance to change
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/settlers/">
+        Settlers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/simplicity/">
+        Simplicity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/situational%20awareness/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/six%20absolute%20basic%20elements%20for%20any%20map/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/small%20cells/">
+        Small cells
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/social%20capital%20is%20important/">
+        Social capital is important
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/space%20has%20meaning/">
+        Space has meaning
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/strategy%20based%20on%20familiarity%20and%20memes/">
+        References
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/sweat%20and%20dump/">
+        Sweat and dump
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20map%20is%20not%20the%20territory/">
+        The map is not the territory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20process%20of%20mapping/">
+        The process of mapping
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20movement/">
+        The why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/the%20why%20of%20purpose/">
+        The why of purpose
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/town%20planners/">
+        Town planners
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/transitional/">
+        Transitional
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/uncharted/">
+        Uncharted
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/use%20of%20patents/">
+        Use of patents
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/visual%20representation/">
+        Visual representation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/weak%20signals/">
+        Weak signals
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/where%20to%20attack/">
+        Where to attack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/why%20of%20movement/">
+        Why of movement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notes/%E2%80%9CArt%20of%20War%E2%80%9D%20by%20Sun%20Tzu/">
+        “Art of War” by Sun Tzu
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_33" id="__nav_33" type="checkbox"/>
+<label class="md-nav__link" for="__nav_33">
+          Practices
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Practices" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_33">
+<span class="md-nav__icon md-icon"></span>
+          Practices
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Cardinal%20Evolution%20Phases/">
+        Cardinal Evolution Phases
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/Notation%20Experiments/">
+        Notation Experiments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../practices/X-Axis%20Explanations/">
+        Approach 1 by Mike Haber
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-doctrine">
+    Learning doctrine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#categorising-doctrine">
+    Categorising Doctrine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-doctrine-with-our-first-map">
+    Using doctrine with our first map
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#an-exercise-for-the-reader">
+    An exercise for the reader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changelog">
+    Changelog:
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Chapter 4   Doctrine</h1>
+<p>I had created my first map and applied an understanding of some basic <a href="../notes/climatic%20patterns/">climatic patterns</a> that might influence it. These patterns were the ones that I could not stop but I could anticipate. Whether I liked it or not the components on my map would evolve through the actions of the market. However, whilst I had no choice over the market that didn’t mean I had no choice over my actions. I might be able to influence the landscape through action, I could decide how I organised myself, the principles that I emphasised within the company and our manner of operating.</p>
+<p>Some of my choices might be <a href="../notes/context%20specific/">context specific</a> i.e. a decision to flank an opponent requires an opponent to be in a known position. This doesn’t mean that everything is context specific. There could exist in business <a href="../notes/generally%20useful%20principles/">generally useful principles</a> that everyone should apply. These principles are <a href="../notes/Doctrine/">Doctrine</a> and in this chapter we’re going to examine that part of my journey — see figure 29. ^d0bb35</p>
+<p><strong>Figure 29 — Doctrine</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*GSg5AjyL5OzuGZX244FZag.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*GSg5AjyL5OzuGZX244FZag.jpeg"/></p>
+<h2 id="learning-doctrine">Learning doctrine<a class="headerlink" href="#learning-doctrine" title="Permanent link">¶</a></h2>
+<p>Doctrine are the basic universal principles that are applicable to all industries regardless of the landscape and its context. This doesn’t mean that the doctrine is right but instead that it appears to be consistently useful for the time being. There will always exist better doctrine in the future. As with climatic patterns we will go through some basic forms and refine in future passes through the strategy cycle.</p>
+<p><strong>Doctrine: Focus on user need<br/>
+</strong>Any value we create is through meeting the needs of others. Even our ability to understand our environment by creating a map requires us to first define the user need as it is the anchor for the entire map — see figure 30. Alas, a mantra of “not sucking as much as the competitors” whilst rarely explicitly stated is surprisingly common. An alternative mantra is “we must be the best we can” but to do that we must understand what it is we need to be. Despite this, the usual response I receive when asking a company or a specific project to explain its user needs is a blank stare. I have seen many large projects in excess of a $100M with endless specification documents where the scale of spending and paperwork is only matched by the inability of the group to explain what the user actually needs. ^af63b8</p>
+<p><strong>Figure 30 — Focus on user needs</strong> ^466a8d</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*wZ8wEX2KVNhVTFgteoHOLw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*wZ8wEX2KVNhVTFgteoHOLw.jpeg"/></p>
+<p>It should be obvious that failing to meet the needs of your users especially when competitors do manage to achieve this is a bad idea. There is a conceit here in the assumption that your competitors will try to achieve this. If you’re operating in a market where everyone ignores user needs or better still tells users what they want (regardless of needs) then no-one gains an advantage. ^300a79</p>
+<p>But how do we work out those <a href="../notes/User%20needs/">User needs</a>? This is extremely tricky because we bring our own biases to the table. The first thing to do is to understand what users are we talking about — your customers, the regulators of your industry, your shareholders, your employees or even your own business? If you’re talking about customers then you need to focus on their needs not your business needs i.e. you might need to make revenue and profit but that is NOT your customers’ need. By meeting the needs of your customers then you should aim to satisfy your business needs to make revenue and profit, not the other way around. ^698105</p>
+<p>But surely I should focus on my business first! This is a topic known as flow which we will cover later. When you look at a map, each [[component]] represents [[a store of capital]] (whether physical, financial or otherwise). The lines between components represent capital flows from one component to another. If you think about a business then you want a flow of capital (in this case revenue) from customers to yourself. To do this you’re going to have to meet their needs because they’re unlikely to give you money for nothing. Unless, you’re operating in a bizarre market where everyone ignores the customer or you tell the customer what they want. ^ed2bc8</p>
+<p>Due to this flow, then the best way I’ve found for determining user needs is to start by looking at the transactions that an organisation makes with them. This will tend to give you an idea of what it provides and what is important. The next step is to examine the customer journey when interacting with those transactions. By questioning this journey and talking with customers then you will often find pointless steps or unmet needs or unnecessary needs being catered for. Another mechanism I’ve also found to be exceptionally useful, especially when your users are in fact other corporations, is to go and map out their landscape. In most cases I find these users have a poor idea of what they actually need. If you’re a supplier to such a company then discussions tend to degenerate to things they want and things they think are necessary rather than things they need. By mapping out their landscape, you can often clarify what is really needed along with finding entire new opportunities for business. ^b2de28</p>
+<p>Discussion and data collection are a key part of determining user needs and so talk with them and talk with experts in the field. However, there is a gotcha. In many cases they turn out to be both wrong! Gasp? What do you mean they’re wrong? There are two important areas where the users and the experts are usually wrong in describing their own needs. By happenstance, both are crucial for strategic gameplay. ^8f9372</p>
+<p>The first area is when a component is moving between stages of evolution e.g. when something shifts from custom built to product or more importantly from product to commodity (+utility). The problem is that the pre-existing installed base causes inertia to the change. Invariably users will be fixated on a legacy world and hence they will have a bias towards it. This is the equivalent to a user saying to Henry Ford — <em>“we don’t want a car; we want a faster horse!”</em> The bias is caused by a climatic pattern known as co-evolution but for the time being you simply need to be wary of the legacy mindset. ^9c817a</p>
+<p>The second area to note is that of the uncharted domain. These needs are both rare and highly uncertain and this means you’re going to have to gamble. There is no consistent way of determining what the user actually needs with something novel because they don’t know themselves. Hence be prepared to pivot. You might think you’re building a machine that will stop all wars (the Wright Brothers original concept for the airplane) but others will find alternative uses — the fighter plane, the bomber. ^03e719</p>
+<p>When it comes to dealing with needs then there are three different approaches according to the domains of uncharted, transitional and industrialised. In the uncharted domain you have to gamble. Users and experts don’t actually know what is needed beyond vague hand waving. In the transitional domain you have to listen. Users and experts can guide you to what they need. In the early days of the industrialised domain then you have to be mindful of users and experts bias caused by the inertia of past success. You already know what is needed but it has to be provided on a volume operations and good enough basis. ^92985d</p>
+<p><strong>Doctrine: Use a common language<br/>
+</strong>Instead of using multiple different ways of explaining the same thing between different functions of the company then try to use one e.g. a map. If you’re using business process diagrams on one side and IT systems diagrams on another then you’ll end up with translation errors, misalignment and confusion. Collaboration is important but it’s very difficult to achieve if one group is speaking Klingon and the other Elvish and let us face it, Finance is Klingon to IT and IT is generally Elvish to Finance. This is why companies often value people skilled in multiple areas who act as translators. But a soldier doesn’t need to know how to operate a boat to work with someone from the Navy nor does a sailor need to know how to operate a mortar to work with the Army. They use maps to collaborate and co-ordinate. The problem in business is the lack of a common language i.e. the lack of any form of mapping. If you can’t map what you are doing, then I recommend you hold back from acting and spend a few hours mapping it. ^8377cc</p>
+<p><strong>Doctrine: Be transparent<br/>
+</strong>Sharing a map will enable others to challenge and question your assumptions. The is essential because it helps us to learn and refine our maps. The downside of sharing is it allows others to challenge and question your assumptions. Many people find this uncomfortable. As the CEO of the company did I really want one of my juniors ripping apart my strategy using the map that I had created? Yes. I’d rather someone point out to me that our strategy involved walking an Army through a minefield than let me discover this for myself. However, don’t underestimate how difficult this transparency is within an organisation. ^f6dd5d</p>
+<p><strong>Doctrine: Challenge assumptions<br/>
+</strong>There is little point in focusing on user needs, creating a common language through the use of a map and sharing it transparently in the organisation if no-one is willing to challenge it. This act should be a duty for everyone in the company. I didn’t care if it was my pet project, I needed people to openly and honestly tell me where they thought I was going wrong. This requires not only transparency but also trust. Any form of retribution or bias against someone for challenging is a deadly sin that will harm your company. As the CEO, I made my CFO the XO back in 2004. One of his duties was to challenge my choices and to encourage this sort of questioning. ^59f09f</p>
+<p><strong>Doctrine: Remove duplication and bias<br/>
+</strong>You should not only share maps, you should collate them in an effort to remove duplication and bias i.e. rebuilding the same thing or custom building that which is already a commodity. Mapping is itself an iterative process and you’ve probably been making decisions for a long time without understanding the landscape. So you don’t need to map the entire landscape to start making decisions but rather think of maps as a guide which tells us more the more we use it. ^736627</p>
+<p>With your first map you can probably <a href="../notes/challenge/">challenge</a> whether we’ve adequately met user needs or maybe how we’re treating <a href="../notes/components/">components</a>. As you collect more maps of different systems or lines of business then you start discover the same component is on multiple maps. I’ve marked some examples in figure 31 in green. ^d83ae3</p>
+<p><strong>Figure 31 — Duplication</strong> ^94014f</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*9sl11s9-DfbTV7NUXoNTuA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*9sl11s9-DfbTV7NUXoNTuA.jpeg"/></p>
+<p>Now, the same component being on different maps is fine except when we’re saying it’s a different instance of that component. For example, if you have ten maps all with database or call centre or print facility as a component then that’s not necessarily a problem but it might be if you’re actually saying we have 10x different databases running on 10x different systems. There can be legitimate reasons for duplication such as locality but even then you’d hope there would be 10x fairly standardised print facilities and not 10x highly customised. ^86bfb0</p>
+<p>In large organisations such as petrochemical or banking companies with committees of architects then you don’t normally see duplication on a scale of tenfold. Instead, from experience, what I commonly find in a single global organisation built by acquisition with a federation of business units is more on the scale of a hundred fold. There’s is nothing quite like discovering 380x isolated teams custom building 380x ERP systems to meet the same user needs with 380x different systems (a chemical company). The worst case example I have is an energy company which has a duplication in excess of 740x. That said, I’m now aware of a bank that might have even exceeded this with over 1,000 risk management systems. These days, I’m positively elated by meeting a large global organisation which has duplication down at the scale of tens or even units. Of course, be aware that most companies might claim this but in practice they have no idea of what their duplication levels really are and significantly underestimate the problem. ^2f6d12</p>
+<p>One technique I find useful in helping to highlight this problem is to create <a href="../notes/a%20profile%20diagram/">a profile diagram</a>. I simply collate maps together, identifying commonly described components and then place them onto the profile. This gives me an idea of both duplication and bias. From the profile diagram below in figure 32, then the following points are noted: - ^b1d9ca</p>
+<p><strong>Figure 32 — Profile</strong> ^fd9cc5</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*6AlKUhSuup8mXu-nc060Pg.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*6AlKUhSuup8mXu-nc060Pg.jpeg"/></p>
+<p><strong>Point 1</strong> — for each common component you record how many times it is repeated. High numbers of repetition is not necessarily a problem as there may be a legitimate reason or it could be the same component in different maps. In this case, our maps show seven references to websites. ^e12c34</p>
+<p><strong>Point 2</strong> — recording how evolved a component is can provide you with an idea of bias within the organisation. From above, there are six examples of user registration in the maps. One of which is distanced from the others. This could be because one group simply thought in their map that user registration was a unique activity (it isn’t) or alternatively, you might have five groups using a common service and one group custom building their own. In this case, they might have a legitimate reason but it’s worth the challenge. ^7221f4</p>
+<p><strong>Point 3</strong> — collating maps often helps in creating a common lexicon. The same thing is often described with different terms in a single organisation. ^0c8f76</p>
+<p><strong>Point 4</strong> — there are seven references to email within the maps. Hopefully (though alas not always the case) this refers to one email system used in different places. There is also some bias with most groups considering email to be more commodity but one group thinking it’s an evolving product. This should probably send alarm bells ringing. ^136967</p>
+<p><strong>Point 5</strong> — there are five references to data centres. Again hopefully this refers to a couple built for specific geographical reasons. Alas, a popular sport in many large enterprises seems to be building data centres as though they’re the first ones ever built. In the worst cases, I have been shown around a lovingly created data centre and then gone to the shop floor to find a sad, solitary rack standing in the middle of a large empty hall. The rack invariably contains servers given loving names such as Seven, Janeway, Paris, Chakotay (all characters from Star Trek’s Voyager series). ^4ba8cc</p>
+<p>The maps and the profile are simply guides to help you remove duplication and bias. This is a necessity for efficient operations. However, duplication should not be solely considered as a financial cost because it impacts our ability to develop more complex capabilities. In the case of the bank with 1,000 risk management systems then one of the problems it is facing is its ability to get anything released. ^91dc93</p>
+<p>Another technique I find useful in a dispersed structure is to determine what capabilities we need as a group. For example, in figure 33, a map is provided that explicitly highlights both the customer journey and the associated capabilities. I’ve derived this map from a real world example used by the <a href="http://www.methods.co.uk/companies/">Methods Group</a>. In this map the customer journey (described as service patterns) is more clearly highlighted and we’re focusing not only on the technology required to meet higher order system needs but also those higher order systems e.g. manage call, determine sponsorship. For reasons of confidentiality, I’ve changed and removed many of the terms. ^e1c1e4</p>
+<p><strong>Figure 33 — Map with customer journey</strong> ^544a1d</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*pbXQOm3BvRXDmt2qvTI_Ng.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*pbXQOm3BvRXDmt2qvTI_Ng.jpeg"/></p>
+<p>By aggregating many of these maps together you can develop a picture of what the company actually does and what its existing capabilities are through a capability profile — see figure 34. ^cec6f6</p>
+<p><strong>Figure 34 — Capability Profile</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*8nDLjopTztazIOrrQ9I1jQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*8nDLjopTztazIOrrQ9I1jQ.jpeg"/></p>
+<p>You may find that common capabilities are often assumed to be custom (e.g. offer a selection of investments) when in reality they should be far more defined. You may also find that you have a plethora of duplicated and custom built technology providing a single capability which should be streamlined. It never fails to surprise me how a simple business with limited capabilities is made incredibly complex and slow by a smorgasbord of duplicated custom built solutions underneath. ^05c412</p>
+<p><strong>Doctrine: Use appropriate methods<br/>
+</strong>One of the climatic patterns we examined in the figure 22 (<a href="https://medium.com/wardleymaps/exploring-the-map-ad0266fad59b">chapter 3</a>) was how no one size fits all method exists. Assuming you are removing bias in your maps either by challenging directly or with the aid of a profile built from multiple maps then the next question becomes what methods are suitable? The most common mistake that I find is with outsourcing. The issue with outsourcing isn’t that the concept is wrong but instead that we have a tendency to outsource entire systems for which we do not understand the landscape. This is often done on the hope that someone else will effectively take care of it. ^31228f</p>
+<p>Let us imagine a system with multiple components spread across the evolution axis but we have no map. Let us now apply a single highly structured process to the system, often through a contract detailing what should be delivered. Unfortunately, unbeknownst to us some of those components will be in the uncharted domain and hence are uncertain by nature. They will change and hence we will incur some form of change control cost. These costs can be significant in any complex system that contains many uncharted components. As a result, arguments tend to break out between the buyer and the supplier. Unfortunately, the supplier has the upper hand because they can point to the contract and show that the components that did not change were efficiently delivered and the cost is associated with the components that changed. The old lines of “if you had specified it correctly in the first place” to “you kept on changing your mind” get trotted out and the buyer normally feels some form of guilt. It was their fault and if only they had specified it more! This is a lie and a trap. ^9651ee</p>
+<p>The problem was not that a highly structured process with detailed specification was correctly applied to industrialised components but that the same technique was also incorrectly applied to components that were by their very nature uncertain and changing. The buyer could never specify those changing components with any degree of certainty. Excessive change control costs caused by a structured process applied to changing components are inevitable. The fault is with the supplier who should have the experience to know that one size fits all cannot work. Unfortunately, and there is no polite way of saying this, it’s a lucrative scam. ^b63db0</p>
+<p>Even better, if the scam works — especially if the supplier waives some cost as a gesture of goodwill — then the next time the buyer will try even harder to specify the next system in more detail. They’ll often pay the supplier or a friendly consultancy to help them do this. Unfortunately, once again it will contain uncharted components which will change and thus costs will be incurred. The only way to avoid this is to break the system down into components and treat them with appropriate methods e.g. figure 35. ^40df02</p>
+<p><strong>Figure 35 — Use appropriate methods.</strong> ^c2a218</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*j5DwoelIG9kukmQjxK7wBw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*j5DwoelIG9kukmQjxK7wBw.jpeg"/></p>
+<p>In the above example from 2005, then power should be outsourced to a utility provider whereas CRM, platform, data centre and compute should use off the shelf products or rental solutions (e.g. hosting) with minimal change where possible. The online photo storage and image manipulation components which are going to rapidly change should ideally be built in-house with our own engineers and using an agile approach. Whilst we might use more detailed and specific contracts for items such as data centre (hosting), we are also mindful that we cannot fully specify image manipulation at this time. If in 2005, we had outsourced the entire system in the figure above to a single highly structured approach using a detailed specification then I could almost guarantee that we would have ended up with excessive change costs around image manipulation and photo storage. ^2bbdb6</p>
+<p>The problem of inappropriate <a href="../notes/outsourcing/">outsourcing</a> is so rife that it’s worth doing a simple example to reinforce this point. In figure 36, I’ve provided a box and wire diagram (commonly used in IT systems) for a self-driving car. However, I’ve translated the description of the components into Elvish because as I’ve said most IT is elvish to people in business. I’d like you to look at the diagram and answer the questions labelled as 1 and 2. ^b07aef</p>
+<p><strong>Figure 36 — Elvish self-driving car (box and wire)</strong> ^a7e5f6</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*z2oekFI8susgjabRDIFFHQ.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*z2oekFI8susgjabRDIFFHQ.jpeg"/></p>
+<p>Now, in figure 37, I’ve provided exactly the same diagram in a mapping format. It’s still in Elvish. See if you can answer question 1 and 2. ^dc8c11</p>
+<p><strong>Figure 37 — Elvish self-driving car (map)</strong> ^857c45</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*zeIyk5Ua05EmXF--B90KKA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*zeIyk5Ua05EmXF--B90KKA.jpeg"/></p>
+<p>You should find you can say something reasonable about how you treat question 1 and 2. If you’re struggling look at figure 22 (<a href="https://medium.com/wardleymaps/exploring-the-map-ad0266fad59b">chapter 3</a>). ^02802d</p>
+<p>For reference, question 1 should probably be built in-house with our own engineers in an agile fashion whereas question 2 should be either outsourced with a structured and well defined process or some sort of commodity consumed. In figure 38, I’ve provided the same diagram without the Elvish so you can check your thinking. ^26c938</p>
+<p><strong>Figure 38— A self-driving car</strong> ^43ba9b</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*xGihHZLBq7B3lYWVQT-a0g.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*xGihHZLBq7B3lYWVQT-a0g.jpeg"/></p>
+<p>What enables you to do this feat of Elvish sensibility is the movement axis of evolution. Unfortunately, in most outsourcing arrangements that I’ve seen then diagrams such as box and wires or business process maps (see figure 39) tend to dominate. Alas, these lack that all important movement characteristic. Box and wires and business process maps are not actually maps; you are relying solely on contextual information from the words (i.e. knowing that process payment is a commodity). The diagrams themselves will not provide you with a guide as to what you should or should not outsource. ^af36ce</p>
+<p><strong>Figure 39— A business process diagram</strong> ^e83733</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*raGrs4q78nqbf55yaDkvXw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*raGrs4q78nqbf55yaDkvXw.jpeg"/></p>
+<p>Before you go and ask your friendly consultancy or vendor to make a map for you, remember that their interests are not necessarily your own. Equally, it’s important to challenge any bias your company may have in your maps. A team building our own home grown electricity supply may well argue that electricity is not a commodity but instead we need to custom build our own supply. Along with common sense, the cheat sheet figure 17, (<a href="https://medium.com/wardleymaps/finding-a-path-cdb1249078c0">chapter 2</a>) and those profile diagrams built from aggregated maps (figure 32) should give you ample evidence to challenge this. ^29d57c</p>
+<p>At this point someone normally tells me — <em>“that’s obvious, we wouldn’t do that”</em> — however, ask yourself how many enterprise content management (ECM) systems do you have? If you’re of any scale and a typical global company built by acquisition, then experience would dictate that you’ll probably say 5–8x. In practice it is often more likely to be 40–250x customised versions with probably 3–5x separate groups building a global ECM whilst being unaware that the other groups exist. The problem is, most of you won’t know how much duplication or bias you have. Of course, there are a wide range of excuses that are deployed for not breaking up entire systems into components and then applying more appropriate methods. My favourite ones include: - ^5dc747</p>
+<p><em>“we need better experts and specification”</em> — that’s called not dealing with the problem. It’s like saying our death star project to clean up the mess of failed death star projects has failed; we need a new death star! There’s a famous quote about repeating the same thing and expecting different results which is relevant here. ^968cd7</p>
+<p><em>“it’s too complex, splitting into parts will make it unmanageable”</em> — the age old effort to pretend that a system containing 100 different moving parts doesn’t actually contain 100 different moving parts. We don’t build cars by pretending they are one thing; in fact, we often have complex supply chains meeting the different needs of different components with appropriate measurement and contracts deployed based upon the component. Yes, it does make for a bit more work to understand what is being built but then if you’re spending significant sums it is generally a good idea to know this. ^4ac409</p>
+<p><em>“It will cause chaos”</em> — cue the old <em>“riots on the street”</em> line. Given construction, automotive and many other industries have no problem with componentisation then I can’t see how anyone ever jumps to this notion of chaos. The truth is usually more of a desire to have “one throat to choke” though there is nothing stopping a company from using one supplier to build all the components with appropriate methods. ^4ecbd0</p>
+<p><em>“You’ll end up with hundreds of experimental startups”</em> — at this point we’re getting into the surreal. If you break a complex system into components, then some of the uncharted components are going to be experimental. This is not a bad thing, this is just what they are. For those components then you’re likely to do this in-house with agile techniques or use a specialist company focused on more agile processes. But you won’t give that company all the components because the majority of components tend to be highly industrialised and hence you’ll use established utility providers such as Amazon for computing infrastructure. I’m not sure how people make the jump from componentisation to giving it all to “hundreds of experimental startups”. In general, this tends to be caused by a desire to keep the current status quo. ^2b4931</p>
+<p><em>“complexity in managing interfaces”</em> — this is my favourite excuse which takes surreal to a whole new level. Pretending that a complex 100 component system with uncharted and industrialised components that have interfaces between them is in fact one system with a one size fits all method and non-existent interfaces is the very definition of fantasy. Those components are there, those interfaces are there — the complexity doesn’t go away simply by “outsourcing”. All you’ve done is try and pretend that the complex thing you’re building is somehow simple because then it’s easier to manage. It would be like BMW or Apple outsourcing their entire product lines to someone else and trying to have no involvement because it makes management simple. ^05e6e0</p>
+<p><strong>Doctrine: Think small<br/>
+</strong>In order to apply appropriate methods then you need to think small. You can’t treat the entire system as one thing but you need to break it into components. I will often extend this to using small contracts localized around specific components. Knowing the details helps you manage a landscape. But you can take this further and even use small teams such as cell based structures. Probably the best known approaches to using small teams are Amazon’s <a href="../notes/Two%20Pizza%20model/">Two Pizza model</a> and <a href="../notes/Haier%E2%80%99s%20Cell%20based%20structure/">Haier’s Cell based structure</a>. ^ae24a4</p>
+<p>Such teams should be given autonomy in their space and this can be achieved by the team providing well defined interfaces for others to consume along with defined boundaries often described through some form of fitness function i.e. the team has a goal around a specific area with defined metrics for delivery. Maps themselves can be useful in helping you identify not only the teams you should build but also the interfaces they need to create — see figure 40. ^a4e9f8</p>
+<p><strong>Figure 40— Think small (as in teams)</strong> ^5d1d1d</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*hq1RwzQTcEITtNk16fUe5g.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*hq1RwzQTcEITtNk16fUe5g.jpeg"/></p>
+<p><strong>Doctrine: Think aptitude and attitude<br/>
+</strong>Now let us suppose you embark on a cell based structure and you’re thinking small. Then each cell is going to require different skills i.e. aptitudes. However, there’s another factor at play here — attitude. When we look at a map, we know that activities evolve from the uncharted to industrialised domain and the methods and techniques we need are different. The genesis of something requires experimentation and whilst you might need the aptitude of engineering you need a specific form i.e. agile engineering. Conversely the type of engineering you need to build a highly industrialised act requires a focus on volume operations and removing deviation such as six sigma. Hence, we have one aptitude of engineering that requires different attitudes. It doesn’t matter what aptitude we examine — finance, engineering, network or marketing — the attitude also matters. There isn’t such a thing as IT or finance or marketing but instead multiples of. ^8f23ff</p>
+<p>To resolve this problem, you need to populate the cells with different types of people — <strong><a href="../notes/pioneers/">pioneers</a></strong>, <strong><a href="../notes/settlers/">settlers</a></strong> and <strong><a href="../notes/town%20planners/">town planners</a></strong>. It’s not realistic to think that everyone has the same attitude, some are much more capable of living in a world of chaos, experimentation and failure whilst others are much more capable of dealing with intensive modelling, the rigours of volume operations and measurement. You need brilliant people with the right aptitudes (e.g. engineering, finance) and different attitudes (e.g. pioneers, settlers). ^25c225</p>
+<p><strong>Pioneers</strong> are brilliant people. They are able to explore the never before discovered concepts, the uncharted land. They show you wonder but they fail a lot. Half the time the thing doesn’t work properly. You wouldn’t trust what they build. They create ‘crazy’ ideas. Their type of innovation is what we describe as core research. They make future success possible. Most of the time we look at them and go “what?”, “I don’t understand?” or “is that magic?”. They built the first ever electric source (the Parthian Battery, 400AD) and the first ever digital computer (Z3, 1943). In the past, we often burnt them at the stake or they usually died from malaria in some newly discovered swamp. ^366b51</p>
+<p><strong>Settlers</strong> are brilliant people. They can turn the half-baked thing into something useful for a larger audience. They build trust. They build understanding. They make the possible future actually happen. They turn the prototype into a product, make it possible to manufacture it, listen to customers and turn it profitable. Their innovation is what we tend to think of as applied research and differentiation. They built the first ever computer products (e.g. IBM 650 and onwards), the first generators (Hippolyte Pixii to Siemen’s generators). They drain the swamp and create some form of settlement. ^869d3e</p>
+<p><strong>Town Planners</strong> are brilliant people. They are able to take something and industrialise it taking advantage of economies of scale. This requires immense skill. You trust what they build. They find ways to make things faster, better, smaller, more efficient, more economic and good enough. They create the components that pioneers build upon. Their type of innovation is industrial research. They take something that exists and turn it into a commodity or a utility (e.g. with Electricity, then Edison, Tesla and Westinghouse). They are the industrial giants we depend upon. They build Rome. ^566a94</p>
+<p>In 2005, we knew that one culture didn’t seem to work and enabling people to gain mastery in one of these three attitudes seemed to make people happier and more focused. Taking one attitude and placing them in a field which requires another attitude is never a good idea. Try it for yourself. Find a pioneer software engineer in your company, someone used to a world of experimentation and agile development and send them on a three week ITIL course. See how miserable they come back. Try the same with a town planner and send them on a three week course of hack days &amp; experimentation with completely uncertain areas and lots of failure. Watch the smile drop from their face.</p>
+<p>When using a map, you should not only break into components and build <a href="../notes/small%20cells/">small cells</a> around this, you should also consider <a href="../notes/attitude/">attitude</a> — see figure 41. ^b34ad9</p>
+<p><strong>Figure 41— Aptitude and Attitude</strong> ^1fd6a3</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*zmgXOcHoIkXCTyKCp7_g4Q.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*zmgXOcHoIkXCTyKCp7_g4Q.jpeg"/></p>
+<p>It’s really important to understand that pioneers <strong>build</strong> and <strong>operate</strong> the novel. Pioneers are responsible for their pioneering and that means everything. They tend to do this by consuming components built by Settlers (e.g. product or libraries) and Town Planners (e.g. industrialised services). Town planners on the other hand <strong>build</strong> and <strong>operate</strong> the industrialised components of huge scale. Don’t fall into the trap that Pioneers build new stuff and hand it off to someone else to run or operate. That’s not how this works. ^643c99</p>
+<p>This three party idea is also not new. A bit of digging will bring you to Robert X. Cringely’s book, Accidental Empires, 1993. Cringely described how there were three different types of companies known as infantry, commando and police. The PST (pioneer, settler and town planner) structure is a direct descendant of that idea but applied to a single company and put into practice in 2005. To quote from his book, which I strongly recommend you read - ^46a51b</p>
+<blockquote>
+<p><em>“Whether invading countries or markets, the first wave of troops to see battle are the commandos. Commando’s parachute behind enemy lines or quietly crawl ashore at night. Speed is what commandos live for. They work hard, fast, and cheap, though often with a low level of professionalism, which is okay, too, because professionalism is expensive. Their job is to do lots of damage with surprise and teamwork, establishing a beachhead before the enemy is even aware they exist. They make creativity a destructive art.</em></p>
+<p><em>[Referring to software business] But what they build, while it may look like a product and work like a product, usually isn’t a product because it still has bugs and major failings that are beneath the notice of commando types. Or maybe it works fine but can’t be produced profitably without extensive redesign. Commandos are useless for this type of work. They get bored.</em></p>
+<p><em>It’s easy to dismiss the commandos. After all, most of business and warfare is conventional. But without commandos you’d never get on the beach at all. Grouping offshore as the commandos do their work is the second wave of soldiers, the infantry. These are the people who hit the beach en masse and slog out the early victory, building the start given by the commandos. The second wave troops take the prototype, test it, refine it, make it manufacturable, write the manuals, market it, and ideally produce a profit. Because there are so many more of these soldiers and their duties are so varied, they require and infrastructure of rules and procedures for getting things done — all the stuff that commandos hate. For just this reason, soldiers of the second wave, while they can work with the first wave, generally don’t trust them, though the commands don’t even notice this fact, since by this time they are bored and already looking for the door. While the commandos make success possible, it’s the infantry that makes success happen.</em></p>
+<p><em>What happens then is that the commandos and the infantry advance into new territories, performing their same jobs again. There is still a need for a military presence in the territory. These third wave troops hate change. They aren’t troops at all but police. They want to fuel growth not by planning more invasions and landing on more beaches but by adding people and building economies and empires of scale”.</em></p>
+</blockquote>
+<p>^d2ad8e</p>
+<p><strong>Doctrine: Design for <a href="../notes/constant%20evolution/">constant evolution</a><br/>
+</strong>Everything is evolving due to competition. The effects of this on business can be seen in their continual restructuring to cope with new outside paradigms. Recent presidents of cloud and social media are no different from the former presidents of electricity and telephony that most companies employed. Today’s bolt-on include Chief Digital Officers. This new stuff is tomorrow’s legacy and this creates a problem. We might introduce a cell based structure with consideration for not only aptitude but attitude however the map isn’t static. We need to somehow mimic that constant state of evolution in the outside world but within a company. The solution is to introduce a mechanism of theft which means new teams need to form and steal the work of earlier teams i.e. the settlers steal from the pioneers and productise the work. This forces the pioneers to move on. Equally the town planners steal from the settlers and industrialise it, forcing the settlers to move on but also providing component service to enable the pioneers. This results in a cycle shown in fig 42. ^54fddb</p>
+<p><strong>Figure 42— Design for constant evolution</strong> ^0b4e02</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*0Ou947Cc8O2vI1zTi4IeYw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*0Ou947Cc8O2vI1zTi4IeYw.jpeg"/></p>
+<p><strong>Point 1</strong> — The Town Planners create some form of industrialised component that previously existed as a product. This is provided as a utility service.</p>
+<p><strong>Point 2</strong> — The Pioneers can now rapidly build higher order systems that consume that component.</p>
+<p><strong>Point 3</strong> — As the new higher order systems evolve, the Settlers identify new patterns within them and create a product or some form of library component for re-use.</p>
+<p><strong>Point 4</strong> — As the product or library component evolves, the Town Planners complete the cycle by creating an industrialised form (as per Point 1). This results in creating an ever expanding platform of discrete industrialised components for which the pioneers can build on.</p>
+<p>Maps are a useful way to kick-start this process. They also give <strong><a href="../notes/Purpose/">Purpose</a></strong> to each cell as they know how their work fits into the overall picture. The cell based structure is an essential element of the structure and it need to have <strong>[[autonomy]]</strong> in their space, they must be self-organising. The interfaces between the cells are therefore used to help define the fitness functions but if a cell sees something they can take tactical advantage of in their space (remember they have an overview of the entire business through the map) then they should exploit it. The cells are populated with not only the right aptitude but attitude (pioneers, settlers and town planners). This enables people to develop <strong><a href="../notes/mastery/">mastery</a></strong> in their area and allows them to focus on what they’re good at. You should let people self-select their type and change at will until they find something they’re truly comfortable with. Reward them for being really good at that. Purpose, mastery and autonomy are the subjects of the book <em>Drive</em> by Daniel H.Pink. ^8765bc</p>
+<p>As new things appear in the outside world they should flow through this system. This structure doesn’t require a bolt-on which you need to replace later. No chief digital, chief telephony, chief electricity, chief cloud officer required. The cells can grow in size but ultimately you should aim to subdivide into smaller cells and maps can help achieve this. Be aware of the Hackman problem that communication channels increase exponentially as the team grows. The US Navy Seals learned long ago that 4 <em>“is the optimal size for a combat team”</em>. ^42c579</p>
+<p>You will however increasingly have to structure the monitoring and communication between cells using a hierarchy and yes, that means you need a hierarchy on top of a cell based structure. I’ve found that an executive structure which mimics the organisation to be of use i.e. a CEO, a Chief Pioneer, a Chief Settler and a Chief Town Planner can be applied. However, you’ll probably use more traditional sounding names such as Chief Operating Officer, Chief Scientist etc. We did. I’m not sure why we did and these days I wouldn’t bother; I’d just make it clear. You will also need separate support structures to reinforce the culture and provide training with some form of pool of resource (for forming new cells). ^952a2f</p>
+<p>Contrary to popular concepts of culture, the structure causes three separate cultures to flourish. This is somewhat counter to general thinking because the culture results from the structure and not the other way around. It also means you don’t have a single company culture but multiple that you need to maintain. I’ve described the basic elements of this within figure 43. ^68dfe7</p>
+<p><strong>Figure 43 — Culture.</strong> ^c99348</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*N_AlXpq2V9C0PtWyqDvLHw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*N_AlXpq2V9C0PtWyqDvLHw.jpeg"/></p>
+<p>Lastly, PST is a structure that I’ve used to remarkable effect in a very small number of cases. That’s code for ‘it might just be a fluke’. However, in the last decade I’ve seen nothing which comes close and instead I’ve seen endless matrix or dual systems that create problems. Will something better come along — of course it will. However, to invoke Conway’s law then if you don’t mimic evolution in your communication mechanisms (e.g. through a mechanism of theft) then you’ll never going to cope with evolution outside the organisation. ^648000</p>
+<p>So how common is a PST structure? Outside certain circles it’s extremely rare. At best I see companies dabbling with cell based structures which to be honest are pretty good anyway and probably where you should go. Telling a company that they need three types of culture, three types of attitude, a system of theft, a map of their environment and high levels of situational awareness is usually enough to get managers running away. It doesn’t fit into a simple 2 x 2. It also doesn’t matter for many organisations because you only need high levels of situational awareness and adaptive structures if you’re competing against organisations who have the same or you’re at the very sharp end of ferocious competition. Personally, for most companies then I’d recommend using a cell based structure and reading “boiling frogs” from GCHQ which is an outstanding piece of work. It will give you more than enough ideas and it contains a very similar structure. ^675d3a</p>
+<p>I will note that in recent years I’ve heard plenty of people talk about dual structures. I have to say that from my perspective and experience that these are fundamentally flawed and you’re being led up the garden path. It’s not enough to deal with the extremes, you must manage the transition in between. Fail to do this and you will not create an organisation that copes with evolution. If you focus on the extremes then you will diminish the all-important middle, you will tend to create war between factions and because the components of the pioneers never evolve (the Town planners will describe these systems as “flaky”) then you create a never growing platform and on top of this an increasing spaghetti junction of new built upon new. I’ve experienced this myself back in 2003 along with the inevitable slow grinding halt of development and the calls for a death star project of immense scale to build the “new platform for the future”. I’ve never seen that work. ^cb4e1c</p>
+<h2 id="categorising-doctrine">Categorising Doctrine<a class="headerlink" href="#categorising-doctrine" title="Permanent link">¶</a></h2>
+<p>Doctrine are universal and applicable to all landscapes though many require you to use a map in order to fully exploit them. It’s worth making a distinction here (courtesy of Trent Hone). Whilst doctrine consists of basic principles, the application of those principles will be different in different contexts. For example, “Focus on user needs” does not mean we all focus on the same user needs but instead the exact user needs will vary with landscape and purpose. The user needs of an automative company are not the same as a tea shop. Equally, the user needs of “the best tea shop in Kent” are not the same as the user needs of “the most convenient tea shop in Kent”. Hence, doctrine can be subdivided into the <strong>principles</strong> of doctrine (i.e. “focus on user needs”) and the <strong>implementation</strong> of doctrine (i.e. “the user needs for the most convenient tea shop in Kent”) ^6a1048</p>
+<p>Furthermore, doctrine are a set of beliefs over which you have choice. They are something which you apply to an organisation unlike climatic patterns which will apply to you regardless of your choice. They also represent our belief as to what works everywhere. I’ve listed the basic forms of doctrine (the <em>principles</em>) that we will cover in this book in figure 44, marking those we’ve just skimmed over in orange. This is not an exhaustive list but enough for now. In later chapters we will loop back around this section, refining both the concepts and different aspects of doctrine as we go. For reference, the categories I use for doctrine depend upon whether it mainly impacts:- ^f6ab00</p>
+<p>• methods of <em>communication</em><br/>
+• the mechanics of <em>development</em> or building things.<br/>
+• the <em>operation</em> of an organisation<br/>
+• how we <em>structure</em> ourselves<br/>
+• the manner by which we <em>learn</em><br/>
+• how we <em>lead</em> ^a245c6</p>
+<p><strong>Figure 44 — Doctrine</strong> ^3a95cf</p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*tUSbtVrnFF-t58KmouqtHw.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*tUSbtVrnFF-t58KmouqtHw.jpeg"/></p>
+<h2 id="using-doctrine-with-our-first-map">Using doctrine with our first map<a class="headerlink" href="#using-doctrine-with-our-first-map" title="Permanent link">¶</a></h2>
+<p>^c5efa6</p>
+<p>When you read the list of doctrine, it mainly sounds like common sense. Most of them are but then again, they’re very difficult to achieve. You really have to work hard at them. In the case of “remove duplication and bias” then you can’t effectively apply it to your first map because it requires multiple maps. However, even with a simple map, you can apply some of these doctrines. In figure 45 I’ve taken our first map which we applied common economic patterns to figure 28 (<a href="https://medium.com/wardleymaps/exploring-the-map-ad0266fad59b">Chapter 3</a>) and shown where doctrine is relevant.</p>
+<p><strong>Figure 45 — Applying doctrine and economic patterns to our first map.</strong></p>
+<p><img alt="" src="https://miro.medium.com/max/30/1*akorOk_iKtA5BN7baKyydA.jpeg?q=20"/></p>
+<p><img alt="" src="https://miro.medium.com/max/700/1*akorOk_iKtA5BN7baKyydA.jpeg"/></p>
+<p><strong>Point 1</strong> — focus on user needs. The anchor of the map is the user, in this case a customer. ^a2cd2e</p>
+<p><strong>Point 2</strong> — The map provides a [[common language]]. It provides a mechanism to visually challenge assumptions.</p>
+<p><strong>Point 3</strong> — Use appropriate methods (agile, lean and six sigma or in-house vs outsource) and don’t try to apply a single method across the entire landscape</p>
+<p><strong>Point 4</strong> — Treat the map as [[small components]] and use [[small teams]] (e.g. team 4)</p>
+<p><strong>Point 5</strong> — Consider not only aptitude but attitude (pioneers, settlers and town planners)</p>
+<p><strong>Point 6</strong> — Design for <a href="../notes/constant%20evolution/">constant evolution</a>. The components will evolve and this might require the formation of new teams (e.g. team 8) with new attitudes.</p>
+<p>It’s worth taking a bit of time to reflect on figure 45. What we have is not only the user needs, the components meeting those needs and the common economic patterns impacting this but also an anticipation of change, the organisational structure that we will need and even the types of methods and culture that are suitable. All of this is in one single diagram. In practice, we normally only show the structures on the map that are relevant to the task at hand i.e. if we’re anticipating change then we might not show cell structure, attitude and hence cultural aspects. However, it’s worth noting that they can all be shown and with practice you will learn when to include them or not. After a few years you will find that much of this becomes automatic and the challenge is to remember to include structures for those that are not initiated in this way of thinking.</p>
+<p>We are now in a position of understanding our landscape, being able to anticipate some forms of change due to climatic patterns and we have an understanding of basic universal doctrine to help us structure ourselves. We’re finally at a point that we can start to learn the context specific forms of gameplay which are at the heart of strategy. With a few basic lessons about gameplay then we will be ready to act.</p>
+<h2 id="an-exercise-for-the-reader">An exercise for the reader<a class="headerlink" href="#an-exercise-for-the-reader" title="Permanent link">¶</a></h2>
+<p>In <a href="https://medium.com/wardleymaps/exploring-the-map-ad0266fad59b">chapter 3</a> I asked you to apply some basic economic patterns to a map you created in <a href="https://medium.com/wardleymaps/finding-a-path-cdb1249078c0">chapter 2</a>. If you’ve been skipping these exercises then now is the time to go back and complete them. Mapping isn’t something you can just read and become an expert in , it’s something you have to apply and learn.</p>
+<p>I want you to now take your map and look at the various forms of doctrine highlighted in figure 44. Try and work with others and apply them to your map. Are you thinking about user needs? Are you challenging your assumptions? How would you organise yourself? Do you know the details?</p>
+<h2 id="changelog">Changelog:<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h2>
+<p>Original text: <a href="../contributors/Simon%20Wardley%20-%20author/">Simon Wardley - author</a>, https://medium.com/wardleymaps/on-being-lost-2ef5f05eb1ec
+Initial linking: <a href="../contributors/Chris%20Daniel/">Chris Daniel</a></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Chapter 3   Exploring the map" class="md-footer__link md-footer__link--prev" href="../Chapter%203%20-%20Exploring%20the%20map/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Chapter 3   Exploring the map
+            </div>
+</div>
+</a>
+<a aria-label="Next: Chapter 5   The play and a decision to act" class="md-footer__link md-footer__link--next" href="../Chapter%205%20-%20The%20play%20and%20a%20decision%20to%20act/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Chapter 5   The play and a decision to act
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
